@@ -69,7 +69,6 @@
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            touch-action: manipulation;
         }
         .hero-bg {
             background: url('https://images.unsplash.com/photo-1585435557343-3b0920fb0483?auto=format&fit=crop&w=800&q=60') no-repeat center center/cover, linear-gradient(135deg, rgba(30,64,175,0.85), rgba(59,130,246,0.85));
@@ -297,8 +296,8 @@
             align-items: center;
             justify-content: center;
             overflow-y: auto;
-            overscroll-behavior: contain;
-            touch-action: none;
+            overscroll-behavior: auto;
+            touch-action: auto;
         }
         .modal-content {
             background: #ffffff;
@@ -832,7 +831,7 @@
         <div class="container text-center">
             <p class="text-base mb-3 font-medium">© 2025 Sri Balaji Medical. All rights reserved.</p>
             <p class="text-base mb-3 font-medium"><i class="fas fa-clock mr-2" aria-hidden="true"></i>Open Daily (except Thursday): 8:00 AM - 10:00 PM. Closed Thursday.</p>
-            <p class="text-sm mb-3 text-gray-300">Version 1.6</p>
+            <p class="text-sm mb-3 text-gray-300">Version 1.7</p>
             <div class="flex justify-center space-x-6">
                 <a href="https://facebook.com" class="social-icon text-xl" aria-label="Visit our Facebook page"><i class="fab fa-square-facebook"></i></a>
                 <a href="https://twitter.com" class="social-icon text-xl" aria-label="Visit our Twitter page"><i class="fab fa-square-twitter"></i></a>
@@ -873,7 +872,7 @@
             hamburger.querySelector('i').classList.toggle('fa-times');
             hamburger.setAttribute('aria-expanded', isActive);
             navMenu.setAttribute('aria-hidden', !isActive);
-            document.body.style.overflow = isActive ? 'hidden' : '';
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
         });
 
         // Close mobile menu on link click
@@ -885,7 +884,7 @@
                 hamburger.querySelector('i').classList.remove('fa-times');
                 hamburger.setAttribute('aria-expanded', 'false');
                 navMenu.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
+                document.body.style.overflow = 'auto';
             });
         });
 
@@ -928,6 +927,7 @@
             });
 
             modal.style.display = 'flex';
+            modal.style.overscrollBehavior = 'contain';
             modal.focus();
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -947,6 +947,7 @@
             timingsElement.textContent = 'Timings: ' + timings;
 
             modal.style.display = 'flex';
+            modal.style.overscrollBehavior = 'contain';
             modal.focus();
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -956,8 +957,9 @@
         function closeModal(modalId) {
             const modal = document.getElementById(modalId);
             modal.style.display = 'none';
+            modal.style.overscrollBehavior = 'auto';
             modal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
+            document.body.style.overflow = 'auto';
             document.querySelector('body').focus();
         }
 
@@ -999,9 +1001,10 @@
             }
         });
 
-        // Prevent overscrolling on mobile
-        document.addEventListener('touchstart', (e) => {
-            if (e.touches.length > 1) {
+        // Prevent pinch zoom but allow scrolling
+        let scale = 1;
+        document.addEventListener('touchmove', (e) => {
+            if (e.scale && e.scale !== 1) {
                 e.preventDefault();
             }
         }, { passive: false });
@@ -1020,12 +1023,10 @@
             }
         }, { passive: true });
 
-        // Prevent pinch zoom
-        document.addEventListener('touchmove', (e) => {
-            if (e.scale !== 1) {
-                e.preventDefault();
-            }
-        }, { passive: false });
+        // Ensure body scrolling is enabled on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.style.overflow = 'auto';
+        });
     </script>
 </body>
 </html>
