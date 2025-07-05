@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Sri Balaji Medical: Premier pharmacy in Titagarh Bazar, Kolkata, offering quality medicines and expert consultations. Open daily except Thursday, 8 AM-10 PM. Call +91-8981777440.">
+    <meta name="keywords" content="Sri Balaji Medical, pharmacy Titagarh, Kolkata pharmacy, medicines, healthcare products, doctor consultations, generic medicines, Titagarh Bazar, pharmacy open late">
+    <meta name="author" content="Sri Balaji Medical">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1e40af">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sri Balaji Medical | Pharmacy & Consultations in Titagarh, Kolkata">
+    <meta property="og:description" content="Trusted pharmacy in Titagarh Bazar, Kolkata for medicines and specialist consultations. Open daily except Thursday, 8 AM-10 PM. Contact +91-8981777440.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sanchalit.github.io/SriBalajiMedical/">
+    <meta property="og:image" content="https://sanchalit.github.io/SriBalajiMedical/images/logo.jpg">
+    <meta property="og:site_name" content="Sri Balaji Medical">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sri Balaji Medical | Pharmacy in Titagarh, Kolkata">
+    <meta name="twitter:description" content="Quality medicines and expert consultations at Sri Balaji Medical, Titagarh Bazar. Open daily except Thursday, 8 AM-10 PM. Call +91-8981777440.">
+    <meta name="twitter:image" content="https://sanchalit.github.io/SriBalajiMedical/images/logo.jpg">
+    <title>Sri Balaji Medical | Medicines & Doctor Consultations in Titagarh, Kolkata</title>
+    <!-- Font Awesome CDN with defer -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <!-- Google Fonts with display=swap -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Exo+2:wght@300;400;600&family=Montserrat:wght@300;600&display=swap">
+    <!-- Preload critical font -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v25/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Tailwind CSS CDN with defer -->
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Sri Balaji Medical",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "MG Road, Titagarh Bazar",
+        "addressLocality": "Titagarh, Kolkata",
+        "addressRegion": "West Bengal",
+        "postalCode": "700119",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-8981777440",
+      "url": "https://sanchalit.github.io/SriBalajiMedical/",
+      "openingHours": "Mo-We,Fr-Su 08:00-22:00; Th closed",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.736439,
+        "longitude": 88.373615
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(90deg, #1e40af, #f4b400);
+            --hover-gradient: linear-gradient(90deg, #3b82f6, #ffd700);
+            --card-bg: #ffffff;
+            --card-border: linear-gradient(135deg, #3b82f6, #f4b400);
+            --icon-bg: linear-gradient(135deg, #1e40af, #f4b400);
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(180deg, #f0f7ff, #e0e7ff);
+            color: #1f2937;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            touch-action: manipulation;
+        }
+        .hero-bg {
+            background: url('https://images.unsplash.com/photo-1585435557343-3b0920fb0483?auto=format&fit=crop&w=800&q=60') no-repeat center center/cover, linear-gradient(135deg, rgba(30,64,175,0.85), rgba(59,130,246,0.85));
+            background-size: cover, 400% 400%;
+            animation: bgZoom 10s ease infinite;
+            position: relative;
+            will-change: background-size;
+        }
+        @keyframes bgZoom {
+            0% { background-size: cover, 400% 400%; }
+            50% { background-size: cover, 450% 450%; }
+            100% { background-size: cover, 400% 400%; }
+        }
+        .card, .doctor-card, .story-card, .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-image: var(--card-border) 1;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            touch-action: manipulation;
+        }
+        .card:hover, .doctor-card:hover, .story-card:hover, .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .services-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            touch-action: pan-x;
+            -webkit-overflow-scrolling: touch;
+        }
+        .services-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .service-item {
+            flex: 0 0 85%;
+            scroll-snap-align: center;
+            padding: 0.75rem;
+        }
+        .btn-primary {
+            background: var(--primary-gradient);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            touch-action: manipulation;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        .btn-primary:hover {
+            background: var(--hover-gradient);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 3px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
+        .sticky-btn {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 100;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            min-height: 48px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 5.5rem;
+            right: 1.5rem;
+            z-index: 100;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            border-radius: 50%;
+            width: 2.75rem;
+            height: 2.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+            min-height: 44px;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            transform: translateY(-4px);
+        }
+        .nav-shadow {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(90deg, #1e40af, #4b5ef6);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .nav-link {
+            position: relative;
+            padding: 0.75rem 1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            font-size: 1rem;
+            color: #ffffff;
+            touch-action: manipulation;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-link:hover {
+            color: #f4b400;
+            transform: translateY(-1px);
+        }
+        .nav-link:active {
+            transform: scale(0.95);
+        }
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .nav-menu {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+        }
+        .hamburger {
+            display: none;
+            transition: transform 0.3s ease;
+            font-size: 1.75rem;
+            padding: 0.75rem;
+            min-height: 44px;
+            min-width: 44px;
+        }
+        .hamburger.active {
+            transform: rotate(90deg);
+        }
+        .hero-text {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+        }
+        .hero-subtext {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .sticker {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--primary-gradient);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transform: rotate(10deg);
+            z-index: 10;
+            text-transform: uppercase;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            touch-action: none;
+        }
+        .modal-content {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 90%;
+            width: 600px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .modal-close {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            font-size: 1.75rem;
+            cursor: pointer;
+            color: #1e40af;
+            transition: color 0.3s ease;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-close:hover {
+            color: #f4b400;
+        }
+        .icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: var(--icon-bg);
+            color: #ffffff;
+            margin: 0 auto 0.75rem;
+            font-size: 2rem;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .icon-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .footer-bg {
+            background: linear-gradient(180deg, #1e40af, #4b5ef6);
+        }
+        .social-icon {
+            transition: transform 0.3s ease, color 0.3s ease;
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: #f4b400;
+        }
+        /* Enhanced Mobile Styles */
+        @media (max-width: 1024px) {
+            .container {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+            .hero-text {
+                font-size: 2.25rem;
+            }
+            .hero-subtext {
+                font-size: 1.125rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .text-5xl { font-size: 2.5rem; }
+            .text-4xl { font-size: 2rem; }
+            .text-2xl { font-size: 1.75rem; }
+            .text-xl { font-size: 1.25rem; }
+            .text-lg { font-size: 1.125rem; }
+            .text-base { font-size: 1rem; }
+            .text-sm { font-size: 0.875rem; }
+            .sticky-btn {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                bottom: 1.25rem;
+                right: 1.25rem;
+            }
+            .back-to-top {
+                bottom: 5rem;
+                width: 2.75rem;
+                height: 2.75rem;
+                font-size: 1.25rem;
+            }
+            .hamburger {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                padding: 0.75rem;
+            }
+            .nav-menu {
+                display: none;
+                max-height: 0;
+                opacity: 0;
+                width: 100%;
+                flex-direction: column;
+                background: #1e40af;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 1.5rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .nav-menu.active {
+                display: flex;
+                max-height: 90vh;
+                opacity: 1;
+            }
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+            .nav-link {
+                padding: 1rem 1.25rem;
+                font-size: 1.125rem;
+                display: block;
+                text-align: center;
+                min-height: 48px;
+            }
+            .sticker {
+                font-size: 0.75rem;
+                padding: 4px 8px;
+                top: -5px;
+                right: -5px;
+            }
+            .modal-content {
+                padding: 1.5rem;
+                width: 95%;
+                max-width: 95%;
+            }
+            .service-item {
+                flex: 0 0 90%;
+            }
+            .icon-circle {
+                width: 3.25rem;
+                height: 3.25rem;
+                font-size: 1.875rem;
+            }
+            .hero-bg {
+                min-height: 50vh;
+            }
+        }
+        @media (max-width: 640px) {
+            .grid-cols-4, .grid-cols-3, .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+            .service-item {
+                flex: 0 0 95%;
+            }
+            .hero-text {
+                font-size: 2rem;
+            }
+            .hero-subtext {
+                font-size: 1rem;
+            }
+            .btn-primary {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
+                min-height: 48px;
+            }
+            .modal-content {
+                padding: 1.25rem;
+            }
+            .map iframe {
+                height: 180px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 1.75rem;
+            }
+            .hero-subtext {
+                font-size: 0.875rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .card, .doctor-card, .story-card, .product-card {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Contact Button -->
+    <a href="#contact" class="sticky-btn btn-primary text-white text-base font-semibold flex items-center" aria-label="Contact to Book Appointment">
+        <i class="fas fa-calendar-check mr-2"></i>Contact to Book
+    </a>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="text-white py-4 sticky top-0 z-50 nav-shadow" aria-label="Main navigation">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tight hero-text">Sri Balaji Medical</h1>
+            <button class="hamburger md:hidden" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu flex space-x-4 text-base font-medium md:flex md:items-center" aria-hidden="true">
+                <li><a href="#about" class="nav-link" aria-label="About Us">About</a></li>
+                <li><a href="#services" class="nav-link" aria-label="Our Services">Services</a></li>
+                <li><a href="#doctors" class="nav-link" aria-label="Our Doctors">Doctors</a></li>
+                <li><a href="#products" class="nav-link" aria-label="Our Products">Products</a></li>
+                <li><a href="#patient-stories" class="nav-link" aria-label="Patient Stories">Stories</a></li>
+                <li><a href="#health-tips" class="nav-link" aria-label="Health Tips">Health Tips</a></li>
+                <li><a href="#contact" class="nav-link" aria-label="Contact Us">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[50vh] flex items-center justify-center text-white fade-in" aria-labelledby="hero-title">
+        <div class="container text-center px-4">
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-bold mb-4 hero-text">Sri Balaji Medical</h1>
+            <p class="text-lg md:text-2xl mb-4 hero-subtext">Trusted Pharmacy in Titagarh Bazar</p>
+            <p class="text-base mb-6 font-family: 'Montserrat', sans-serif;">Premier pharmacy in Kolkata for genuine medicines and expert consultations. Open daily except Thursday, 8 AM-10 PM. Call +91-8981777440.</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="#contact" class="btn-primary text-white text-base font-semibold" aria-label="Contact Us">Contact Us</a>
+                <a href="#doctors" class="bg-white text-blue-900 px-5 py-2 rounded-lg text-base font-semibold hover:bg-gray-100 transition duration-300 min-h-[48px]" aria-label="Meet Our Doctors">Meet Our Doctors</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white py-4 text-center fade-in" aria-label="Call to Action">
+        <p class="text-base font-semibold"><i class="fas fa-stethoscope mr-2"></i>Quality Care Awaits - Contact Us Now!</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white fade-in" aria-labelledby="about-title">
+        <div class="container">
+            <h2 id="about-title" class="text-3xl font-bold text-center section-title">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <p class="text-base text-gray-700 mb-4 leading-relaxed">Sri Balaji Medical offers top-quality medicines, healthcare products, and specialist consultations in Titagarh, Kolkata.</p>
+                    <p class="text-base text-gray-700 leading-relaxed">Our mission is to provide compassionate, world-class healthcare services.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-r from-blue-100 to-yellow-100 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-blue-900 mb-2 font-family: 'Montserrat', sans-serif;">Our Vision</h3>
+                        <p class="text-gray-600 text-base">Leading healthcare with empathy and excellence in Titagarh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-12 bg-gray-100 fade-in" aria-labelledby="why-choose-us-title">
+        <div class="container">
+            <h2 id="why-choose-us-title" class="text-3xl font-bold text-center section-title">Why Choose Us</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-xl text-center">
+                    <i class="fas fa-user-doctor icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Expert Doctors</h3>
+                    <p class="text-gray-600 text-base">Skilled specialists for superior care.</p>
+                </div>
+                <div class="card p-6 rounded-xl text-center">
+                    <i class="fas fa-laptop-medical icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Advanced Care</h3>
+                    <p class="text-gray-600 text-base">Cutting-edge diagnostics and treatments.</p>
+                </div>
+                <div class="card p-6 rounded-xl text-center">
+                    <i class="fas fa-hands-holding-heart icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Compassionate Service</h3>
+                    <p class="text-gray-600 text-base">Personalized care with empathy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Carousel Section -->
+    <section id="services" class="py-12 bg-white fade-in" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="text-3xl font-bold text-center section-title">Our Services</h2>
+            <div class="services-carousel" role="region" aria-label="Services carousel">
+                <div class="service-item p-4">
+                    <div class="card p-6 rounded-xl text-center">
+                        <i class="fas fa-stethoscope icon-circle" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Consultations</h3>
+                        <p class="text-gray-600 text-base">Expert care from specialists.</p>
+                    </div>
+                </div>
+                <div class="service-item p-4">
+                    <div class="card p-6 rounded-xl text-center">
+                        <i class="fas fa-capsules icon-circle" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Pharmacy</h3>
+                        <p class="text-gray-600 text-base">Quality medicines at affordable prices.</p>
+                    </div>
+                </div>
+                <div class="service-item p-4">
+                    <div class="card p-6 rounded-xl text-center">
+                        <i class="fas fa-ambulance icon-circle" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Emergency Support</h3>
+                        <p class="text-gray-600 text-base">Prompt critical care assistance.</p>
+                    </div>
+                </div>
+                <div class="service-item p-4">
+                    <div class="card p-6 rounded-xl text-center">
+                        <i class="fas fa-vial icon-circle" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2 font-family: 'Montserrat', sans-serif;">Diagnostics</h3>
+                        <p class="text-gray-600 text-base">Accurate health assessments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6 gap-3">
+                <button aria-label="Previous Service" onclick="scrollServicesCarousel(-1)" class="btn-primary text-white px-4 py-2 rounded-lg"><i class="fas fa-chevron-left"></i></button>
+                <button aria-label="Next Service" onclick="scrollServicesCarousel(1)" class="btn-primary text-white px-4 py-2 rounded-lg"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-12 bg-gray-100 fade-in" aria-labelledby="doctors-title">
+        <div class="container">
+            <h2 id="doctors-title" class="text-3xl font-bold text-center section-title">Meet Our Doctors</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Child Specialist</span>
+                    <i class="fas fa-baby icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. Major Robin Dubey</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Child Specialist</p>
+                    <p class="text-gray-600 mb-3 text-base">Expert in pediatric care.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. Major Robin Dubey', 'Child Specialist', '10+ years of experience in pediatric care, providing compassionate treatment for children.', 'Wednesday and Saturday, 6:30 PM to 7:30 PM, by appointment only.')" aria-label="View Dr. Major Robin Dubey Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Child Specialist</span>
+                    <i class="fas fa-baby icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. DN Chakraborty</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Child Specialist</p>
+                    <p class="text-gray-600 mb-3 text-base">Renowned pediatric expert.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. DN Chakraborty', 'Child Specialist', '40+ years of experience in pediatric care, renowned for expertise in child health.', 'Daily except Sunday, 6:00 PM to 7:30 PM.')" aria-label="View Dr. DN Chakraborty Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Gynecologist</span>
+                    <i class="fas fa-venus icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. UK Ghosh</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Gynecologist</p>
+                    <p class="text-gray-600 mb-3 text-base">Specialist in women's health.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. UK Ghosh', 'Gynecologist', 'Experienced in women\'s health, providing comprehensive gynecological care.', 'Monday, 8:00 PM.')" aria-label="View Dr. UK Ghosh Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Gynecologist</span>
+                    <i class="fas fa-venus icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. Rini Mukherji</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Gynecologist</p>
+                    <p class="text-gray-600 mb-3 text-base">Expert in women's health.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. Rini Mukherji', 'Gynecologist', 'Skilled in women\'s health, offering personalized gynecological services.', 'Monday, 8:00 PM.')" aria-label="View Dr. Rini Mukherji Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Gynecologist</span>
+                    <i class="fas fa-venus icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. Sapna Lakhotia</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Gynecologist</p>
+                    <p class="text-gray-600 mb-3 text-base">Dedicated to women's health.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. Sapna Lakhotia', 'Gynecologist', 'Dedicated to women\'s health, providing expert gynecological care.', 'Monday and Wednesday, 10:00 AM, by appointment only.')" aria-label="View Dr. Sapna Lakhotia Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Skin Specialist</span>
+                    <i class="fas fa-hand-holding-droplet icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. TK Chakraborty</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Skin Specialist</p>
+                    <p class="text-gray-600 mb-3 text-base">Expert in dermatology.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. TK Chakraborty', 'Skin Specialist', 'Expert in dermatology, offering advanced skin treatments.', 'Wednesday and Friday, 8:00 PM, by appointment only.')" aria-label="View Dr. TK Chakraborty Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Skin Specialist</span>
+                    <i class="fas fa-hand-holding-droplet icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. A Mukherjee</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Skin Specialist</p>
+                    <p class="text-gray-600 mb-3 text-base">Specialized in skin care.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. A Mukherjee', 'Skin Specialist', 'Specialized in dermatology, providing effective skin care solutions.', 'Wednesday, 11:00 AM, by appointment only.')" aria-label="View Dr. A Mukherjee Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+                <div class="doctor-card p-6 rounded-xl text-center relative">
+                    <span class="sticker">Cardiologist</span>
+                    <i class="fas fa-heartbeat icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Dr. Sovik Bannerjee</h3>
+                    <p class="text-blue-600 text-base font-semibold mb-2">Cardiologist & Critical Care</p>
+                    <p class="text-gray-600 mb-3 text-base">Expert in heart care.</p>
+                    <button class="btn-primary text-white text-base mb-3" onclick="showQuickView('Dr. Sovik Bannerjee', 'Cardiologist & Critical Care', 'Expert in cardiology and critical care, ensuring heart health.', 'Contact for availability.')" aria-label="View Dr. Sovik Bannerjee Details">Quick View</button>
+                    <p class="text-sm text-gray-600">Call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a> to book</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section id="health-tips" class="py-12 bg-white fade-in" aria-labelledby="health-tips-title">
+        <div class="container">
+            <h2 id="health-tips-title" class="text-3xl font-bold text-center section-title">Health Tips</h2>
+            <p class="text-center text-base text-gray-600 mb-6 font-family: 'Montserrat', sans-serif;">Expert advice for better health.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-shield-virus icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Boost Immunity</h3>
+                    <p class="text-gray-600 mb-3 text-base">Strengthen with vitamins C and D.</p>
+                    <button class="btn-primary text-white text-base font-semibold" onclick="showHealthTipModal('Boost Immunity', 'A doctor\'s advice to boost your immune system and fight infections and speeds recovery.', ['Eat fruits and vegetables daily.', 'Sleep 7-8 hours nightly.', 'Drink 8 glasses of water daily.', 'Use probiotics for gut health.'])" aria-label="Read More About Boost Immunity">Read More</button>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-heart icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Heart Health</h3>
+                    <p class="text-gray-600 mb-3 text-base">Exercise regularly and low-sodium diet.</p>
+                    <button class="btn-primary text-white text-base font-semibold" onclick="showHealthTipModal('Heart Health', 'Heart health reduces cardiovascular risks.', ['Exercise 30 minutes 5 days a week.', 'Avoid sodium-rich foods.', 'Include omega-3s from fish.', 'Check cholesterol regularly.'])" aria-label="Read More About Heart Health">Read More</button>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <i class="fas fa-brain icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Mental Wellness</h3>
+                    <p class="text-gray-600 mb-3 text-base">Practice mindfulness daily.</p>
+                    <button class="btn-primary text-white text-base font-semibold" onclick="showHealthTipModal('Mental Wellness', 'Mental health tips to boost resilience and reduce stress.', ['Meditate 10 minutes daily.', 'Engage in hobbies.', 'Connect with loved ones.', 'Seek professional help if needed.'])" aria-label="Read More About Mental Wellness">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-gray-100 fade-in" aria-labelledby="products-title">
+        <div class="container">
+            <h2 id="products-title" class="text-3xl font-bold text-center section-title">Our Products</h2>
+            <p class="text-center text-base text-gray-600 mb-6 font-family: 'Montserrat', sans-serif;">Quality healthcare products available. Contact us to order.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="product-card p-6 rounded-xl text-center">
+                    <i class="fas fa-prescription-bottle-medical icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Prescription Medicines</h3>
+                    <p class="text-gray-600 mb-3 text-base">High-quality medications.</p>
+                    <a href="#contact" class="btn-primary text-white text-base font-semibold" aria-label="Contact to Order Prescription Medicines">Contact to Order</a>
+                </div>
+                <div class="product-card p-6 rounded-xl text-center">
+                    <i class="fas fa-monitor-waveform icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Medical Devices</h3>
+                    <p class="text-gray-600 mb-3 text-base">Glucometers, BP monitors, and more.</p>
+                    <a href="#contact" class="btn-primary text-white text-base font-semibold" aria-label="Contact to Order Medical Devices">Contact to Order</a>
+                </div>
+                <div class="product-card p-6 rounded-xl text-center">
+                    <i class="fas fa-leaf icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Wellness Products</h3>
+                    <p class="text-gray-600 mb-3 text-base">Vitamins and supplements for health.</p>
+                    <a href="#contact" class="btn-primary text-white text-base font-semibold" aria-label="Contact to Order Wellness Products">Contact to Order</a>
+                </div>
+                <div class="product-card p-6 rounded-xl text-center">
+                    <i class="fas fa-microscope icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Lab Tests</h3>
+                    <p class="text-gray-600 mb-3 text-base">Accurate diagnostic kits.</p>
+                    <a href="#contact" class="btn-primary text-white text-base font-semibold" aria-label="Contact to Order Lab Tests">Contact to Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Stories Section -->
+    <section id="patient-stories" class="py-12 bg-white fade-in" aria-labelledby="patient-stories-title">
+        <div class="container">
+            <h2 id="patient-stories-title" class="text-3xl font-bold text-center section-title">Patient Stories</h2>
+            <p class="text-center text-base text-gray-600 mb-6 font-family: 'Montserrat', sans-serif;">Inspiring stories of recovery and health.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="story-card p-6 rounded-xl">
+                    <i class="fas fa-smile icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Rina's Recovery</h3>
+                    <p class="text-gray-600 text-base italic">"Drina's care restored my confidence."</p>
+                </div>
+                <div class="story-card p-6 rounded-xl">
+                    <i class="fas fa-heart icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Amit's Heart Journey</h3>
+                    <p class="text-gray-600 text-base italic">"Dr.'s expertise saved my life."</p>
+                </div>
+                <div class="story-card p-6 rounded-xl">
+                    <i class="fas fa-spa icon-circle" aria-hidden="true"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;">Sia's Skin Transformation</h3>
+                    <p class="text-gray-600 text-base italic">"Dr.'s treatments were exceptional."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-gray-100 fade-in" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="text-3xl font-bold text-center section-title">Contact Us</h2>
+            <div class="max-w-lg mx-auto text-center">
+                <p class="text-base text-gray-600 mb-4 font-medium">Reach us for medicines, consultations, or bookings.</p>
+                <p class="text-base font-semibold text-blue-900 mb-4"><i class="fas fa-clock mr-2" aria-hidden="true"></i>Open Daily (except Thursday): 8:00 AM - 10:00 PM. Closed Thursday.</p>
+                <p class="text-base text-gray-600 mb-4"><i class="fas fa-phone mr-2" aria-hidden="true"></i><a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                <p class="text-base text-gray-600 mb-6"><i class="fas fa-location-dot mr-2" aria-hidden="true"></i>MG Road, Titagarh Bazar, Kolkata, WB 700119</p>
+                <div class="map mb-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.676374413219!2d88.3736154149785!3d22.73643998509854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89e4c0b3e4b7b%3A0x4c7e8f1b2c3d4e5!2sMG%20Road%2C%20Titagarh%2C%20Kolkata%2C%20West%20Bengal%20700119!5e0!3m2!1sen!2sin!4v1698765432109!5m2!1sen!2sin"
+                        width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" title="Sri Balaji Medical Location in Titagarh Bazar, Kolkata"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-8" aria-label="Footer">
+        <div class="container text-center">
+            <p class="text-base mb-3 font-medium">© 2025 Sri Balaji Medical. All rights reserved.</p>
+            <p class="text-base mb-3 font-medium"><i class="fas fa-clock mr-2" aria-hidden="true"></i>Open Daily (except Thursday): 8:00 AM - 10:00 PM. Closed Thursday.</p>
+            <p class="text-sm mb-3 text-gray-300">Version 1.6</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://facebook.com" class="social-icon text-xl" aria-label="Visit our Facebook page"><i class="fab fa-square-facebook"></i></a>
+                <a href="https://twitter.com" class="social-icon text-xl" aria-label="Visit our Twitter page"><i class="fab fa-square-twitter"></i></a>
+                <a href="https://instagram.com" class="social-icon text-xl" aria-label="Visit our Instagram page"><i class="fab fa-square-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="health-tip-modal" class="modal" role="dialog" aria-labelledby="health-tip-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('health-tip-modal')" aria-label="Close Health Tip Modal">×</button>
+            <h3 id="health-tip-title" class="text-xl font-semibold mb-3 text-blue-900 font-family: 'Montserrat', sans-serif;"></h3>
+            <p id="health-tip-about" class="text-gray-600 mb-4 text-base"></p>
+            <h4 class="text-lg font-semibold text-blue-900 mb-2 font-family: 'Montserrat', sans-serif;">Additional Tips</h4>
+            <ul id="health-tip-list" class="text-gray-600 text-base list-disc pl-6"></ul>
+        </div>
+    </div>
+    <div id="quick-view-modal" class="modal" role="dialog" aria-labelledby="quick-view-name" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('quick-view-modal')" aria-label="Close Doctor Quick View Modal">×</button>
+            <h3 id="quick-view-name" class="text-xl font-semibold mb-2 text-blue-900 font-family: 'Montserrat', sans-serif;"></h3>
+            <p id="quick-view-specialty" class="text-blue-600 text-base mb-2"></p>
+            <p id="quick-view-bio" class="text-gray-600 mb-3 text-base"></p>
+            <p id="quick-view-timings" class="text-gray-600 mb-4 text-base"></p>
+            <p class="text-gray-600 text-base">Book an appointment at <a href="#contact" class="text-yellow-600 hover:text-yellow-800 font-semibold" aria-label="Go to Contact Section">our contact page</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a>.</p>
+        </div>
+    </div>
+
+    <script defer>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            const isActive = navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-bars');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+            hamburger.setAttribute('aria-expanded', isActive);
+            navMenu.setAttribute('aria-hidden', !isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                hamburger.querySelector('i').classList.add('fa-bars');
+                hamburger.querySelector('i').classList.remove('fa-times');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Services carousel functionality
+        const servicesCarousel = document.querySelector('.services-carousel');
+        function scrollServicesCarousel(direction) {
+            const scrollAmount = servicesCarousel.offsetWidth * direction * 0.9;
+            servicesCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        // Health Tip Modal
+        function showHealthTipModal(title, about, tips) {
+            const modal = document.getElementById('health-tip-modal');
+            const titleElement = document.getElementById('health-tip-title');
+            const aboutElement = document.getElementById('health-tip-about');
+            const listElement = document.getElementById('health-tip-list');
+
+            titleElement.textContent = title;
+            aboutElement.textContent = about;
+            listElement.innerHTML = '';
+            tips.forEach(tip => {
+                const li = document.createElement('li');
+                li.textContent = tip;
+                li.classList.add('mb-2');
+                listElement.appendChild(li);
+            });
+
+            modal.style.display = 'flex';
+            modal.focus();
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Quick View Modal
+        function showQuickView(name, specialty, bio, timings) {
+            const modal = document.getElementById('quick-view-modal');
+            const nameElement = document.getElementById('quick-view-name');
+            const specialtyElement = document.getElementById('quick-view-specialty');
+            const bioElement = document.getElementById('quick-view-bio');
+            const timingsElement = document.getElementById('quick-view-timings');
+
+            nameElement.textContent = name;
+            specialtyElement.textContent = specialty;
+            bioElement.textContent = bio;
+            timingsElement.textContent = 'Timings: ' + timings;
+
+            modal.style.display = 'flex';
+            modal.focus();
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close Modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            document.querySelector('body').focus();
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', function(event) {
+            const healthModal = document.getElementById('health-tip-modal');
+            const quickViewModal = document.getElementById('quick-view-modal');
+            if (event.target === healthModal) closeModal('health-tip-modal');
+            if (event.target === quickViewModal) closeModal('quick-view-modal');
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeModal('health-tip-modal');
+                closeModal('quick-view-modal');
+            }
+        });
+
+        // Fade-in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Back to Top button visibility
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Prevent overscrolling on mobile
+        document.addEventListener('touchstart', (e) => {
+            if (e.touches.length > 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        // Optimize carousel scrolling for touch
+        let touchStartX = 0;
+        let touchEndX = 0;
+        servicesCarousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        servicesCarousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const deltaX = touchStartX - touchEndX;
+            if (Math.abs(deltaX) > 50) {
+                scrollServicesCarousel(deltaX > 0 ? 1 : -1);
+            }
+        }, { passive: true });
+
+        // Prevent pinch zoom
+        document.addEventListener('touchmove', (e) => {
+            if (e.scale !== 1) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    </script>
+</body>
+</html>
