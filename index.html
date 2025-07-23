@@ -27,14 +27,16 @@
     <!-- Preload critical resources for faster loading (LCP, render-blocking) -->
     <!-- Preloading the Tailwind CSS script for faster execution -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    <!-- Preloading fonts and icons as styles for early discovery -->
+    <!-- Preloading fonts as styles for early discovery, especially important for LCP text -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" as="style">
+    <!-- Preloading Font Awesome for early discovery, though loaded asynchronously -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
 
     <!-- Tailwind CSS CDN (placed in head for immediate styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Orbitron for headings, Inter for body (with font-display: swap for better FCP) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Google Fonts - Orbitron for headings, Inter for body (now loaded synchronously for LCP, with font-display: swap) -->
+    <!-- Removed media="print" onload="this.media='all'" to make it render-blocking for faster LCP text display -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons (loaded asynchronously to prevent render blocking) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
 
@@ -629,7 +631,7 @@
                 product_other_desc: "আমাদের মূল অফারগুলির বাইরে, আমরা বিভিন্ন অন্যান্য প্রয়োজনীয় স্বাস্থ্যসেবা সামগ্রী এবং পরিষেবা সরবরাহ করি যা বিভিন্ন চাহিদা পূরণ করে। আরও বিস্তারিত জানার জন্য আমাদের দোকানে যান বা আমাদের সাথে যোগাযোগ করুন।",
                 product_other_item1: "প্রাথমিক চিকিৎসার সরঞ্জাম",
                 product_other_item2: "সার্জিক্যাল আইটেম",
-                product_other_item3: "হোম ডেলিভারি সার্ভিস",
+                product_other_item3: "होम डिलीवरी सेवा",
                 doctors_title: "আমাদের ডাক্তারদের সাথে দেখা করুন",
                 doc1_name: "ডাঃ মেজর রবিন দুবে",
                 doc1_specialty: "শিশু বিশেষজ্ঞ",
@@ -639,7 +641,7 @@
                 doc2_specialty: "শিশু বিশেষজ্ঞ",
                 doc2_experience: "बाल चिकित्सा देखभाल में 40+ वर्षों का अनुभव, बाल स्वास्थ्य में विशेषज्ञता के लिए प्रसिद्ध।",
                 doc2_timings: "রবিবার ব্যতীত প্রতিদিন, সন্ধ্যা 6:00 থেকে 7:30 পর্যন্ত।",
-                doc3_name: "ডাঃ ইউকে ঘোষ",
+                doc3_name: "ডাঃ ইউके ঘোষ",
                 doc3_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
                 doc3_experience: "মহিলাদের স্বাস্থ্যে অভিজ্ঞ, ব্যাপক স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান করেন।",
                 doc3_timings: "সোমবার, রাত 8:00 টা।",
@@ -665,11 +667,11 @@
                 doc8_timings: "উপলব্ধতার জন্য যোগাযোগ করুন।",
                 doc_timings_label: "সময়:",
                 doc_appointment_note: "শুধুমাত্র অ্যাপয়েন্টমেন্ট দ্বারা।",
-                doc_book_appointment: "অ্যাপয়েন্টমেন্ট বুক করুন:",
+                doc_book_appointment: "অ্যাপয়েন্টमेंट বুক করুন:",
                 contact_us_link: "যোগাযোগ করুন",
                 contact_title: "যোগাযোগ করুন",
                 contact_details_title: "আমাদের অবস্থান ও যোগাযোগের বিবরণ",
-                contact_shop_location_link: "আমাদের দোকান का স্থান", // New key for the location link
+                contact_shop_location_link: "আমাদের দোকান का स्थान", // New key for the location link
                 contact_phone_label: "ফোন:",
                 contact_phone1: "+91 89817 77440",
                 contact_phone2: "+91 98838 09088",
