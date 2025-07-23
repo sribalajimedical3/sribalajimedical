@@ -3,97 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="page_title">Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata</title>
-    <meta name="description" data-key="meta_description" content="Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.">
-    <meta name="keywords" data-key="meta_keywords" content="Sri Balaji Medical, medical store Kolkata, Titagarh Bazar pharmacy, child specialist Kolkata, gynecologist Kolkata, skin specialist Kolkata, cardiologist Kolkata, medicines Kolkata, pharmacy near me, medical shop timings, Kolkata clinic">
-    <meta name="author" content="Sri Balaji Medical">
-
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" data-key="og_title" content="Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata">
-    <meta property="og:description" data-key="og_description" content="Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw">
-    <meta property="og:url" content="https://your-website-url.com/sri-balaji-medical"> <!-- Replace with actual deployed URL -->
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" data-key="twitter_title" content="Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata">
-    <meta name="twitter:description" data-key="twitter_description" content="Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.">
-    <meta name="twitter:image" content="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw">
-
-    <!-- Preconnect to Google Fonts and Googleusercontent for faster resource loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://lh3.googleusercontent.com">
-
-    <!-- Preload Google Fonts for improved FCP and added display=swap for better perceived performance -->
-    <!-- The `onload` attribute ensures the stylesheet is applied after loading, preventing render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"></noscript>
-
-    <!-- Preload critical images like the logo for faster display -->
-    <link rel="preload" href="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" as="image">
-
-    <!-- Tailwind CSS CDN - Loaded asynchronously to prevent render-blocking -->
-    <script src="https://cdn.tailwindcss.com" async></script>
-    
+    <title>Sri Balaji Medicals</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Orbitron for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Ensure font-display: swap is explicitly set for better FCP */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #eef2f6; /* Very light blue-gray background for a fresh look */
-            color: #334155; /* Darker gray for body text */
+            background-color: #f3f4f6; /* Light gray background */
         }
         h1, h2, h3 {
-            font-family: 'Orbitron', sans-serif; /* Orbitron for headings */
-            color: #1a202c; /* Darker heading color */
+            font-family: 'Orbitron', sans-serif;
         }
-        .section-card {
-            background-color: #ffffff;
-            padding: 2.5rem; /* Increased padding */
-            border-radius: 1.25rem; /* More rounded corners */
-            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05); /* Stronger, softer shadow */
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
-            border: 1px solid #e2e8f0; /* Subtle border */
+        /* Custom class for hero background image - removed image as requested */
+        .hero-bg {
+            background: linear-gradient(to right, #1a202c, #2b6cb0); /* Darker blue gradient */
         }
-        .section-card:hover {
-            transform: translateY(-8px); /* More pronounced lift on hover */
-            box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.15), 0 10px 12px -8px rgba(0, 0, 0, 0.08);
+        /* Subtle hover effect for cards */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
-        .btn-primary {
-            background-color: #2563eb; /* Stronger blue for primary button */
-            color: white;
-            padding: 0.85rem 2rem; /* Increased padding */
-            border-radius: 0.75rem; /* More rounded button */
-            font-weight: 700; /* Bolder text */
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Keyframe animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .btn-primary:hover {
-            background-color: #1e40af; /* Even darker blue on hover */
-            transform: translateY(-2px); /* Slight lift */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .link-hover:hover {
-            color: #60a5fa; /* Lighter blue on link hover */
-            text-decoration: underline;
+        @keyframes bounceOnce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
-        .doctor-card {
-            background-color: #f8fafc; /* Very light blue for doctor cards */
-            padding: 1.75rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e0e7ff; /* Light blue border */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .doctor-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-bounce-once { animation: bounceOnce 0.8s ease-in-out; }
 
-        /* Modal Styles */
+        /* Modal specific styles */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -107,827 +58,631 @@
             z-index: 1000;
         }
         .modal-content {
-            background-color: #fff;
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-2xl */
             text-align: center;
             max-width: 90%;
             width: 400px;
         }
-        .modal-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            margin: 0.5rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-        .modal-button:hover {
-            background-color: #1e40af;
-        }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="text-gray-800">
 
-    <!-- Language Selection Modal - Added ARIA attributes for accessibility -->
-    <div id="language-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <!-- Language Selection Modal -->
+    <div id="language-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <h2 class="text-3xl font-bold mb-6" data-key="choose_language">Choose Language</h2>
+            <h3 class="text-2xl font-bold text-blue-700 mb-6">Select Your Language</h3>
             <div class="flex flex-col space-y-4">
-                <button class="modal-button" data-lang="en">English</button>
-                <button class="modal-button" data-lang="hi">हिन्दी</button>
-                <button class="modal-button" data-lang="bn">বাংলা</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('en')">English</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('hi')">हिन्दी</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('bn')">বাংলা</button>
             </div>
         </div>
     </div>
 
     <!-- Header Section -->
-    <header class="bg-gradient-to-r from-blue-700 to-blue-900 text-white shadow-xl py-6">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <!-- Business Logo Image - Circular -->
-            <div class="mb-4 md:mb-0 transform hover:scale-105 transition duration-300">
-                <!-- Added width and height for CLS prevention -->
-                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medical Logo" class="h-24 w-24 rounded-full object-cover shadow-md border-4 border-white" width="96" height="96">
-            </div>
-            <!-- Added ARIA label for navigation -->
-            <nav aria-label="Main navigation">
-                <ul class="flex flex-wrap justify-center space-x-8 text-xl">
-                    <li><a href="#home" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_home">Home</a></li>
-                    <li><a href="#about" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_about">About Us</a></li>
-                    <li><a href="#products" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_products">Products</a></li>
-                    <li><a href="#doctors" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_doctors">Our Doctors</a></li>
-                    <li><a href="#info" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_contact">Get in Touch</a></li>
+    <header class="bg-white shadow-lg py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Logo" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md border-2 border-blue-200">
+                <span class="text-xl md:text-2xl font-bold text-blue-700" data-translate-key="site_title">Sri Balaji Medicals</span>
+            </a>
+            <!-- Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_home">Home</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_about">About Us</a></li>
+                    <li><a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_products">Our Products</a></li>
+                    <li><a href="#doctors" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_doctors">Doctors</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_contact">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Language Switcher -->
-            <div class="mt-4 md:mt-0">
-                <select id="language-switcher" class="bg-blue-800 text-white p-2 rounded-md cursor-pointer">
-                    <option value="en">English</option>
-                    <option value="hi">हिन्दी</option>
-                    <option value="bn">বাংলা</option>
-                </select>
+            <!-- Language Selector (Desktop) -->
+            <div class="hidden md:flex space-x-2 ml-4">
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en')">EN</button>
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi')">HI</button>
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn')">BN</button>
             </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
+        <!-- Mobile Navigation Menu -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-white py-2 shadow-md">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_home" onclick="toggleMobileMenu()">Home</a></li>
+                <li><a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_about" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#products" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_products" onclick="toggleMobileMenu()">Our Products</a></li>
+                <li><a href="#doctors" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_doctors" onclick="toggleMobileMenu()">Doctors</a></li>
+                <li><a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_contact" onclick="toggleMobileMenu()">Contact</a></li>
+                <li class="flex space-x-2 mt-4">
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en'); toggleMobileMenu();">EN</button>
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi'); toggleMobileMenu();">HI</button>
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn'); toggleMobileMenu();">BN</button>
+                </li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <main class="flex-grow container mx-auto px-6 py-12">
-        <section id="home" class="section-card mb-16 text-center">
-            <h2 class="text-6xl font-extrabold text-blue-800 mb-8 animate-fade-in" data-key="home_heading">Your Health, Our Priority</h2>
-            <p class="text-2xl text-gray-700 leading-relaxed mb-10" data-key="home_intro">
-                Welcome to Sri Balaji Medical, your trusted partner for all your pharmaceutical needs. We are committed to providing high-quality medicines and exceptional service to our community, ensuring your well-being is always at the forefront.
-            </p>
-            <div class="mt-10">
-                <!-- Added width and height attributes for LCP optimization and CLS prevention -->
-                <img src="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw" alt="Sri Balaji Medical Store Front - Titagarh Bazar, Kolkata" class="mx-auto rounded-2xl shadow-2xl max-w-full h-auto border-4 border-blue-300 transform hover:scale-102 transition duration-300" loading="lazy" fetchpriority="high" width="1360" height="1020">
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-24 md:py-40 flex items-center justify-center text-center relative overflow-hidden px-4">
+        <div class="relative z-10 p-6 md:p-8 rounded-xl max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 shadow-xl">
+            <h1 class="text-3xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-translate-key="hero_title">Your Health, Our Priority</h1>
+            <p class="text-base md:text-xl mb-8 animate-fade-in-up" data-translate-key="hero_subtitle">Providing quality medical supplies and services with care and compassion.</p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-once" data-translate-key="hero_button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-12 md:py-16 bg-white px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="md:w-1/2">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Shop Front" class="rounded-xl shadow-2xl w-full h-auto object-cover transform transition duration-500 hover:scale-105">
             </div>
-        </section>
-
-        <section id="about" class="section-card mb-16">
-            <h2 class="text-5xl font-bold text-blue-700 mb-10 border-b-4 border-blue-400 pb-5 text-center" data-key="about_heading">About Sri Balaji Medical</h2>
-            <div class="grid grid-cols-1 gap-12 items-center">
-                <div>
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-5" data-key="about_mission_heading">Our Mission & Values</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6" data-key="about_mission_text_1">
-                        At Sri Balaji Medical, our mission is to be the most reliable and compassionate healthcare provider in Titagarh Bazar and beyond. We are dedicated to offering a wide range of authentic medications, health supplements, and personal care products at affordable prices. Our core values include integrity, customer-centricity, and a commitment to community health. We strive to create a welcoming environment where every customer feels valued and well-cared for.
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed" data-key="about_mission_text_2">
-                        With years of service, we have built a reputation for trust and excellence. Our team of experienced pharmacists and staff are always on hand to provide expert advice and ensure you receive the best possible care.
-                    </p>
-                </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4 md:mb-6" data-translate-key="about_title">About Sri Balaji Medicals</h2>
+                <p class="text-gray-700 leading-relaxed text-base md:text-lg mb-4" data-translate-key="about_paragraph1">
+                    Welcome to Sri Balaji Medicals, your trusted partner in health and wellness. We are dedicated to providing a comprehensive range of high-quality medical supplies, equipment, and pharmaceuticals to meet the diverse needs of our community.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-base md:text-lg" data-translate-key="about_paragraph2">
+                    With a commitment to excellence and customer satisfaction, we strive to ensure that you receive the best products and services with utmost care and efficiency. Our knowledgeable team is always ready to assist you, ensuring a seamless and supportive experience for all your healthcare needs.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Products Section -->
-        <section id="products" class="section-card mb-16">
-            <h2 class="text-5xl font-bold text-blue-700 mb-10 border-b-4 border-blue-400 pb-5 text-center" data-key="products_heading">Our Products & Services</h2>
-            <p class="text-center text-lg text-gray-700 mb-10" data-key="products_intro">
-                We offer a comprehensive range of medical products and services to meet your healthcare needs.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Prescription Medicines -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-3xl font-bold text-blue-800 mb-4" data-key="prescription_medicines_heading">Prescription Medicines</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="prescription_medicines_text">
-                        We stock a wide variety of prescription medications. Our pharmacists ensure safe and accurate dispensing, and are available to answer your questions.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="med_antibiotics">Antibiotics</li>
-                        <li data-key="med_pain_relievers">Pain Relievers</li>
-                        <li data-key="med_chronic_disease">Chronic Disease Medications</li>
-                        <li data-key="med_vitamins">Vitamins & Supplements</li>
+    <!-- Products Section -->
+    <section id="products" class="py-12 md:py-16 bg-gray-100 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-8 md:mb-12" data-translate-key="products_title">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                <!-- Product Card: Prescription Medicines -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 ease-in-out card-hover border border-gray-200">
+                    <div class="text-blue-600 text-5xl md:text-6xl mb-4 md:mb-6"><i class="fas fa-prescription-bottle-alt"></i></div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4" data-translate-key="product_medicine_title">Prescription Medicines</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4" data-translate-key="product_medicine_desc">We stock a wide variety of prescription medications. Our pharmacists ensure safe and accurate dispensing, and are available to answer your questions.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm md:text-base text-left mx-auto max-w-xs">
+                        <li data-translate-key="product_medicine_item1">Antibiotics</li>
+                        <li data-translate-key="product_medicine_item2">Pain Relievers</li>
+                        <li data-translate-key="product_medicine_item3">Chronic Disease Medications</li>
+                        <li data-translate-key="product_medicine_item4">Vitamins & Supplements</li>
                     </ul>
                 </div>
-
-                <!-- Medical Devices -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-3xl font-bold text-blue-800 mb-4" data-key="medical_devices_heading">Medical Devices</h3>
-                    <p class="text-700 leading-relaxed mb-4" data-key="medical_devices_text">
-                        Explore our selection of high-quality medical devices for home use and professional needs. From blood pressure monitors to glucose meters, we stock reliable equipment to support your health management.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="device_bp_monitor">Blood Pressure Monitors</li>
-                        <li data-key="device_glucose_meter">Glucose Meters</li>
-                        <li data-key="device_thermometers">Thermometers</li>
-                        <li data-key="device_nebulizers">Nebulizers</li>
-                        <li data-key="device_orthopedic">Orthopedic Supports</li>
+                <!-- Product Card: Medical Devices -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 ease-in-out card-hover border border-gray-200">
+                    <div class="text-blue-600 text-5xl md:text-6xl mb-4 md:mb-6"><i class="fas fa-stethoscope"></i></div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4" data-translate-key="product_devices_title">Medical Devices</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4" data-translate-key="product_devices_desc">Explore our selection of high-quality medical devices for home use and professional needs. From blood pressure monitors to glucose meters, we stock reliable equipment to support your health management.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm md:text-base text-left mx-auto max-w-xs">
+                        <li data-translate-key="product_devices_item1">Blood Pressure Monitors</li>
+                        <li data-translate-key="product_devices_item2">Glucose Meters</li>
+                        <li data-translate-key="product_devices_item3">Thermometers</li>
+                        <li data-translate-key="product_devices_item4">Nebulizers</li>
+                        <li data-translate-key="product_devices_item5">Orthopedic Supports</li>
                     </ul>
                 </div>
-
-                <!-- Lab Tests -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-3xl font-bold text-blue-800 mb-4" data-key="lab_tests_heading">Lab Test Services</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="lab_tests_text">
-                        We facilitate various lab tests with trusted partners, ensuring accurate and timely results for your diagnostic needs.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="test_blood_sugar">Blood Sugar Test</li>
-                        <li data-key="test_thyroid_profile">Thyroid Profile</li>
-                        <li data-key="test_lipid_profile">Lipid Profile</li>
-                        <li data-key="test_liver_function">Liver Function Test</li>
-                        <li data-key="test_kidney_function">Kidney Function Test</li>
+                <!-- Product Card: Lab Test Services -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 ease-in-out card-hover border border-gray-200">
+                    <div class="text-blue-600 text-5xl md:text-6xl mb-4 md:mb-6"><i class="fas fa-flask"></i></div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4" data-translate-key="product_lab_title">Lab Test Services</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4" data-translate-key="product_lab_desc">We facilitate various lab tests with trusted partners, ensuring accurate and timely results for your diagnostic needs.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm md:text-base text-left mx-auto max-w-xs">
+                        <li data-translate-key="product_lab_item1">Blood Sugar Test</li>
+                        <li data-translate-key="product_lab_item2">Thyroid Profile</li>
+                        <li data-translate-key="product_lab_item3">Lipid Profile</li>
+                        <li data-translate-key="product_lab_item4">Liver Function Test</li>
+                        <li data-translate-key="product_lab_item5">Kidney Function Test</li>
                     </ul>
-                    <p class="text-gray-800 font-medium mt-4" data-key="test_booking_info">
-                        Please contact us for more information on available tests and booking procedures.
-                    </p>
+                    <p class="text-blue-600 text-xs md:text-sm mt-3 md:mt-4" data-translate-key="product_lab_contact">Please contact us for more information on available tests and booking procedures.</p>
                 </div>
-
-                <!-- Wellness Products -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-3xl font-bold text-blue-800 mb-4" data-key="wellness_products_heading">Wellness Products</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="wellness_products_text">
-                        Enhance your well-being with our range of health and wellness products, including nutritional supplements, personal care items, and more.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="wellness_supplements">Nutritional Supplements</li>
-                        <li data-key="wellness_personal_care">Personal Care Items</li>
-                        <li data-key="wellness_oral_care">Oral Care Products</li>
-                        <li data-key="wellness_baby_care">Baby Care Essentials</li>
+                <!-- Product Card: Wellness Products -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 ease-in-out card-hover border border-gray-200">
+                    <div class="text-blue-600 text-5xl md:text-6xl mb-4 md:mb-6"><i class="fas fa-spa"></i></div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4" data-translate-key="product_wellness_title">Wellness Products</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4" data-translate-key="product_wellness_desc">Enhance your well-being with our range of health and wellness products, including nutritional supplements, personal care items, and more.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm md:text-base text-left mx-auto max-w-xs">
+                        <li data-translate-key="product_wellness_item1">Nutritional Supplements</li>
+                        <li data-translate-key="product_wellness_item2">Personal Care Items</li>
+                        <li data-translate-key="product_wellness_item3">Oral Care Products</li>
+                        <li data-translate-key="product_wellness_item4">Baby Care Essentials</li>
                     </ul>
                 </div>
-
-                <!-- Others -->
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200 hover:shadow-lg transition duration-300">
-                    <h3 class="text-3xl font-bold text-blue-800 mb-4" data-key="others_heading">Other Products & Services</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="others_text">
-                        Beyond our core offerings, we provide various other essential healthcare items and services to cater to diverse needs. Visit our store or contact us for more details.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="others_first_aid">First Aid Supplies</li>
-                        <li data-key="others_surgical_items">Surgical Items</li>
-                        <li data-key="others_home_delivery">Home Delivery Service</li>
+                <!-- Product Card: Other Products & Services -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg transition duration-300 ease-in-out card-hover border border-gray-200">
+                    <div class="text-blue-600 text-5xl md:text-6xl mb-4 md:mb-6"><i class="fas fa-boxes"></i></div>
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-2 md:mb-4" data-translate-key="product_other_title">Other Products & Services</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4" data-translate-key="product_other_desc">Beyond our core offerings, we provide various other essential healthcare items and services to cater to diverse needs. Visit our store or contact us for more details.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm md:text-base text-left mx-auto max-w-xs">
+                        <li data-translate-key="product_other_item1">First Aid Supplies</li>
+                        <li data-translate-key="product_other_item2">Surgical Items</li>
+                        <li data-translate-key="product_other_item3">Home Delivery Service</li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Doctors Section -->
-        <section id="doctors" class="section-card mb-16">
-            <h2 class="text-5xl font-bold text-blue-700 mb-10 border-b-4 border-blue-400 pb-5 text-center" data-key="doctors_heading">Our Esteemed Doctors</h2>
-            <p class="text-center text-lg text-gray-700 mb-10" data-key="doctors_intro">
-                We are proud to host a panel of highly qualified and experienced medical specialists to cater to diverse healthcare needs.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Doctor 1: Dr. Major Robin Dubey -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. Major Robin Dubey</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_robin_specialty">Child Specialist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_robin_exp">
-                        10+ years of experience in pediatric care, providing compassionate treatment for children.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_robin_time_1">Wednesday and Saturday, 6:30 PM to 7:30 PM</li>
-                        <li data-key="doc_by_appointment">By appointment only.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-12 md:py-16 bg-white px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-8 md:mb-12" data-translate-key="doctors_title">Meet Our Doctors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                <!-- Doctor Card: Dr. Major Robin Dubey -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc1_name">Dr. Major Robin Dubey</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc1_specialty">Child Specialist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc1_experience">10+ years of experience in pediatric care, providing compassionate treatment for children.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-2" data-translate-key="doc1_timings">Wednesday and Saturday, 6:30 PM to 7:30 PM</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc_appointment_note">By appointment only.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 2: Dr. DN Chakraborty -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. DN Chakraborty</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_dn_specialty">Child Specialist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_dn_exp">
-                        40+ years of experience in pediatric care, renowned for expertise in child health.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_dn_time_1">Daily except Sunday, 6:00 PM to 7:30 PM.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. DN Chakraborty -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc2_name">Dr. DN Chakraborty</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc2_specialty">Child Specialist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc2_experience">40+ years of experience in pediatric care, renowned for expertise in child health.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc2_timings">Daily except Sunday, 6:00 PM to 7:30 PM.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 3: Dr. UK Ghosh -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. UK Ghosh</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_uk_specialty">Gynecologist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_uk_exp">
-                        Experienced in women's health, providing comprehensive gynecological care.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_uk_time_1">Monday, 8:00 PM.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. UK Ghosh -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc3_name">Dr. UK Ghosh</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc3_specialty">Gynecologist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc3_experience">Experienced in women's health, providing comprehensive gynecological care.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc3_timings">Monday, 8:00 PM.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 4: Dr. Rini Mukherji -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. Rini Mukherji</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_rini_specialty">Gynecologist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_rini_exp">
-                        Skilled in women's health, offering personalized gynecological services.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_rini_time_1">Monday, 8:00 PM.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. Rini Mukherji -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc4_name">Dr. Rini Mukherji</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc4_specialty">Gynecologist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc4_experience">Skilled in women's health, offering personalized gynecological services.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc4_timings">Monday, 8:00 PM.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 5: Dr. Sapna Lakhotia -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. Sapna Lakhotia</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_sapna_specialty">Gynecologist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_sapna_exp">
-                        Dedicated to women's health, providing expert gynecological care.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_sapna_time_1">Monday and Wednesday, 10:00 AM</li>
-                        <li data-key="doc_by_appointment">By appointment only.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. Sapna Lakhotia -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc5_name">Dr. Sapna Lakhotia</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc5_specialty">Gynecologist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc5_experience">Dedicated to women's health, providing expert gynecological care.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc5_timings">Monday and Wednesday, 10:00 AM<br>By appointment only.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 6: Dr. TK Chakraborty -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. TK Chakraborty</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_tk_specialty">Skin Specialist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_tk_exp">
-                        Expert in dermatology, offering advanced skin treatments.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_tk_time_1">Wednesday and Friday, 8:00 PM</li>
-                        <li data-key="doc_by_appointment">By appointment only.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. TK Chakraborty -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc6_name">Dr. TK Chakraborty</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc6_specialty">Skin Specialist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc6_experience">Expert in dermatology, offering advanced skin treatments.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc6_timings">Wednesday and Friday, 8:00 PM<br>By appointment only.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 7: Dr. A Mukherjee -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. A Mukherjee</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_a_specialty">Skin Specialist</p>
-                    <p class="text-gray-700 leading-relaxed mb-4" data-key="doc_a_exp">
-                        Specialized in dermatology, providing effective skin care solutions.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_a_time_1">Wednesday, 11:00 AM</li>
-                        <li data-key="doc_by_appointment">By appointment only.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. A Mukherjee -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc7_name">Dr. A Mukherjee</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc7_specialty">Skin Specialist</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc7_experience">Specialized in dermatology, providing effective skin care solutions.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc7_timings">Wednesday, 11:00 AM<br>By appointment only.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
 
-                <!-- Doctor 8: Dr. Sovik Bannerjee -->
-                <div class="doctor-card">
-                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Dr. Sovik Bannerjee</h3>
-                    <p class="text-blue-600 font-semibold mb-3" data-key="doc_sovik_specialty">Cardiologist & Critical Care</p>
-                    <p class="text-700 leading-relaxed mb-4" data-key="doc_sovik_exp">
-                        Expert in cardiology and critical care, ensuring heart health.
-                    </p>
-                    <p class="text-gray-800 font-medium mb-2" data-key="doc_timings"><strong>Timings:</strong></p>
-                    <ul class="list-disc list-inside text-gray-700 mb-4">
-                        <li data-key="doc_contact_availability">Contact for availability.</li>
-                    </ul>
-                    <p class="text-gray-800 font-medium" data-key="doc_book_appointment"><strong>Book an appointment:</strong></p>
-                    <p class="text-blue-600 mt-1 text-base">
-                        <a href="#info" class="hover:underline link-hover" data-key="contact_us_link">Contact Us</a> or <span data-key="or_call">call</span> <a href="tel:+918981777440" class="hover:underline link-hover">+91-8981777440</a>
-                    </p>
+                <!-- Doctor Card: Dr. Sovik Bannerjee -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-left border border-gray-200 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" data-translate-key="doc8_name">Dr. Sovik Bannerjee</h3>
+                    <p class="text-blue-600 font-medium text-sm md:text-base mb-2" data-translate-key="doc8_specialty">Cardiologist & Critical Care</p>
+                    <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc8_experience">Expert in cardiology and critical care, ensuring heart health.</p>
+                    <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
+                    <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc8_timings">Contact for availability.</p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Get in Touch Section -->
-        <section id="info" class="section-card mb-16">
-            <h2 class="text-5xl font-bold text-blue-700 mb-10 border-b-4 border-blue-400 pb-5 text-center" data-key="get_in_touch_heading">Get in Touch with Us</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4" data-key="our_location_heading">Our Location</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4" data-key="our_location_text">
-                        Visit us at our convenient location:
-                    </p>
-                    <p class="text-blue-600 font-bold text-xl">
-                        2. MG. Road Titagarh Bazar, Kolkata 700119
-                    </p>
-                    <a href="https://g.co/kgs/MyBWfR1" target="_blank" class="inline-block mt-4 text-blue-700 hover:text-blue-900 font-semibold link-hover transition duration-300" data-key="view_on_map">
-                        View on Map &rarr;
-                    </a>
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-12 md:py-16 bg-gray-100 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-8" data-translate-key="contact_title">Get in Touch</h2>
+            <div class="flex flex-col md:flex-row gap-8 items-start justify-center">
+                <!-- Contact Info -->
+                <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-xl shadow-lg border border-gray-200 text-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-translate-key="contact_details_title">Our Location & Contact Details</h3>
+                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-map-marker-alt text-blue-600 mr-3"></i> <a href="https://g.co/kgs/J4dDpYH" target="_blank" class="hover:underline" data-translate-key="contact_shop_location_link">Our Shop Location</a></p>
+                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-phone text-blue-600 mr-3"></i> <span data-translate-key="contact_phone_label">Phone:</span> <a href="tel:+918981777440" class="hover:underline" data-translate-key="contact_phone1">+91 89817 77440</a> / <a href="tel:+919883809088" class="hover:underline" data-translate-key="contact_phone2">+91 98838 09088</a></p>
                 </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4" data-key="shop_timings_heading">Shop Timings</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4" data-key="shop_timings_text">
-                        We are open to serve you during the following hours:
-                    </p>
-                    <ul class="list-none text-lg text-gray-700 leading-relaxed">
-                        <li class="mb-2" data-key="open_daily_except_thursday"><strong>Open Daily (except Thursday):</strong></li>
-                        <li class="text-blue-600 font-bold text-xl">8:00 AM - 10:00 PM</li>
-                        <li class="mt-4" data-key="closed"><strong>Closed:</strong></li>
-                        <li class="text-red-600 font-bold text-xl" data-key="thursday">Thursday</li>
-                    </ul>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-lg shadow-md border border-blue-200">
-                    <h3 class="text-3xl font-semibold text-gray-800 mb-4" data-key="contact_details_heading">Contact Details</h3>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-4" data-key="contact_details_text">
-                        Reach out to us for any queries or appointments:
-                    </p>
-                    <ul class="list-none text-blue-600 font-bold text-xl">
-                        <li class="mb-3">📞 <a href="tel:+918981777440" class="hover:underline link-hover transition duration-300">+91-8981777440</a></li>
-                        <li>📞 <a href="tel:+919883809088" class="hover:underline link-hover transition duration-300">+91-9883809088</a></li>
-                    </ul>
-                    <p class="text-gray-700 mt-4 text-md" data-key="team_ready_assist">
-                        Our team is ready to assist you.
-                    </p>
+
+                <!-- Shop Timings -->
+                <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-xl shadow-lg border border-gray-200 text-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-translate-key="shop_timings_title">Shop Timings</h3>
+                    <p class="text-gray-700 mb-2 text-base md:text-lg" data-translate-key="shop_timings_open_daily">We are open to serve you during the following hours:</p>
+                    <p class="text-gray-700 mb-2 text-base md:text-lg font-semibold" data-translate-key="shop_timings_hours">Open Daily (except Thursday):</p>
+                    <p class="text-blue-600 text-xl font-bold mb-4" data-translate-key="shop_timings_time">8:00 AM - 10:00 PM</p>
+                    <p class="text-red-600 text-base md:text-lg font-semibold" data-translate-key="shop_timings_closed">Closed: Thursday</p>
                 </div>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-10 mt-16 shadow-inner">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-xl font-medium" data-key="footer_copyright">2025 Sri Balaji Medical. All rights reserved.</p>
-            <p class="mt-4 text-lg text-gray-400">2. MG. Road Titagarh Bazar, Kolkata 700119</p>
-            <div class="flex justify-center space-x-8 mt-6">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg" data-key="footer_privacy">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-lg" data-key="footer_terms">Terms of Service</a>
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p class="mb-4 text-sm md:text-base" data-translate-key="footer_copyright">&copy; 2024 Sri Balaji Medicals. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-twitter text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-instagram text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in text-xl md:text-2xl"></i></a>
             </div>
         </div>
     </footer>
 
-    <script async>
+    <script>
+        // Language translation data
         const translations = {
             en: {
-                page_title: "Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata",
-                meta_description: "Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.",
-                meta_keywords: "Sri Balaji Medical, medical store Kolkata, Titagarh Bazar pharmacy, child specialist Kolkata, gynecologist Kolkata, skin specialist Kolkata, cardiologist Kolkata, medicines Kolkata, pharmacy near me, medical shop timings, Kolkata clinic",
-                og_title: "Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata",
-                og_description: "Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.",
-                twitter_title: "Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata",
-                twitter_description: "Sri Balaji Medical in Titagarh Bazar, Kolkata offers a wide range of medicines, health products, and expert consultations with child specialists, gynecologists, skin specialists, and cardiologists. Open daily (except Thursday) 8 AM - 10 PM. Your health is our priority.",
-
+                site_title: "Sri Balaji Medicals",
                 nav_home: "Home",
                 nav_about: "About Us",
-                nav_products: "Products",
-                nav_doctors: "Our Doctors",
-                nav_contact: "Get in Touch",
-
-                home_heading: "Your Health, Our Priority",
-                home_intro: "Welcome to Sri Balaji Medical, your trusted partner for all your pharmaceutical needs. We are committed to providing high-quality medicines and exceptional service to our community, ensuring your well-being is always at the forefront.",
-
-                about_heading: "About Sri Balaji Medical",
-                about_mission_heading: "Our Mission & Values",
-                about_mission_text_1: "At Sri Balaji Medical, our mission is to be the most reliable and compassionate healthcare provider in Titagarh Bazar and beyond. We are dedicated to offering a wide range of authentic medications, health supplements, and personal care products at affordable prices. Our core values include integrity, customer-centricity, and a commitment to community health. We strive to create a welcoming environment where every customer feels valued and well-cared for.",
-                about_mission_text_2: "With years of service, we have built a reputation for trust and excellence. Our team of experienced pharmacists and staff are always on hand to provide expert advice and ensure you receive the best possible care.",
-
-                products_heading: "Our Products & Services",
-                products_intro: "We offer a comprehensive range of medical products and services to meet your healthcare needs.",
-                prescription_medicines_heading: "Prescription Medicines",
-                prescription_medicines_text: "We stock a wide variety of prescription medications. Our pharmacists ensure safe and accurate dispensing, and are available to answer your questions.",
-                med_antibiotics: "Antibiotics",
-                med_pain_relievers: "Pain Relievers",
-                med_chronic_disease: "Chronic Disease Medications",
-                med_vitamins: "Vitamins & Supplements",
-                medical_devices_heading: "Medical Devices",
-                medical_devices_text: "Explore our selection of high-quality medical devices for home use and professional needs. From blood pressure monitors to glucose meters, we stock reliable equipment to support your health management.",
-                device_bp_monitor: "Blood Pressure Monitors",
-                device_glucose_meter: "Glucose Meters",
-                device_thermometers: "Thermometers",
-                device_nebulizers: "Nebulizers",
-                device_orthopedic: "Orthopedic Supports",
-                lab_tests_heading: "Lab Test Services",
-                lab_tests_text: "We facilitate various lab tests with trusted partners, ensuring accurate and timely results for your diagnostic needs.",
-                test_blood_sugar: "Blood Sugar Test",
-                test_thyroid_profile: "Thyroid Profile",
-                test_lipid_profile: "Lipid Profile",
-                test_liver_function: "Liver Function Test",
-                test_kidney_function: "Kidney Function Test",
-                test_booking_info: "Please contact us for more information on available tests and booking procedures.",
-                wellness_products_heading: "Wellness Products",
-                wellness_products_text: "Enhance your well-being with our range of health and wellness products, including nutritional supplements, personal care items, and more.",
-                wellness_supplements: "Nutritional Supplements",
-                wellness_personal_care: "Personal Care Items",
-                wellness_oral_care: "Oral Care Products",
-                wellness_baby_care: "Baby Care Essentials",
-                others_heading: "Other Products & Services",
-                others_text: "Beyond our core offerings, we provide various other essential healthcare items and services to cater to diverse needs. Visit our store or contact us for more details.",
-                others_first_aid: "First Aid Supplies",
-                others_surgical_items: "Surgical Items",
-                others_home_delivery: "Home Delivery Service",
-
-                doctors_heading: "Our Esteemed Doctors",
-                doctors_intro: "We are proud to host a panel of highly qualified and experienced medical specialists to cater to diverse healthcare needs.",
-
-                doc_robin_specialty: "Child Specialist",
-                doc_robin_exp: "10+ years of experience in pediatric care, providing compassionate treatment for children.",
-                doc_timings: "Timings:",
-                doc_robin_time_1: "Wednesday and Saturday, 6:30 PM to 7:30 PM",
-                doc_by_appointment: "By appointment only.",
+                nav_products: "Our Products",
+                nav_doctors: "Doctors",
+                nav_contact: "Contact",
+                hero_title: "Your Health, Our Priority",
+                hero_subtitle: "Providing quality medical supplies and services with care and compassion.",
+                hero_button: "Get in Touch",
+                about_title: "About Sri Balaji Medicals",
+                about_paragraph1: "Welcome to Sri Balaji Medicals, your trusted partner in health and wellness. We are dedicated to providing a comprehensive range of high-quality medical supplies, equipment, and pharmaceuticals to meet the diverse needs of our community.",
+                about_paragraph2: "With a commitment to excellence and customer satisfaction, we strive to ensure that you receive the best products and services with utmost care and efficiency. Our knowledgeable team is always ready to assist you, ensuring a seamless and supportive experience for all your healthcare needs.",
+                products_title: "Our Products",
+                product_medicine_title: "Prescription Medicines",
+                product_medicine_desc: "We stock a wide variety of prescription medications. Our pharmacists ensure safe and accurate dispensing, and are available to answer your questions.",
+                product_medicine_item1: "Antibiotics",
+                product_medicine_item2: "Pain Relievers",
+                product_medicine_item3: "Chronic Disease Medications",
+                product_medicine_item4: "Vitamins & Supplements",
+                product_devices_title: "Medical Devices",
+                product_devices_desc: "Explore our selection of high-quality medical devices for home use and professional needs. From blood pressure monitors to glucose meters, we stock reliable equipment to support your health management.",
+                product_devices_item1: "Blood Pressure Monitors",
+                product_devices_item2: "Glucose Meters",
+                product_devices_item3: "Thermometers",
+                product_devices_item4: "Nebulizers",
+                product_devices_item5: "Orthopedic Supports",
+                product_lab_title: "Lab Test Services",
+                product_lab_desc: "We facilitate various lab tests with trusted partners, ensuring accurate and timely results for your diagnostic needs.",
+                product_lab_item1: "Blood Sugar Test",
+                product_lab_item2: "Thyroid Profile",
+                product_lab_item3: "Lipid Profile",
+                product_lab_item4: "Liver Function Test",
+                product_lab_item5: "Kidney Function Test",
+                product_lab_contact: "Please contact us for more information on available tests and booking procedures.",
+                product_wellness_title: "Wellness Products",
+                product_wellness_desc: "Enhance your well-being with our range of health and wellness products, including nutritional supplements, personal care items, and more.",
+                product_wellness_item1: "Nutritional Supplements",
+                product_wellness_item2: "Personal Care Items",
+                product_wellness_item3: "Oral Care Products",
+                product_wellness_item4: "Baby Care Essentials",
+                product_other_title: "Other Products & Services",
+                product_other_desc: "Beyond our core offerings, we provide various other essential healthcare items and services to cater to diverse needs. Visit our store or contact us for more details.",
+                product_other_item1: "First Aid Supplies",
+                product_other_item2: "Surgical Items",
+                product_other_item3: "Home Delivery Service",
+                doctors_title: "Meet Our Doctors",
+                doc1_name: "Dr. Major Robin Dubey",
+                doc1_specialty: "Child Specialist",
+                doc1_experience: "10+ years of experience in pediatric care, providing compassionate treatment for children.",
+                doc1_timings: "Wednesday and Saturday, 6:30 PM to 7:30 PM",
+                doc2_name: "Dr. DN Chakraborty",
+                doc2_specialty: "Child Specialist",
+                doc2_experience: "40+ years of experience in pediatric care, renowned for expertise in child health.",
+                doc2_timings: "Daily except Sunday, 6:00 PM to 7:30 PM.",
+                doc3_name: "Dr. UK Ghosh",
+                doc3_specialty: "Gynecologist",
+                doc3_experience: "Experienced in women's health, providing comprehensive gynecological care.",
+                doc3_timings: "Monday, 8:00 PM.",
+                doc4_name: "Dr. Rini Mukherji",
+                doc4_specialty: "Gynecologist",
+                doc4_experience: "Skilled in women's health, offering personalized gynecological services.",
+                doc4_timings: "Monday, 8:00 PM.",
+                doc5_name: "Dr. Sapna Lakhotia",
+                doc5_specialty: "Gynecologist",
+                doc5_experience: "Dedicated to women's health, providing expert gynecological care.",
+                doc5_timings: "Monday and Wednesday, 10:00 AM",
+                doc6_name: "Dr. TK Chakraborty",
+                doc6_specialty: "Skin Specialist",
+                doc6_experience: "Expert in dermatology, offering advanced skin treatments.",
+                doc6_timings: "Wednesday and Friday, 8:00 PM",
+                doc7_name: "Dr. A Mukherjee",
+                doc7_specialty: "Skin Specialist",
+                doc7_experience: "Specialized in dermatology, providing effective skin care solutions.",
+                doc7_timings: "Wednesday, 11:00 AM",
+                doc8_name: "Dr. Sovik Bannerjee",
+                doc8_specialty: "Cardiologist & Critical Care",
+                doc8_experience: "Expert in cardiology and critical care, ensuring heart health.",
+                doc8_timings: "Contact for availability.",
+                doc_timings_label: "Timings:",
+                doc_appointment_note: "By appointment only.",
                 doc_book_appointment: "Book an appointment:",
                 contact_us_link: "Contact Us",
-                or_call: "or call",
-
-                doc_dn_specialty: "Child Specialist",
-                doc_dn_exp: "40+ years of experience in pediatric care, renowned for expertise in child health.",
-                doc_dn_time_1: "Daily except Sunday, 6:00 PM to 7:30 PM.",
-
-                doc_uk_specialty: "Gynecologist",
-                doc_uk_exp: "Experienced in women's health, providing comprehensive gynecological care.",
-                doc_uk_time_1: "Monday, 8:00 PM.",
-
-                doc_rini_specialty: "Gynecologist",
-                doc_rini_exp: "Skilled in women's health, offering personalized gynecological services.",
-                doc_rini_time_1: "Monday, 8:00 PM.",
-
-                doc_sapna_specialty: "Gynecologist",
-                doc_sapna_exp: "Dedicated to women's health, providing expert gynecological care.",
-                doc_sapna_time_1: "Monday and Wednesday, 10:00 AM",
-
-                doc_tk_specialty: "Skin Specialist",
-                doc_tk_exp: "Expert in dermatology, offering advanced skin treatments.",
-                doc_tk_time_1: "Wednesday and Friday, 8:00 PM",
-
-                doc_by_appointment: "By appointment only.",
-                doc_book_appointment: "Book an appointment:",
-                contact_us_link: "Contact Us",
-                or_call: "or call",
-
-                doc_a_specialty: "Skin Specialist",
-                doc_a_exp: "Specialized in dermatology, providing effective skin care solutions.",
-                doc_a_time_1: "Wednesday, 11:00 AM",
-
-                doc_sovik_specialty: "Cardiologist & Critical Care",
-                doc_sovik_exp: "Expert in cardiology and critical care, ensuring heart health.",
-                doc_contact_availability: "Contact for availability.",
-
-                get_in_touch_heading: "Get in Touch with Us",
-                our_location_heading: "Our Location",
-                our_location_text: "Visit us at our convenient location:",
-                view_on_map: "View on Map",
-                shop_timings_heading: "Shop Timings",
-                shop_timings_text: "We are open to serve you during the following hours:",
-                open_daily_except_thursday: "Open Daily (except Thursday):",
-                closed: "Closed:",
-                thursday: "Thursday",
-                contact_details_heading: "Contact Details",
-                contact_details_text: "Reach out to us for any queries or appointments:",
-                team_ready_assist: "Our team is ready to assist you.",
-
-                footer_copyright: "2025 Sri Balaji Medical. All rights reserved.",
-                footer_privacy: "Privacy Policy",
-                footer_terms: "Terms of Service",
-                choose_language: "Choose Language"
+                contact_title: "Get in Touch",
+                contact_details_title: "Our Location & Contact Details",
+                contact_shop_location_link: "Our Shop Location", // New key for the location link
+                contact_phone_label: "Phone:",
+                contact_phone1: "+91 89817 77440",
+                contact_phone2: "+91 98838 09088",
+                shop_timings_title: "Shop Timings",
+                shop_timings_open_daily: "We are open to serve you during the following hours:",
+                shop_timings_hours: "Open Daily (except Thursday):",
+                shop_timings_time: "8:00 AM - 10:00 PM",
+                shop_timings_closed: "Closed: Thursday",
+                footer_copyright: "&copy; 2024 Sri Balaji Medicals. All rights reserved."
             },
             hi: {
-                page_title: "श्री बालाजी मेडिकल - टीटागढ़, कोलकाता में आपका विश्वसनीय फार्मेसी और क्लिनिक",
-                meta_description: "टीटागढ़ बाजार, कोलकाता में श्री बालाजी मेडिकल दवाओं, स्वास्थ्य उत्पादों और अनुभवी बाल रोग विशेषज्ञों, स्त्री रोग विशेषज्ञों, त्वचा विशेषज्ञों और हृदय रोग विशेषज्ञों के साथ विशेषज्ञ परामर्श की एक विस्तृत श्रृंखला प्रदान करता है। गुरुवार को छोड़कर प्रतिदिन सुबह 8 बजे से रात 10 बजे तक खुला रहता है। आपका स्वास्थ्य हमारी प्राथमिकता है।",
-                meta_keywords: "श्री बालाजी मेडिकल, मेडिकल स्टोर कोलकाता, टीटागढ़ बाजार फार्मेसी, बाल रोग विशेषज्ञ कोलकाता, स्त्री रोग विशेषज्ञ कोलकाता, त्वचा विशेषज्ञ कोलकाता, हृदय रोग विशेषज्ञ कोलकाता, दवाएं कोलकाता, मेरे पास फार्मेसी, मेडिकल शॉप का समय, कोलकाता क्लिनिक",
-                og_title: "श्री बालाजी मेडिकल - टीटागढ़, कोलकाता में आपका विश्वसनीय फार्मेसी और क्लिनिक",
-                og_description: "टीटागढ़ बाजार, कोलकाता में श्री बालाजी मेडिकल दवाओं, स्वास्थ्य उत्पादों और अनुभवी बाल रोग विशेषज्ञों, स्त्री रोग विशेषज्ञों, त्वचा विशेषज्ञों और हृदय रोग विशेषज्ञों के साथ विशेषज्ञ परामर्श की एक विस्तृत श्रृंखला प्रदान करता है। गुरुवार को छोड़कर प्रतिदिन सुबह 8 बजे से रात 10 बजे तक खुला रहता है। आपका स्वास्थ्य हमारी प्राथमिकता है।",
-                twitter_title: "श्री बालाजी मेडिकल - टीटागढ़, कोलकाता में आपका विश्वसनीय फार्मेसी और क्लिनिक",
-                twitter_description: "टीटागढ़ बाजार, कोलकाता में श्री बालाजी मेडिकल दवाओं, स्वास्थ्य उत्पादों और अनुभवी बाल रोग विशेषज्ञों, स्त्री रोग विशेषज्ञों, त्वचा विशेषज्ञों और हृदय रोग विशेषज्ञों के साथ विशेषज्ञ परामर्श की एक विस्तृत श्रृंखला प्रदान करता है। गुरुवार को छोड़कर प्रतिदिन सुबह 8 बजे से रात 10 बजे तक तक खुला रहता है। आपका स्वास्थ्य हमारी प्राथमिकता है।",
-
+                site_title: "श्री बालाजी मेडिकल्स",
                 nav_home: "होम",
                 nav_about: "हमारे बारे में",
-                nav_products: "उत्पाद",
-                nav_doctors: "हमारे डॉक्टर",
+                nav_products: "हमारे उत्पाद",
+                nav_doctors: "डॉक्टर",
                 nav_contact: "संपर्क करें",
-
-                home_heading: "आपका स्वास्थ्य, हमारी प्राथमिकता",
-                home_intro: "श्री बालाजी मेडिकल में आपका स्वागत है, आपकी सभी फार्मास्युटिकल ज़रूरतों के लिए आपका विश्वसनीय साथी। हम अपने समुदाय को उच्च गुणवत्ता वाली दवाएं और असाधारण सेवा प्रदान करने के लिए प्रतिबद्ध हैं, यह सुनिश्चित करते हुए कि आपका स्वास्थ्य हमेशा हमारी सर्वोच्च प्राथमिकता रहे।",
-
-                about_heading: "श्री बालाजी मेडिकल के बारे में",
-                about_mission_heading: "हमारा मिशन और मूल्य",
-                about_mission_text_1: "श्री बालाजी मेडिकल में, हमारा मिशन टीटागढ़ बाजार और उससे आगे सबसे विश्वसनीय और दयालु स्वास्थ्य सेवा प्रदाता बनना है। हम सस्ती कीमतों पर प्रामाणिक दवाओं, स्वास्थ्य पूरक और व्यक्तिगत देखभाल उत्पादों की एक विस्तृत श्रृंखला प्रदान करने के लिए समर्पित हैं। हमारे मूल मूल्यों में ईमानदारी, ग्राहक-केंद्रितता और सामुदायिक स्वास्थ्य के प्रति प्रतिबद्धता शामिल है। हम एक ऐसा स्वागत योग्य वातावरण बनाने का प्रयास करते हैं जहां प्रत्येक ग्राहक मूल्यवान और अच्छी तरह से देखभाल महसूस करे।",
-                about_mission_text_2: "वर्षों की सेवा के साथ, हमने विश्वास और उत्कृष्टता के लिए एक प्रतिष्ठा बनाई है। अनुभवी फार्मासिस्टों और कर्मचारियों की हमारी टीम हमेशा विशेषज्ञ सलाह प्रदान करने और यह सुनिश्चित करने के लिए उपलब्ध है कि आपको सर्वोत्तम संभव देखभाल मिले।",
-
-                products_heading: "हमारे उत्पाद और सेवाएं",
-                products_intro: "हम आपकी स्वास्थ्य संबंधी जरूरतों को पूरा करने के लिए चिकित्सा उत्पादों और सेवाओं की एक विस्तृत श्रृंखला प्रदान करते हैं।",
-                prescription_medicines_heading: "नुस्खे वाली दवाएं",
-                prescription_medicines_text: "हम विभिन्न प्रकार की नुस्खे वाली दवाएं स्टॉक करते हैं। हमारे फार्मासिस्ट सुरक्षित और सटीक वितरण सुनिश्चित करते हैं, और आपके सवालों के जवाब देने के लिए उपलब्ध हैं।",
-                med_antibiotics: "एंटीबायोटिक्स",
-                med_pain_relievers: "दर्द निवारक",
-                med_chronic_disease: "पुरानी बीमारी की दवाएं",
-                med_vitamins: "विटामिन और पूरक",
-                medical_devices_heading: "चिकित्सा उपकरण",
-                medical_devices_text: "घर के उपयोग और पेशेवर जरूरतों के लिए उच्च गुणवत्ता वाले चिकित्सा उपकरणों के हमारे चयन का अन्वेषण करें। ब्लड प्रेशर मॉनिटर से लेकर ग्लूकोज मीटर तक, हम आपके स्वास्थ्य प्रबंधन का समर्थन करने के लिए विश्वसनीय उपकरण स्टॉक करते हैं।",
-                device_bp_monitor: "ब्लड प्रेशर मॉनिटर",
-                device_glucose_meter: "ग्लूकोज मीटर",
-                device_thermometers: "थर्मामीटर",
-                device_nebulizers: "नेबुलाइज़र",
-                device_orthopedic: "ऑर्थोपेडिक सपोर्ट",
-                lab_tests_heading: "लैब टेस्ट सेवाएं",
-                lab_tests_text: "हम विश्वसनीय भागीदारों के साथ विभिन्न लैब टेस्ट की सुविधा प्रदान करते हैं, जो आपकी नैदानिक ​​जरूरतों के लिए सटीक और समय पर परिणाम सुनिश्चित करते हैं।",
-                test_blood_sugar: "ब्लड शुगर टेस्ट",
-                test_thyroid_profile: "थायराइड प्रोफाइल",
-                test_lipid_profile: "लिपिड प्रोफाइल",
-                test_liver_function: "लिवर फंक्शन टेस्ट",
-                test_kidney_function: "किडनी फंक्शन टेस्ट",
-                test_booking_info: "उपलब्ध टेस्ट और बुकिंग प्रक्रियाओं के बारे में अधिक जानकारी के लिए कृपया हमसे संपर्क करें।",
-                wellness_products_heading: "वेलनेस उत्पाद",
-                wellness_products_text: "पोषक तत्वों की खुराक, व्यक्तिगत देखभाल के सामान और बहुत कुछ सहित हमारे स्वास्थ्य और वेलनेस उत्पादों की श्रृंखला के साथ अपनी भलाई को बढ़ाएं।",
-                wellness_supplements: "पोषक तत्वों की खुराक",
-                wellness_personal_care: "व्यक्तिगत देखभाल के सामान",
-                wellness_oral_care: "मौखिक देखभाल उत्पाद",
-                wellness_baby_care: "बेबी केयर आवश्यक वस्तुएं",
-                others_heading: "अन्य उत्पाद और सेवाएं",
-                others_text: "हमारे मुख्य प्रस्तावों के अलावा, हम विभिन्न अन्य आवश्यक स्वास्थ्य देखभाल आइटम और सेवाएं प्रदान करते हैं ताकि विभिन्न आवश्यकताओं को पूरा किया जा सके। अधिक जानकारी के लिए हमारे स्टोर पर जाएं या हमसे संपर्क करें।",
-                others_first_aid: "प्राथमिक उपचार की आपूर्ति",
-                others_surgical_items: "सर्जिकल आइटम",
-                others_home_delivery: "होम डिलीवरी सेवा",
-
-                doctors_heading: "हमारे सम्मानित डॉक्टर",
-                doctors_intro: "हमें विभिन्न स्वास्थ्य सेवा आवश्यकताओं को पूरा करने के लिए अत्यधिक योग्य और अनुभवी चिकित्सा विशेषज्ञों के एक पैनल की मेजबानी करने पर गर्व है।",
-
-                doc_robin_specialty: "बाल रोग विशेषज्ञ",
-                doc_robin_exp: "बाल चिकित्सा देखभाल में 10+ वर्षों का अनुभव, बच्चों के लिए दयालु उपचार प्रदान करना।",
-                doc_timings: "समय:",
-                doc_robin_time_1: "बुधवार और शनिवार, शाम 6:30 बजे से शाम 7:30 बजे तक",
-                doc_by_appointment: "केवल अपॉइंटमेंट द्वारा।",
+                hero_title: "आपका स्वास्थ्य, हमारी प्राथमिकता",
+                hero_subtitle: "देखभाल और करुणा के साथ गुणवत्तापूर्ण चिकित्सा आपूर्ति और सेवाएं प्रदान करना।",
+                hero_button: "संपर्क करें",
+                about_title: "श्री बालाजी मेडिकल्स के बारे में",
+                about_paragraph1: "श्री बालाजी मेडिकल्स में आपका स्वागत है, स्वास्थ्य और कल्याण में आपके विश्वसनीय भागीदार। हम अपने समुदाय की विविध आवश्यकताओं को पूरा करने के लिए उच्च गुणवत्ता वाली चिकित्सा आपूर्ति, उपकरण और फार्मास्यूटिकल्स की एक विस्तृत श्रृंखला प्रदान करने के लिए समर्पित हैं।",
+                about_paragraph2: "उत्कृष्टता और ग्राहक संतुष्टि के प्रति प्रतिबद्धता के साथ, हम यह सुनिश्चित करने का प्रयास करते हैं कि आपको अत्यधिक देखभाल और दक्षता के साथ सर्वोत्तम उत्पाद और सेवाएं मिलें। हमारी जानकार टीम आपकी सभी स्वास्थ्य संबंधी आवश्यकताओं के लिए एक सहज और सहायक अनुभव सुनिश्चित करने के लिए हमेशा आपकी सहायता के लिए तैयार है।",
+                products_title: "हमारे उत्पाद",
+                product_medicine_title: "नुस्खे वाली दवाएं",
+                product_medicine_desc: "हम विभिन्न प्रकार की नुस्खे वाली दवाएं रखते हैं। हमारे फार्मासिस्ट सुरक्षित और सटीक वितरण सुनिश्चित करते हैं, और आपके प्रश्नों का उत्तर देने के लिए उपलब्ध हैं।",
+                product_medicine_item1: "एंटीबायोटिक्स",
+                product_medicine_item2: "दर्द निवारक",
+                product_medicine_item3: "पुरानी बीमारी की दवाएं",
+                product_medicine_item4: "विटामिन और सप्लीमेंट्स",
+                product_devices_title: "चिकित्सा उपकरण",
+                product_devices_desc: "घर के उपयोग और पेशेवर जरूरतों के लिए उच्च गुणवत्ता वाले चिकित्सा उपकरणों के हमारे चयन का अन्वेषण करें। ब्लड प्रेशर मॉनिटर से लेकर ग्लूकोज मीटर तक, हम आपके स्वास्थ्य प्रबंधन का समर्थन करने के लिए विश्वसनीय उपकरण रखते हैं।",
+                product_devices_item1: "ब्लड प्रेशर मॉनिटर",
+                product_devices_item2: "ग्लूकोज मीटर",
+                product_devices_item3: "थर्मामीटर",
+                product_devices_item4: "नेबुलाइजर",
+                product_devices_item5: "ऑर्थोपेडिक सपोर्ट",
+                product_lab_title: "लैब टेस्ट सेवाएं",
+                product_lab_desc: "हम आपके नैदानिक ​​आवश्यकताओं के लिए सटीक और समय पर परिणाम सुनिश्चित करते हुए, विश्वसनीय भागीदारों के साथ विभिन्न लैब टेस्ट की सुविधा प्रदान करते हैं।",
+                product_lab_item1: "ब्लड शुगर टेस्ट",
+                product_lab_item2: "थायराइड प्रोफाइल",
+                product_lab_item3: "लिपिड प्रोफाइल",
+                product_lab_item4: "लिवर फंक्शन टेस्ट",
+                product_lab_item5: "किडनी फंक्शन टेस्ट",
+                product_lab_contact: "उपलब्ध टेस्ट और बुकिंग प्रक्रियाओं के बारे में अधिक जानकारी के लिए कृपया हमसे संपर्क करें।",
+                product_wellness_title: "कल्याण उत्पाद",
+                product_wellness_desc: "पोषक तत्वों की खुराक, व्यक्तिगत देखभाल की वस्तुओं और बहुत कुछ सहित हमारे स्वास्थ्य और कल्याण उत्पादों की श्रृंखला के साथ अपनी भलाई बढ़ाएँ।",
+                product_wellness_item1: "पोषक तत्वों की खुराक",
+                product_wellness_item2: "व्यक्तिगत देखभाल की वस्तुएं",
+                product_wellness_item3: "मौखिक देखभाल उत्पाद",
+                product_wellness_item4: "शिशु देखभाल आवश्यक",
+                product_other_title: "अन्य उत्पाद और सेवाएं",
+                product_other_desc: "हमारे मुख्य प्रस्तावों के अलावा, हम विविध आवश्यकताओं को पूरा करने के लिए विभिन्न अन्य आवश्यक स्वास्थ्य देखभाल आइटम और सेवाएं प्रदान करते हैं। अधिक जानकारी के लिए हमारे स्टोर पर जाएँ या हमसे संपर्क करें।",
+                product_other_item1: "प्राथमिक चिकित्सा आपूर्ति",
+                product_other_item2: "सर्जिकल आइटम",
+                product_other_item3: "होम डिलीवरी सेवा",
+                doctors_title: "हमारे डॉक्टरों से मिलें",
+                doc1_name: "डॉ. मेजर रॉबिन दुबे",
+                doc1_specialty: "बाल रोग विशेषज्ञ",
+                doc1_experience: "बाल चिकित्सा देखभाल में 10+ वर्षों का अनुभव, बच्चों के लिए दयालु उपचार प्रदान करते हैं।",
+                doc1_timings: "बुधवार और शनिवार, शाम 6:30 बजे से 7:30 बजे तक",
+                doc2_name: "डॉ. डीएन चक्रवर्ती",
+                doc2_specialty: "बाल रोग विशेषज्ञ",
+                doc2_experience: "बाल चिकित्सा देखभाल में 40+ वर्षों का अनुभव, बाल स्वास्थ्य में विशेषज्ञता के लिए प्रसिद्ध।",
+                doc2_timings: "रविवार को छोड़कर प्रतिदिन, शाम 6:00 बजे से 7:30 बजे तक।",
+                doc3_name: "डॉ. यूके घोष",
+                doc3_specialty: "स्त्री रोग विशेषज्ञ",
+                doc3_experience: "महिला स्वास्थ्य में अनुभवी, व्यापक स्त्री रोग संबंधी देखभाल प्रदान करते हैं।",
+                doc3_timings: "सोमवार, रात 8:00 बजे।",
+                doc4_name: "डॉ. रिनी मुखर्जी",
+                doc4_specialty: "स्त्री रोग विशेषज्ञ",
+                doc4_experience: "महिला स्वास्थ्य में कुशल, व्यक्तिगत स्त्री रोग संबंधी सेवाएं प्रदान करते हैं।",
+                doc4_timings: "सोमवार, रात 8:00 बजे।",
+                doc5_name: "डॉ. सपना लखोटिया",
+                doc5_specialty: "स्त्री रोग विशेषज्ञ",
+                doc5_experience: "महिला स्वास्थ्य के लिए समर्पित, विशेषज्ञ स्त्री रोग संबंधी देखभाल प्रदान करते हैं।",
+                doc5_timings: "सोमवार और बुधवार, सुबह 10:00 बजे",
+                doc6_name: "डॉ. टीके चक्रवर्ती",
+                doc6_specialty: "त्वचा विशेषज्ञ",
+                doc6_experience: "त्वचा विज्ञान में विशेषज्ञ, उन्नत त्वचा उपचार प्रदान करते हैं।",
+                doc6_timings: "बुधवार और शुक्रवार, रात 8:00 बजे",
+                doc7_name: "डॉ. ए मुखर्जी",
+                doc7_specialty: "त्वचा विशेषज्ञ",
+                doc7_experience: "त्वचा विज्ञान में विशेषज्ञता प्राप्त, प्रभावी त्वचा देखभाल समाधान प्रदान करते हैं।",
+                doc7_timings: "बुधवार, सुबह 11:00 बजे",
+                doc8_name: "डॉ. सोविक बनर्जी",
+                doc8_specialty: "हृदय रोग विशेषज्ञ और क्रिटिकल केयर",
+                doc8_experience: "हृदय रोग विज्ञान और क्रिटिकल केयर में विशेषज्ञ, हृदय स्वास्थ्य सुनिश्चित करते हैं।",
+                doc8_timings: "उपलब्धता के लिए संपर्क करें।",
+                doc_timings_label: "समय:",
+                doc_appointment_note: "केवल अपॉइंटमेंट द्वारा।",
                 doc_book_appointment: "अपॉइंटमेंट बुक करें:",
                 contact_us_link: "हमसे संपर्क करें",
-                or_call: "या कॉल करें",
-
-                doc_dn_specialty: "बाल रोग विशेषज्ञ",
-                doc_dn_exp: "बाल स्वास्थ्य में विशेषज्ञता के लिए प्रसिद्ध, बाल चिकित्सा देखभाल में 40+ वर्षों का अनुभव।",
-                doc_dn_time_1: "रविवार को छोड़कर प्रतिदिन, शाम 6:00 बजे से शाम 7:30 बजे तक।",
-
-                doc_uk_specialty: "स्त्री रोग विशेषज्ञ",
-                doc_uk_exp: "महिला स्वास्थ्य में अनुभवी, व्यापक स्त्री रोग संबंधी देखभाल प्रदान करना।",
-                doc_uk_time_1: "सोमवार, रात 8:00 बजे।",
-
-                doc_rini_specialty: "स्त्री रोग विशेषज्ञ",
-                doc_rini_exp: "महिला स्वास्थ्य में कुशल, व्यक्तिगत स्त्री रोग संबंधी सेवाएं प्रदान करना।",
-                doc_rini_time_1: "सोमवार, रात 8:00 बजे।",
-
-                doc_sapna_specialty: "स्त्री रोग विशेषज्ञ",
-                doc_sapna_exp: "महिला स्वास्थ्य के लिए समर्पित, विशेषज्ञ स्त्री रोग संबंधी देखभाल प्रदान करना।",
-                doc_sapna_time_1: "सोमवार और बुधवार, सुबह 10:00 बजे",
-
-                doc_tk_specialty: "त्वचा विशेषज्ञ",
-                doc_tk_exp: "त्वचा विज्ञान में विशेषज्ञ, उन्नत त्वचा उपचार प्रदान करना।",
-                doc_tk_time_1: "बुधवार और शुक्रवार, रात 8:00 बजे",
-
-                doc_by_appointment: "केवल अपॉइंटमेंट द्वारा।",
-                doc_book_appointment: "अपॉइंटमेंट बुक करें:",
-                contact_us_link: "हमसे संपर्क करें",
-                or_call: "या कॉल करें",
-
-                doc_a_specialty: "त्वचा विशेषज्ञ",
-                doc_a_exp: "त्वचा विज्ञान में विशेषज्ञता, प्रभावी त्वचा देखभाल समाधान प्रदान करना।",
-                doc_a_time_1: "बुधवार, सुबह 11:00 बजे",
-
-                doc_sovik_specialty: "हृदय रोग विशेषज्ञ और गहन देखभाल",
-                doc_sovik_exp: "हृदय रोग और गहन देखभाल में विशेषज्ञ, हृदय स्वास्थ्य सुनिश्चित करना।",
-                doc_contact_availability: "उपलब्धता के लिए संपर्क करें।",
-
-                get_in_touch_heading: "हमसे संपर्क करें",
-                our_location_heading: "हमारा स्थान",
-                our_location_text: "हमारे सुविधाजनक स्थान पर हमसे मिलें:",
-                view_on_map: "मानचित्र पर देखें",
-                shop_timings_heading: "दुकान का समय",
-                shop_timings_text: "हम आपको निम्नलिखित घंटों के दौरान सेवा देने के लिए खुले हैं:",
-                open_daily_except_thursday: "प्रतिदिन खुला (गुरुवार को छोड़कर):",
-                closed: "बंद:",
-                thursday: "गुरुवार",
-                contact_details_heading: "संपर्क विवरण",
-                contact_details_text: "किसी भी प्रश्न या अपॉइंटमेंट के लिए हमसे संपर्क करें:",
-                team_ready_assist: "हमारी टीम आपकी सहायता के लिए तैयार है।",
-
-                footer_copyright: "2025 श्री बालाजी मेडिकल। सर्वाधिकार सुरक्षित।",
-                footer_privacy: "गोपनीयता नीति",
-                footer_terms: "सेवा की शर्तें",
-                choose_language: "भाषा चुनें"
+                contact_title: "संपर्क करें",
+                contact_details_title: "हमारा स्थान और संपर्क विवरण",
+                contact_shop_location_link: "हमारी दुकान का स्थान", // New key for the location link
+                contact_phone_label: "फ़ोन:",
+                contact_phone1: "+91 89817 77440",
+                contact_phone2: "+91 98838 09088",
+                shop_timings_title: "दुकान का समय",
+                shop_timings_open_daily: "हम आपको निम्नलिखित घंटों के दौरान सेवा देने के लिए खुले हैं:",
+                shop_timings_hours: "रोजाना खुला (गुरुवार को छोड़कर):",
+                shop_timings_time: "सुबह 8:00 बजे - रात 10:00 बजे",
+                shop_timings_closed: "बंद: गुरुवार",
+                footer_copyright: "&copy; 2024 श्री बालाजी मेडिकल्स। सर्वाधिकार सुरक्षित।"
             },
             bn: {
-                page_title: "শ্রী বালাজি মেডিকেল - টিটাগড়, কলকাতা-এর আপনার বিশ্বস্ত ফার্মেসি ও ক্লিনিক",
-                meta_description: "টিটাগড় বাজার, কলকাতা-এর শ্রী বালাজি মেডিকেল বিভিন্ন ধরণের ঔষধ, স্বাস্থ্য পণ্য এবং অভিজ্ঞ শিশু বিশেষজ্ঞ, স্ত্রীরোগ বিশেষজ্ঞ, ত্বক বিশেষজ্ঞ এবং হৃদরোগ বিশেষজ্ঞের সাথে বিশেষজ্ঞ পরামর্শ প্রদান করে। বৃহস্পতিবার ব্যতীত প্রতিদিন সকাল 8 টা থেকে রাত 10 টা পর্যন্ত খোলা থাকে। আপনার স্বাস্থ্য আমাদের অগ্রাধিকার।",
-                meta_keywords: "শ্রী বালাজি মেডিকেল, মেডিকেল স্টোর কলকাতা, টিটাগড় বাজার ফার্মেসি, শিশু বিশেষজ্ঞ কলকাতা, স্ত্রীরোগ বিশেষজ্ঞ কলকাতা, ত্বক বিশেষজ্ঞ কলকাতা, হৃদরোগ বিশেষজ্ঞ কলকাতা, ঔষধ কলকাতা, আমার কাছাকাছি ফার্মেসি, মেডিকেল শপের সময়, কলকাতা ক্লিনিক",
-                og_title: "শ্রী বালাজি মেডিকেল - টিটাগড়, কলকাতা-এর আপনার বিশ্বস্ত ফার্মেসি ও ক্লিনিক",
-                og_description: "টিটাগড় বাজার, কলকাতা-এর শ্রী বালাজি মেডিকেল বিভিন্ন ধরণের ঔষধ, স্বাস্থ্য পণ্য এবং অভিজ্ঞ শিশু বিশেষজ্ঞ, স্ত্রীরোগ বিশেষজ্ঞ, ত্বক বিশেষজ্ঞ এবং হৃদরোগ বিশেষজ্ঞের সাথে বিশেষজ্ঞ পরামর্শ প্রদান করে। বৃহস্পতিবার ব্যতীত প্রতিদিন সকাল 8 টা থেকে রাত 10 টা পর্যন্ত খোলা থাকে। আপনার স্বাস্থ্য আমাদের অগ্রাধিকার।",
-                twitter_title: "শ্রী বালাজি মেডিকেল - টিটাগড়, কলকাতা-এর আপনার বিশ্বস্ত ফার্মেসি ও ক্লিনিক",
-                twitter_description: "টিটাগড় বাজার, কলকাতা-এর শ্রী বালাজি মেডিকেল বিভিন্ন ধরণের ঔষধ, স্বাস্থ্য পণ্য এবং অভিজ্ঞ শিশু বিশেষজ্ঞ, স্ত্রীরোগ বিশেষজ্ঞ, ত্বক বিশেষজ্ঞ এবং হৃদরোগ বিশেষজ্ঞের সাথে বিশেষজ্ঞ পরামর্শ প্রদান করে। বৃহস্পতিবার ব্যতীত প্রতিদিন সকাল 8 টা থেকে রাত 10 টা পর্যন্ত খোলা থাকে। আপনার স্বাস্থ্য আমাদের অগ্রাধিকার।",
-
+                site_title: "শ্রী বালাজি মেডিক্যালের",
                 nav_home: "হোম",
                 nav_about: "আমাদের সম্পর্কে",
-                nav_products: "পণ্য",
-                nav_doctors: "আমাদের ডাক্তার",
-                nav_contact: "যোগাযোগ করুন",
-
-                home_heading: "আপনার স্বাস্থ্য, আমাদের অগ্রাধিকার",
-                home_intro: "শ্রী বালাজি মেডিকেল-এ আপনাকে স্বাগতম, আপনার সমস্ত ফার্মাসিউটিক্যাল প্রয়োজনের জন্য আপনার বিশ্বস্ত অংশীদার। আমরা আমাদের সম্প্রদায়ে উচ্চ-মানের ঔষধ এবং ব্যতিক্রমী পরিষেবা প্রদানে প্রতিশ্রুতিবদ্ধ, আপনার সুস্থতা সর্বদা আমাদের অগ্রভাগে নিশ্চিত করে।",
-
-                about_heading: "শ্রী বালাজি মেডিকেল সম্পর্কে",
-                about_mission_heading: "আমাদের লক্ষ্য ও মূল্যবোধ",
-                about_mission_text_1: "শ্রী বালাজি মেডিকেল-এ, আমাদের লক্ষ্য হল টিটাগড় বাজার এবং তার বাইরে সবচেয়ে নির্ভরযোগ্য এবং সহানুভূতিশীল স্বাস্থ্যসেবা প্রদানকারী হওয়া। আমরা সাশ্রয়ী মূল্যে বিভিন্ন ধরণের খাঁটি ঔষধ, স্বাস্থ্য পরিপূরক এবং ব্যক্তিগত যত্নের পণ্য সরবরাহ করতে নিবেদিত। আমাদের মূল মূল্যবোধের মধ্যে রয়েছে সততা, গ্রাহক-কেন্দ্রিকতা এবং সম্প্রদায়ের স্বাস্থ্যের প্রতি প্রতিশ্রুতি। আমরা এমন একটি স্বাগত জানানোর পরিবেশ তৈরি করার চেষ্টা করি যেখানে প্রতিটি গ্রাহক মূল্যবান এবং ভালোভাবে যত্নশীল বোধ করেন।",
-                about_mission_text_2: "বছরের পর বছর ধরে পরিষেবা দিয়ে, আমরা বিশ্বাস এবং শ্রেষ্ঠত্বের জন্য একটি খ্যাতি তৈরি করেছি। আমাদের অভিজ্ঞ ফার্মাসিস্ট এবং কর্মীদের দল সর্বদা বিশেষজ্ঞ পরামর্শ প্রদান করতে এবং আপনি সেরা সম্ভাব্য যত্ন পান তা নিশ্চিত করতে প্রস্তুত।",
-
-                products_heading: "আমাদের পণ্য ও পরিষেবা",
-                products_intro: "আমরা আপনার স্বাস্থ্যসেবার চাহিদা পূরণের জন্য চিকিৎসা পণ্য এবং পরিষেবার একটি বিস্তৃত পরিসর অফার করি।",
-                prescription_medicines_heading: "প্রেসক্রিপশন ঔষধ",
-                prescription_medicines_text: "আমরা বিভিন্ন ধরণের প্রেসক্রিপশন ঔষধ মজুত রাখি। আমাদের ফার্মাসিস্টরা নিরাপদ এবং সঠিক বিতরণ নিশ্চিত করেন, এবং আপনার প্রশ্নের উত্তর দিতে উপলব্ধ।",
-                med_antibiotics: "অ্যান্টিবায়োটিক",
-                med_pain_relievers: "ব্যথা উপশমকারী",
-                med_chronic_disease: "দীর্ঘস্থায়ী রোগের ঔষধ",
-                med_vitamins: "ভিটামিন ও সাপ্লিমেন্টস",
-                medical_devices_heading: "চিকিৎসা সরঞ্জাম",
-                medical_devices_text: "বাড়িতে ব্যবহার এবং পেশাদার প্রয়োজনের জন্য আমাদের উচ্চ-মানের চিকিৎসা সরঞ্জামের নির্বাচন অন্বেষণ করুন। রক্তচাপ পরিমাপক থেকে শুরু করে গ্লুকোজ মিটার পর্যন্ত, আমরা আপনার স্বাস্থ্য ব্যবস্থাপনাকে সমর্থন করার জন্য নির্ভরযোগ্য সরঞ্জাম মজুত রাখি।",
-                device_bp_monitor: "রক্তচাপ পরিমাপক",
-                device_glucose_meter: "গ্লুকোজ মিটার",
-                device_thermometers: "থার্মোমিটার",
-                device_nebulizers: "নেবুলাইজার",
-                device_orthopedic: "অর্থোপেডিক সাপোর্ট",
-                lab_tests_heading: "ল্যাব টেস্ট পরিষেবা",
-                lab_tests_text: "আমরা বিশ্বস্ত অংশীদারদের সাথে বিভিন্ন ল্যাব টেস্টের সুবিধা প্রদান করি, আপনার ডায়াগনস্টিক প্রয়োজনের জন্য সঠিক এবং সময়োপযোগী ফলাফল নিশ্চিত করে।",
-                test_blood_sugar: "রক্তে শর্করার পরীক্ষা",
-                test_thyroid_profile: "থাইরয়েড প্রোফাইল",
-                test_lipid_profile: "লিপিড প্রোফাইল",
-                test_liver_function: "লিভার ফাংশন টেস্ট",
-                test_kidney_function: "কিডনি ফাংশন টেস্ট",
-                test_booking_info: "উপলব্ধ পরীক্ষা এবং বুকিং পদ্ধতির বিষয়ে আরও তথ্যের জন্য অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন।",
-                wellness_products_heading: "ওয়েলनेस পণ্য",
-                wellness_products_text: "পুষ্টিকর পরিপূরক, ব্যক্তিগত যত্নের জিনিসপত্র এবং আরও অনেক কিছু সহ আমাদের স্বাস্থ্য ও ওয়েলনেস পণ্যের পরিসর দিয়ে আপনার সুস্থতা বাড়ান।",
-                wellness_supplements: "পুষ্টিকর পরিপূরক",
-                wellness_personal_care: "ব্যক্তিগত যত্নের জিনিসপত্র",
-                wellness_oral_care: "ওরাল কেয়ার পণ্য",
-                wellness_baby_care: "শিশুর যত্নের প্রয়োজনীয় জিনিসপত্র",
-                others_heading: "অন্যান্য পণ্য ও পরিষেবা",
-                others_text: "আমাদের মূল অফারগুলি ছাড়াও, আমরা বিভিন্ন অন্যান্য প্রয়োজনীয় স্বাস্থ্যসেবা সামগ্রী এবং পরিষেবা সরবরাহ করি যা বিভিন্ন চাহিদা পূরণ করে। আরও বিস্তারিত জানার জন্য আমাদের দোকানে যান বা আমাদের সাথে যোগাযোগ করুন।",
-                others_first_aid: "প্রাথমিক চিকিৎসার সরবরাহ",
-                others_surgical_items: "সার্জিক্যাল আইটেম",
-                others_home_delivery: "হোম ডেলিভারি পরিষেবা",
-
-                doctors_heading: "আমাদের সম্মানিত ডাক্তারগণ",
-                doctors_intro: "আমরা বিভিন্ন স্বাস্থ্যসেবার চাহিদা পূরণের জন্য অত্যন্ত যোগ্য এবং অভিজ্ঞ চিকিৎসা বিশেষজ্ঞদের একটি প্যানেল হোস্ট করতে পেরে গর্বিত।",
-
-                doc_robin_specialty: "শিশু বিশেষজ্ঞ",
-                doc_robin_exp: "শিশুদের যত্নে ১০+ বছরের অভিজ্ঞতা, শিশুদের জন্য সহানুভূতিশীল চিকিৎসা প্রদান।",
-                doc_timings: "সময়:",
-                doc_robin_time_1: "বুধবার এবং শনিবার, সন্ধ্যা ৬:৩০ টা থেকে সন্ধ্যা ৭:৩০ টা",
-                doc_by_appointment: "শুধুমাত্র অ্যাপয়েন্টমেন্ট দ্বারা।",
+                nav_products: "আমাদের পণ্য",
+                nav_doctors: "ডাক্তারগণ",
+                nav_contact: "যোগাযোগ",
+                hero_title: "আপনার স্বাস্থ্য, আমাদের অগ্রাধিকার",
+                hero_subtitle: "যত্ন ও সহানুভূতি সহ মানসম্পন্ন চিকিৎসা সরঞ্জাম ও পরিষেবা প্রদান।",
+                hero_button: "যোগাযোগ করুন",
+                about_title: "শ্রী বালাজি মেডিক্যালের সম্পর্কে",
+                about_paragraph1: "শ্রী বালাজি মেডিক্যালে আপনাকে স্বাগতম, স্বাস্থ্য ও সুস্থতার ক্ষেত্রে আপনার বিশ্বস্ত অংশীদার। আমরা আমাদের সম্প্রদায়ের বিভিন্ন চাহিদা পূরণের জন্য উচ্চ-মানের চিকিৎসা সরঞ্জাম, যন্ত্রপাতি এবং ফার্মাসিউটিক্যালসের একটি বিস্তৃত পরিসর সরবরাহ করতে প্রতিশ্রুতিবদ্ধ।",
+                about_paragraph2: "উৎকর্ষ এবং গ্রাহক সন্তুষ্টির প্রতি অঙ্গীকারবদ্ধ হয়ে, আমরা নিশ্চিত করতে সচেষ্ট যে আপনি সর্বোচ্চ যত্ন এবং দক্ষতার সাথে সেরা পণ্য ও পরিষেবাগুলি পান। আমাদের জ্ঞানী দল আপনার সমস্ত স্বাস্থ্যসেবার প্রয়োজনের জন্য একটি নির্বিঘ্ন এবং সহায়ক অভিজ্ঞতা নিশ্চিত করতে সর্বদা প্রস্তুত।",
+                products_title: "আমাদের পণ্য",
+                product_medicine_title: "প্রেসক্রিপশন ঔষধ",
+                product_medicine_desc: "আমরা বিভিন্ন ধরণের প্রেসক্রিপশন ঔষধ মজুত করি। আমাদের ফার্মাসিস্টরা নিরাপদ এবং সঠিক বিতরণ নিশ্চিত করেন এবং আপনার প্রশ্নের উত্তর দেওয়ার জন্য উপলব্ধ।",
+                product_medicine_item1: "অ্যান্টিবায়োটিক",
+                product_medicine_item2: "ব্যথা উপশমকারী",
+                product_medicine_item3: "দীর্ঘস্থায়ী রোগের ঔষধ",
+                product_medicine_item4: "ভিটামিন ও সাপ্লিমেন্ট",
+                product_devices_title: "চিকিৎসা সরঞ্জাম",
+                product_devices_desc: "বাড়িতে ব্যবহার এবং পেশাদার প্রয়োজনের জন্য আমাদের উচ্চ-মানের চিকিৎসা সরঞ্জামগুলির নির্বাচন অন্বেষণ করুন। রক্তচাপ মনিটর থেকে শুরু করে গ্লুকোজ মিটার পর্যন্ত, আমরা আপনার স্বাস্থ্য ব্যবস্থাপনার জন্য নির্ভরযোগ্য সরঞ্জাম মজুত করি।",
+                product_devices_item1: "রক্তচাপ মনিটর",
+                product_devices_item2: "গ্লুকোজ মিটার",
+                product_devices_item3: "থার্মোমিটার",
+                product_devices_item4: "নেবুলাইজার",
+                product_devices_item5: "অর্থোপেডিক সাপোর্ট",
+                product_lab_title: "ল্যাব টেস্ট পরিষেবা",
+                product_lab_desc: "আমরা বিশ্বস্ত অংশীদারদের সাথে বিভিন্ন ল্যাব টেস্টের সুবিধা প্রদান করি, আপনার ডায়াগনস্টিক প্রয়োজনের জন্য সঠিক এবং সময়োপযোগী ফলাফল নিশ্চিত করি।",
+                product_lab_item1: "ব্লাড সুগার টেস্ট",
+                product_lab_item2: "থাইরয়েড প্রোফাইল",
+                product_lab_item3: "লিপিড প্রোফাইল",
+                product_lab_item4: "লিভার ফাংশন টেস্ট",
+                product_lab_item5: "কিডনি ফাংশন টেস্ট",
+                product_lab_contact: "উপলব্ধ পরীক্ষা এবং বুকিং পদ্ধতির বিষয়ে আরও তথ্যের জন্য অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন।",
+                product_wellness_title: "সুস্থতা পণ্য",
+                product_wellness_desc: "পুষ্টির পরিপূরক, ব্যক্তিগত যত্নের জিনিসপত্র এবং আরও অনেক কিছু সহ আমাদের স্বাস্থ্য ও সুস্থতা পণ্যগুলির পরিসর দিয়ে আপনার সুস্থতা বাড়ান।",
+                product_wellness_item1: "পুষ্টির পরিপূরক",
+                product_wellness_item2: "ব্যক্তিগত যত্নের জিনিসপত্র",
+                product_wellness_item3: "মৌখিক যত্নের পণ্য",
+                product_wellness_item4: "শিশুর যত্নের প্রয়োজনীয় জিনিস",
+                product_other_title: "অন্যান্য পণ্য ও পরিষেবা",
+                product_other_desc: "আমাদের মূল অফারগুলির বাইরে, আমরা বিভিন্ন অন্যান্য প্রয়োজনীয় স্বাস্থ্যসেবা সামগ্রী এবং পরিষেবা সরবরাহ করি যা বিভিন্ন চাহিদা পূরণ করে। আরও বিস্তারিত জানার জন্য আমাদের দোকানে যান বা আমাদের সাথে যোগাযোগ করুন।",
+                product_other_item1: "প্রাথমিক চিকিৎসার সরঞ্জাম",
+                product_other_item2: "সার্জিক্যাল আইটেম",
+                product_other_item3: "হোম ডেলিভারি সার্ভিস",
+                doctors_title: "আমাদের ডাক্তারদের সাথে দেখা করুন",
+                doc1_name: "ডাঃ মেজর রবিন দুবে",
+                doc1_specialty: "শিশু বিশেষজ্ঞ",
+                doc1_experience: "শিশুদের যত্নে 10+ বছরের অভিজ্ঞতা, শিশুদের জন্য সহানুভূতিশীল চিকিৎসা প্রদান করেন।",
+                doc1_timings: "বুধবার ও শনিবার, সন্ধ্যা 6:30 থেকে 7:30 পর্যন্ত",
+                doc2_name: "ডাঃ ডিএন চক্রবর্তী",
+                doc2_specialty: "শিশু বিশেষজ্ঞ",
+                doc2_experience: "শিশুদের যত্নে 40+ বছরের অভিজ্ঞতা, শিশু স্বাস্থ্যে দক্ষতার জন্য সুপরিচিত।",
+                doc2_timings: "রবিবার ব্যতীত প্রতিদিন, সন্ধ্যা 6:00 থেকে 7:30 পর্যন্ত।",
+                doc3_name: "ডাঃ ইউকে ঘোষ",
+                doc3_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
+                doc3_experience: "মহিলাদের স্বাস্থ্যে অভিজ্ঞ, ব্যাপক স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান করেন।",
+                doc3_timings: "সোমবার, রাত 8:00 টা।",
+                doc4_name: "ডাঃ রিনি মুখার্জি",
+                doc4_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
+                doc4_experience: "মহিলাদের স্বাস্থ্যে দক্ষ, ব্যক্তিগত স্ত্রীরোগ সংক্রান্ত পরিষেবা প্রদান করেন।",
+                doc4_timings: "সোমবার, রাত 8:00 টা।",
+                doc5_name: "ডাঃ স্বপ্না লাখোটিয়া",
+                doc5_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
+                doc5_experience: "মহিলাদের স্বাস্থ্যের প্রতি নিবেদিত, বিশেষজ্ঞ স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান করেন।",
+                doc5_timings: "সোমবার ও বুধবার, সকাল 10:00 টা",
+                doc6_name: "ডাঃ টিকে চক্রবর্তী",
+                doc6_specialty: "ত্বক বিশেষজ্ঞ",
+                doc6_experience: "ত্বকবিদ্যায় বিশেষজ্ঞ, উন্নত ত্বকের চিকিৎসা প্রদান করেন।",
+                doc6_timings: "বুধবার ও শুক্রবার, রাত 8:00 টা",
+                doc7_name: "ডাঃ এ মুখার্জি",
+                doc7_specialty: "त्वक विशेषज्ञ",
+                doc7_experience: "त्वकविद্যায় विशेषत्व, কার্যকর ত্বকের যত্নের समाधान प्रदान করেন।",
+                doc7_timings: "বুধবার, সকাল 11:00 টা",
+                doc8_name: "ডাঃ সোভিক ব্যানার্জি",
+                doc8_specialty: "কার্ডিওলজিস্ট ও ক্রিটিক্যাল কেয়ার",
+                doc8_experience: "কার্ডিওলজি এবং ক্রিটিক্যাল কেয়ারে বিশেষজ্ঞ, হৃদপিণ্ডের স্বাস্থ্য নিশ্চিত করেন।",
+                doc8_timings: "উপलब्धতার জন্য যোগাযোগ করুন।",
+                doc_timings_label: "সময়:",
+                doc_appointment_note: "শুধুমাত্র অ্যাপয়েন্টমেন্ট দ্বারা।",
                 doc_book_appointment: "অ্যাপয়েন্টমেন্ট বুক করুন:",
                 contact_us_link: "যোগাযোগ করুন",
-                or_call: "অথবা কল করুন",
-
-                doc_dn_specialty: "बाल रोग विशेषज्ञ",
-                doc_dn_exp: "৪০+ বছরের শিশু যত্নের অভিজ্ঞতা, শিশু স্বাস্থ্যে দক্ষতার জন্য সুপরিচিত।",
-                doc_dn_time_1: "রবিবার ব্যতীত প্রতিদিন, সন্ধ্যা ৬:০০ টা থেকে সন্ধ্যা ৭:৩০ টা।",
-
-                doc_uk_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
-                doc_uk_exp: "মহিলাদের স্বাস্থ্যে অভিজ্ঞ, ব্যাপক স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান।",
-                doc_uk_time_1: "সোমবার, রাত ৮:০০ টা।",
-
-                doc_rini_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
-                doc_rini_exp: "মহিলাদের স্বাস্থ্যে দক্ষ, ব্যক্তিগতকৃত স্ত্রীরোগ সংক্রান্ত পরিষেবা প্রদান।",
-                doc_rini_time_1: "সোমবার, রাত ৮:০০ টা।",
-
-                doc_sapna_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
-                doc_sapna_exp: "মহিলাদের স্বাস্থ্যে নিবেদিত, বিশেষজ্ঞ স্ত্রীরोग সংক্রান্ত যত্ন প্রদান।",
-                doc_sapna_time_1: "সোমবার এবং বুধবার, সকাল ১০:০০ টা",
-
-                doc_tk_specialty: "ত্বক বিশেষজ্ঞ",
-                doc_tk_exp: "ডার্মাটোলজিতে বিশেষজ্ঞ, উন্নত ত্বকের চিকিৎসা প্রদান।",
-                doc_tk_time_1: "বুধবার এবং শুক্রবার, রাত ৮:০০ টা",
-
-                doc_by_appointment: "শুধুমাত্র অ্যাপয়েন্টমেন্ট দ্বারা।",
-                doc_book_appointment: "অ্যাপয়েন্টমেন্ট বুক করুন:",
-                contact_us_link: "যোগাযোগ করুন",
-                or_call: "অথবা কল করুন",
-
-                doc_a_specialty: "ত্বক বিশেষজ্ঞ",
-                doc_a_exp: "ডার্মাটোলজিতে বিশেষীকরণ, কার্যকর ত্বকের যত্ন সমাধান প্রদান।",
-                doc_a_time_1: "বুধবার, সকাল ১১:০০ টা",
-
-                doc_sovik_specialty: "হৃদরোগ বিশেষজ্ঞ ও ক্রিটিক্যাল কেয়ার",
-                doc_sovik_exp: "হৃদরোগ ও ক্রিটিক্যাল কেয়ারে বিশেষজ্ঞ, হৃদপিণ্ডের স্বাস্থ্য নিশ্চিত করা।",
-                doc_contact_availability: "উপलब्धতার জন্য যোগাযোগ করুন।",
-
-                get_in_touch_heading: "আমাদের সাথে যোগাযোগ করুন",
-                our_location_heading: "আমাদের অবস্থান",
-                our_location_text: "আমাদের সুবিধাজনক স্থানে আমাদের সাথে দেখা করুন:",
-                view_on_map: "মানচিত্রে দেখুন",
-                shop_timings_heading: "দোকানের সময়",
-                shop_timings_text: "আমরা নিম্নলিখিত সময়ে আপনাকে সেবা দিতে প্রস্তুত:",
-                open_daily_except_thursday: "প্রতিদিন খোলা (বৃহস্পতিবার ব্যতীত):",
-                closed: "বন্ধ:",
-                thursday: "বৃহস্পতিবার",
-                contact_details_heading: "যোগাযোগের বিবরণ",
-                contact_details_text: "যেকোনো প্রশ্ন বা অ্যাপয়েন্টমেন্টের জন্য আমাদের साथ যোগাযোগ করুন:",
-                team_ready_assist: "আমাদের দল আপনাকে সহায়তা করতে প্রস্তুত।",
-
-                footer_copyright: "2025 শ্রী বালাজি মেডিকেল। সর্বস্বত্ব সংরক্ষিত।",
-                footer_privacy: "গোপনীয়তা নীতি",
-                footer_terms: "পরিষেবার শর্তাবলী",
-                choose_language: "ভাষা নির্বাচন করুন"
+                contact_title: "যোগাযোগ করুন",
+                contact_details_title: "আমাদের অবস্থান ও যোগাযোগের বিবরণ",
+                contact_shop_location_link: "আমাদের দোকান का स्थान", // New key for the location link
+                contact_phone_label: "ফোন:",
+                contact_phone1: "+91 89817 77440",
+                contact_phone2: "+91 98838 09088",
+                shop_timings_title: "দোকান খোলার সময়",
+                shop_timings_open_daily: "আমরা নিম্নলিখিত সময়গুলিতে আপনাকে পরিষেবা দিতে খোলা আছি:",
+                shop_timings_hours: "প্রতিদিন খোলা (বৃহস্পতিবার ব্যতীত):",
+                shop_timings_time: "সকাল 8:00 টা - রাত 10:00 টা",
+                shop_timings_closed: "বন্ধ: বৃহস্পতিবার",
+                footer_copyright: "&copy; 2024 শ্রী বালাজি মেডিক্যালের। সর্বস্বত্ব সংরক্ষিত।"
             }
         };
 
-        function setLanguage(lang) {
-            // Update meta tags and title
-            document.querySelector('title').textContent = translations[lang].page_title;
-            document.querySelector('meta[name="description"]').setAttribute('content', translations[lang].meta_description);
-            document.querySelector('meta[name="keywords"]').setAttribute('content', translations[lang].meta_keywords);
-            document.querySelector('meta[property="og:title"]').setAttribute('content', translations[lang].og_title);
-            document.querySelector('meta[property="og:description"]').setAttribute('content', translations[lang].og_description);
-            document.querySelector('meta[name="twitter:title"]').setAttribute('content', translations[lang].twitter_title);
-            document.querySelector('meta[name="twitter:description"]').setAttribute('content', translations[lang].twitter_description);
-
-            // Update elements with data-key attribute
-            document.querySelectorAll('[data-key]').forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[lang][key]) {
-                    // Check if the element is an input/textarea or image alt text
-                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                        element.placeholder = translations[lang][key];
-                    } else if (element.tagName === 'IMG') {
-                        element.alt = translations[lang][key];
-                    }
-                    else {
-                        element.textContent = translations[lang][key];
-                    }
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
                 }
             });
 
-            // Set the value of the language switcher dropdown
-            const languageSwitcher = document.getElementById('language-switcher');
-            if (languageSwitcher) {
-                languageSwitcher.value = lang;
-            }
-
-            // Store preference
-            localStorage.setItem('selectedLanguage', lang);
+            // This part for doctors' numbers is fine as it uses forEach
+            document.querySelectorAll('#doctors a[href^="tel:+918981777440"]').forEach(link => {
+                link.textContent = '+91-8981777440'; // Keep consistent for doctors
+            });
         }
 
-        // Initialize language on page load
+        // Function to select language from modal
+        function selectLanguage(lang) {
+            localStorage.setItem('preferredLanguage', lang);
+            document.getElementById('language-modal').classList.add('hidden');
+            changeLanguage(lang);
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Set default language or show modal on load
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('selectedLanguage');
-            const languageModal = document.getElementById('language-modal');
-            const languageButtons = document.querySelectorAll('#language-modal .modal-button');
-            const languageSwitcherDropdown = document.getElementById('language-switcher');
-
-            if (savedLang) {
-                setLanguage(savedLang);
-                languageModal.classList.add('hidden'); // Hide modal if language is already chosen
+            const storedLanguage = localStorage.getItem('preferredLanguage');
+            if (storedLanguage) {
+                changeLanguage(storedLanguage);
             } else {
-                languageModal.classList.remove('hidden'); // Show modal if no language is chosen
-                // Set initial focus to the first button in the modal for accessibility
-                if (languageButtons.length > 0) {
-                    languageButtons[0].focus();
-                }
+                document.getElementById('language-modal').classList.remove('hidden');
             }
 
-            languageButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const lang = event.target.dataset.lang;
-                    setLanguage(lang);
-                    languageModal.classList.add('hidden'); // Hide modal after selection
-                    // Return focus to the body or a relevant element after closing modal
-                    document.body.focus();
-                });
-            });
-
-            // Add event listener for language switcher in header
-            if (languageSwitcherDropdown) {
-                languageSwitcherDropdown.addEventListener('change', (event) => {
-                    setLanguage(event.target.value);
-                });
-            }
+            // Event listener for mobile menu button
+            document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
         });
     </script>
 </body>
