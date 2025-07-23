@@ -19,6 +19,7 @@
     <link rel="icon" href="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" type="image/png">
 
     <!-- Tailwind CSS CDN -->
+    <!-- It's generally best to keep critical CSS in the head for faster initial render. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Orbitron for headings, Inter for body -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -89,9 +90,9 @@
         <div class="modal-content">
             <h3 class="text-2xl font-bold text-blue-700 mb-6">Select Your Language</h3>
             <div class="flex flex-col space-y-4">
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('en')">English</button>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('hi')">हिन्दी</button>
-                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('bn')">বাংলা</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('en')" aria-label="Select English Language">English</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('hi')" aria-label="Select Hindi Language">हिन्दी</button>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out" onclick="selectLanguage('bn')" aria-label="Select Bengali Language">বাংলা</button>
             </div>
         </div>
     </div>
@@ -100,43 +101,43 @@
     <header class="bg-white shadow-lg py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#" class="flex items-center space-x-2">
+            <a href="#" class="flex items-center space-x-2" aria-label="Home - Sri Balaji Medicals">
                 <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Logo" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md border-2 border-blue-200">
                 <span class="text-xl md:text-2xl font-bold text-blue-700" data-translate-key="site_title">Sri Balaji Medicals</span>
             </a>
             <!-- Navigation -->
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_home">Home</a></li>
-                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_about">About Us</a></li>
-                    <li><a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_products">Our Products</a></li>
-                    <li><a href="#doctors" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_doctors">Doctors</a></li>
-                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300" data-translate-key="nav_contact">Contact</a></li>
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline" data-translate-key="nav_home">Home</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline" data-translate-key="nav_about">About Us</a></li>
+                    <li><a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline" data-translate-key="nav_products">Our Products</a></li>
+                    <li><a href="#doctors" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline" data-translate-key="nav_doctors">Doctors</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline" data-translate-key="nav_contact">Contact</a></li>
                 </ul>
             </nav>
             <!-- Language Selector (Desktop) -->
             <div class="hidden md:flex space-x-2 ml-4">
-                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en')">EN</button>
-                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi')">HI</button>
-                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn')">BN</button>
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en')" aria-label="Change language to English">EN</button>
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi')" aria-label="Change language to Hindi">HI</button>
+                <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn')" aria-label="Change language to Bengali">BN</button>
             </div>
             <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
         <!-- Mobile Navigation Menu -->
         <nav id="mobile-menu" class="md:hidden hidden bg-white py-2 shadow-md">
             <ul class="flex flex-col items-center space-y-4">
-                <li><a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_home" onclick="toggleMobileMenu()">Home</a></li>
-                <li><a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_about" onclick="toggleMobileMenu()">About Us</a></li>
-                <li><a href="#products" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_products" onclick="toggleMobileMenu()">Our Products</a></li>
-                <li><a href="#doctors" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_doctors" onclick="toggleMobileMenu()">Doctors</a></li>
-                <li><a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium py-2" data-translate-key="nav_contact" onclick="toggleMobileMenu()">Contact</a></li>
+                <li><a href="#home" class="block text-gray-700 hover:text-blue-600 font-medium py-2 hover:underline" data-translate-key="nav_home" onclick="toggleMobileMenu()">Home</a></li>
+                <li><a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium py-2 hover:underline" data-translate-key="nav_about" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#products" class="block text-gray-700 hover:text-blue-600 font-medium py-2 hover:underline" data-translate-key="nav_products" onclick="toggleMobileMenu()">Our Products</a></li>
+                <li><a href="#doctors" class="block text-gray-700 hover:text-blue-600 font-medium py-2 hover:underline" data-translate-key="nav_doctors" onclick="toggleMobileMenu()">Doctors</a></li>
+                <li><a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium py-2 hover:underline" data-translate-key="nav_contact" onclick="toggleMobileMenu()">Contact</a></li>
                 <li class="flex space-x-2 mt-4">
-                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en'); toggleMobileMenu();">EN</button>
-                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi'); toggleMobileMenu();">HI</button>
-                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn'); toggleMobileMenu();">BN</button>
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('en'); toggleMobileMenu();" aria-label="Change language to English">EN</button>
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('hi'); toggleMobileMenu();" aria-label="Change language to Hindi">HI</button>
+                    <button class="bg-blue-500 text-white text-sm px-3 py-1 rounded-full hover:bg-blue-600 transition" onclick="changeLanguage('bn'); toggleMobileMenu();" aria-label="Change language to Bengali">BN</button>
                 </li>
             </ul>
         </nav>
@@ -147,7 +148,7 @@
         <div class="relative z-10 p-6 md:p-8 rounded-xl max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 shadow-xl">
             <h1 class="text-3xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-translate-key="hero_title">Your Health, Our Priority</h1>
             <p class="text-base md:text-xl mb-8 animate-fade-in-up" data-translate-key="hero_subtitle">Providing quality medical supplies and services with care and compassion.</p>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-once" data-translate-key="hero_button">Get in Touch</a>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-once" data-translate-key="hero_button" aria-label="Get in touch with us">Get in Touch</a>
         </div>
     </section>
 
@@ -155,7 +156,7 @@
     <section id="about" class="py-12 md:py-16 bg-white px-4">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div class="md:w-1/2">
-                <img src="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Shop Front" class="rounded-xl shadow-2xl w-full h-auto object-cover transform transition duration-500 hover:scale-105">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Shop Front" class="rounded-xl shadow-2xl w-full h-auto object-cover transform transition duration-500 hover:scale-105" loading="lazy">
             </div>
             <div class="md:w-1/2 text-center md:text-left">
                 <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4 md:mb-6" data-translate-key="about_title">About Sri Balaji Medicals</h2>
@@ -253,7 +254,7 @@
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-2" data-translate-key="doc1_timings">Wednesday and Saturday, 6:30 PM to 7:30 PM</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc_appointment_note">By appointment only.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. DN Chakraborty -->
@@ -263,7 +264,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc2_experience">40+ years of experience in pediatric care, renowned for expertise in child health.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc2_timings">Daily except Sunday, 6:00 PM to 7:30 PM.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. UK Ghosh -->
@@ -273,7 +274,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc3_experience">Experienced in women's health, providing comprehensive gynecological care.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc3_timings">Monday, 8:00 PM.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. Rini Mukherji -->
@@ -283,7 +284,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc4_experience">Skilled in women's health, offering personalized gynecological services.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc4_timings">Monday, 8:00 PM.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. Sapna Lakhotia -->
@@ -293,7 +294,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc5_experience">Dedicated to women's health, providing expert gynecological care.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc5_timings">Monday and Wednesday, 10:00 AM<br>By appointment only.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. TK Chakraborty -->
@@ -303,7 +304,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc6_experience">Expert in dermatology, offering advanced skin treatments.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc6_timings">Wednesday and Friday, 8:00 PM<br>By appointment only.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. A Mukherjee -->
@@ -313,7 +314,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc7_experience">Specialized in dermatology, providing effective skin care solutions.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc7_timings">Wednesday, 11:00 AM<br>By appointment only.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
 
                 <!-- Doctor Card: Dr. Sovik Bannerjee -->
@@ -323,7 +324,7 @@
                     <p class="text-gray-700 text-sm md:text-base mb-2" data-translate-key="doc8_experience">Expert in cardiology and critical care, ensuring heart health.</p>
                     <p class="text-gray-700 font-semibold text-sm md:text-base" data-translate-key="doc_timings_label">Timings:</p>
                     <p class="text-gray-600 text-sm md:text-base mb-4" data-translate-key="doc8_timings">Contact for availability.</p>
-                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline">+91-8981777440</a></p>
+                    <p class="text-gray-700 text-sm md:text-base" data-translate-key="doc_book_appointment">Book an appointment: <a href="#contact" class="text-blue-600 hover:underline" data-translate-key="contact_us_link" aria-label="Contact us for appointment or call +91-8981777440">Contact Us</a> or call <a href="tel:+918981777440" class="text-blue-600 hover:underline" aria-label="Call +91-8981777440 for appointment">+91-8981777440</a></p>
                 </div>
             </div>
         </div>
@@ -337,8 +338,8 @@
                 <!-- Contact Info -->
                 <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-6 rounded-xl shadow-lg border border-gray-200 text-left">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-translate-key="contact_details_title">Our Location & Contact Details</h3>
-                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-map-marker-alt text-blue-600 mr-3"></i> <a href="https://g.co/kgs/J4dDpYH" target="_blank" class="hover:underline" data-translate-key="contact_shop_location_link">Our Shop Location</a></p>
-                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-phone text-blue-600 mr-3"></i> <span data-translate-key="contact_phone_label">Phone:</span> <a href="tel:+918981777440" class="hover:underline" data-translate-key="contact_phone1">+91 89817 77440</a> / <a href="tel:+919883809088" class="hover:underline" data-translate-key="contact_phone2">+91 98838 09088</a></p>
+                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-map-marker-alt text-blue-600 mr-3"></i> <a href="https://g.co/kgs/J4dDpYH" target="_blank" class="hover:underline" data-translate-key="contact_shop_location_link" aria-label="View Sri Balaji Medicals on Google Maps">Our Shop Location</a></p>
+                    <p class="text-gray-700 mb-3 text-base md:text-lg"><i class="fas fa-phone text-blue-600 mr-3"></i> <span data-translate-key="contact_phone_label">Phone:</span> <a href="tel:+918981777440" class="hover:underline" data-translate-key="contact_phone1" aria-label="Call +91 89817 77440">+91 89817 77440</a> / <a href="tel:+919883809088" class="hover:underline" data-translate-key="contact_phone2" aria-label="Call +91 98838 09088">+91 98838 09088</a></p>
                 </div>
 
                 <!-- Shop Timings -->
@@ -358,10 +359,10 @@
         <div class="container mx-auto text-center">
             <p class="mb-4 text-sm md:text-base" data-translate-key="footer_copyright">&copy; 2024 Sri Balaji Medicals. All rights reserved.</p>
             <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-facebook-f text-xl md:text-2xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-twitter text-xl md:text-2xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-instagram text-xl md:text-2xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125"><i class="fab fa-linkedin-in text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125" aria-label="Visit us on Facebook"><i class="fab fa-facebook-f text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125" aria-label="Visit us on Twitter"><i class="fab fa-twitter text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125" aria-label="Visit us on Instagram"><i class="fab fa-instagram text-xl md:text-2xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-125" aria-label="Visit us on LinkedIn"><i class="fab fa-linkedin-in text-xl md:text-2xl"></i></a>
             </div>
         </div>
     </footer>
@@ -634,7 +635,7 @@
                 doc6_timings: "বুধবার ও শুক্রবার, রাত 8:00 টা",
                 doc7_name: "ডাঃ এ মুখার্জি",
                 doc7_specialty: "त्वक विशेषज्ञ",
-                doc7_experience: "त्वकविद্যায় विशेषत्व, কার্যকর ত্বকের যত্নের समाधान प्रदान করেন।",
+                doc7_experience: "त्वकविद্যায় বিশেষत्व, কার্যকর ত্বকের যত্নের সমাধান প্রদান করেন।",
                 doc7_timings: "বুধবার, সকাল 11:00 টা",
                 doc8_name: "ডাঃ সোভিক ব্যানার্জি",
                 doc8_specialty: "কার্ডিওলজিস্ট ও ক্রিটিক্যাল কেয়ার",
