@@ -18,6 +18,12 @@
     <!-- Favicon -->
     <link rel="icon" href="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" type="image/png">
 
+    <!-- Preconnect to domains hosting critical assets for faster connection establishment -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Required for Google Fonts -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <!-- Preload critical resources for faster loading (LCP, render-blocking) -->
     <!-- Preloading the Tailwind CSS script for faster execution -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
@@ -383,7 +389,7 @@
         </div>
     </footer>
 
-    <script>
+    <script defer>
         // Language translation data
         const translations = {
             en: {
@@ -651,7 +657,7 @@
                 doc6_timings: "বুধবার ও শুক্রবার, রাত 8:00 টা",
                 doc7_name: "ডাঃ এ মুখার্জি",
                 doc7_specialty: "ত্বক বিশেষজ্ঞ",
-                doc7_experience: "ত্বকविद্যায় विशेषत्व, কার্যকর ত্বকের যত্নের समाधान प्रदान করেন।",
+                doc7_experience: "ত্বকविद্যায় বিশেষত্ব, কার্যকর ত্বকের যত্নের সমাধান প্রদান করেন।",
                 doc7_timings: "বুধবার, সকাল 11:00 টা",
                 doc8_name: "ডাঃ সোভিক ব্যানার্জি",
                 doc8_specialty: "কার্ডিওলজিস্ট ও ক্রিটিক্যাল কেয়ার",
