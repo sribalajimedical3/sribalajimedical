@@ -132,8 +132,8 @@
 </head>
 <body class="flex flex-col min-h-screen">
 
-    <!-- Language Selection Modal -->
-    <div id="language-modal" class="modal-overlay hidden">
+    <!-- Language Selection Modal - Added ARIA attributes for accessibility -->
+    <div id="language-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
         <div class="modal-content">
             <h2 class="text-3xl font-bold mb-6" data-key="choose_language">Choose Language</h2>
             <div class="flex flex-col space-y-4">
@@ -149,9 +149,11 @@
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
             <!-- Business Logo Image - Circular -->
             <div class="mb-4 md:mb-0 transform hover:scale-105 transition duration-300">
-                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medical Logo" class="h-24 w-24 rounded-full object-cover shadow-md border-4 border-white">
+                <!-- Added width and height for CLS prevention -->
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medical Logo" class="h-24 w-24 rounded-full object-cover shadow-md border-4 border-white" width="96" height="96">
             </div>
-            <nav>
+            <!-- Added ARIA label for navigation -->
+            <nav aria-label="Main navigation">
                 <ul class="flex flex-wrap justify-center space-x-8 text-xl">
                     <li><a href="#home" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_home">Home</a></li>
                     <li><a href="#about" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_about">About Us</a></li>
@@ -160,7 +162,7 @@
                     <li><a href="#info" class="hover:text-blue-200 link-hover transition duration-300" data-key="nav_contact">Get in Touch</a></li>
                 </ul>
             </nav>
-            <!-- Language Switcher (now visible for later changes) -->
+            <!-- Language Switcher -->
             <div class="mt-4 md:mt-0">
                 <select id="language-switcher" class="bg-blue-800 text-white p-2 rounded-md cursor-pointer">
                     <option value="en">English</option>
@@ -489,7 +491,7 @@
         </div>
     </footer>
 
-    <script>
+    <script async>
         const translations = {
             en: {
                 page_title: "Sri Balaji Medical - Your Trusted Pharmacy & Clinic in Titagarh, Kolkata",
@@ -779,7 +781,7 @@
                 test_liver_function: "লিভার ফাংশন টেস্ট",
                 test_kidney_function: "কিডনি ফাংশন টেস্ট",
                 test_booking_info: "উপলব্ধ পরীক্ষা এবং বুকিং পদ্ধতির বিষয়ে আরও তথ্যের জন্য অনুগ্রহ করে আমাদের সাথে যোগাযোগ করুন।",
-                wellness_products_heading: "ওয়েলনেস পণ্য",
+                wellness_products_heading: "ওয়েলनेस পণ্য",
                 wellness_products_text: "পুষ্টিকর পরিপূরক, ব্যক্তিগত যত্নের জিনিসপত্র এবং আরও অনেক কিছু সহ আমাদের স্বাস্থ্য ও ওয়েলনেস পণ্যের পরিসর দিয়ে আপনার সুস্থতা বাড়ান।",
                 wellness_supplements: "পুষ্টিকর পরিপূরক",
                 wellness_personal_care: "ব্যক্তিগত যত্নের জিনিসপত্র",
@@ -816,7 +818,7 @@
                 doc_rini_time_1: "সোমবার, রাত ৮:০০ টা।",
 
                 doc_sapna_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
-                doc_sapna_exp: "মহিলাদের স্বাস্থ্যে নিবেদিত, বিশেষজ্ঞ স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান।",
+                doc_sapna_exp: "মহিলাদের স্বাস্থ্যে নিবেদিত, বিশেষজ্ঞ স্ত্রীরोग সংক্রান্ত যত্ন প্রদান।",
                 doc_sapna_time_1: "সোমবার এবং বুধবার, সকাল ১০:০০ টা",
 
                 doc_tk_specialty: "ত্বক বিশেষজ্ঞ",
@@ -834,7 +836,7 @@
 
                 doc_sovik_specialty: "হৃদরোগ বিশেষজ্ঞ ও ক্রিটিক্যাল কেয়ার",
                 doc_sovik_exp: "হৃদরোগ ও ক্রিটিক্যাল কেয়ারে বিশেষজ্ঞ, হৃদপিণ্ডের স্বাস্থ্য নিশ্চিত করা।",
-                doc_contact_availability: "উপলব্ধতার জন্য যোগাযোগ করুন।",
+                doc_contact_availability: "উপलब्धতার জন্য যোগাযোগ করুন।",
 
                 get_in_touch_heading: "আমাদের সাথে যোগাযোগ করুন",
                 our_location_heading: "আমাদের অবস্থান",
@@ -904,6 +906,10 @@
                 languageModal.classList.add('hidden'); // Hide modal if language is already chosen
             } else {
                 languageModal.classList.remove('hidden'); // Show modal if no language is chosen
+                // Set initial focus to the first button in the modal for accessibility
+                if (languageButtons.length > 0) {
+                    languageButtons[0].focus();
+                }
             }
 
             languageButtons.forEach(button => {
@@ -911,6 +917,8 @@
                     const lang = event.target.dataset.lang;
                     setLanguage(lang);
                     languageModal.classList.add('hidden'); // Hide modal after selection
+                    // Return focus to the body or a relevant element after closing modal
+                    document.body.focus();
                 });
             });
 
