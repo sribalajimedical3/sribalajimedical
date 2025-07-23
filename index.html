@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Balaji Medicals - Your Health, Our Priority</title>
-    <meta name="description" content="Sri Balaji Medicals offers a wide range of prescription medicines, medical devices, lab test services, and wellness products. Your trusted partner in health and wellness in Kolkata.">
-    <meta name="keywords" content="Sri Balaji Medicals, medical supplies, pharmaceuticals, medical equipment, lab tests, wellness products, doctors, child specialist, gynecologist, skin specialist, cardiologist, Kolkata, health, wellness">
+    <!-- Primary SEO Meta Tags -->
+    <title>Sri Balaji Medicals - Your Health, Our Priority | Pharmacy & Doctors in Kolkata</title>
+    <meta name="description" content="Sri Balaji Medicals offers a wide range of prescription medicines, medical devices, lab test services, and wellness products. Consult top child specialists, gynecologists, skin specialists, and cardiologists. Your trusted healthcare partner in Barrackpore, Kolkata.">
+    <meta name="keywords" content="Sri Balaji Medicals, medical supplies, pharmaceuticals, medical equipment, lab tests, wellness products, doctors, child specialist, gynecologist, skin specialist, cardiologist, Barrackpore, Kolkata, health, wellness, pharmacy, medicine shop">
     <meta name="author" content="Sri Balaji Medicals">
+    <meta name="robots" content="index, follow"> <!-- Instructs search engines to index and follow links -->
+    <link rel="canonical" href="https://yourwebsite.com/sribalajimedical/"> <!-- Replace with your actual canonical URL -->
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook Meta Tags for Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://yourwebsite.com/sribalajimedical/"> <!-- Replace with your actual website URL -->
-    <meta property="og:title" content="Sri Balaji Medicals - Your Health, Our Priority">
-    <meta property="og:description" content="Providing quality medical supplies and services with care and compassion.">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw"> <!-- Shop front image for social media -->
+    <meta property="og:title" content="Sri Balaji Medicals - Your Health, Our Priority | Pharmacy & Doctors in Kolkata">
+    <meta property="og:description" content="Providing quality medical supplies and services with care and compassion. Consult top specialists.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw"> <!-- High-quality image for social media preview -->
+    <meta property="og:image:alt" content="Sri Balaji Medicals Shop Front and Logo">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sribalajimedicals"> <!-- Replace with your Twitter handle if applicable -->
+    <meta name="twitter:title" content="Sri Balaji Medicals - Your Health, Our Priority">
+    <meta name="twitter:description" content="Your trusted healthcare partner in Barrackpore, Kolkata, offering medicines, devices, lab tests, and specialist consultations.">
+    <meta name="twitter:image" content="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw">
 
     <!-- Favicon -->
     <link rel="icon" href="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" type="image/png">
@@ -25,34 +36,134 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Preload critical resources for faster loading (LCP, render-blocking) -->
-    <!-- Preloading the Tailwind CSS script for faster execution -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    <!-- Preloading fonts as styles for early discovery, especially important for LCP text -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" as="style">
-    <!-- Preloading Font Awesome for early discovery, though loaded asynchronously -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
 
     <!-- Tailwind CSS CDN (placed in head for immediate styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Orbitron for headings, Inter for body (now loaded synchronously for LCP, with font-display: swap) -->
-    <!-- Removed media="print" onload="this.media='all'" to make it render-blocking for faster LCP text display -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons (loaded asynchronously to prevent render blocking) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
-        /* Critical CSS for initial layout can be inlined here if not using Tailwind JIT */
+        /* Critical CSS for initial layout - Inlined to reduce FCP/LCP */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
+            background-color: #f3f4f6;
         }
         h1, h2, h3 {
             font-family: 'Orbitron', sans-serif;
         }
-        /* Custom class for hero background image */
+        .header-bg {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .logo-img {
+            height: 3rem; /* h-12 */
+            width: 3rem;  /* w-12 */
+            border-radius: 9999px; /* rounded-full */
+            object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            border-width: 2px; /* border-2 */
+            border-color: #bfdbfe; /* border-blue-200 */
+        }
+        @media (min-width: 768px) { /* md: */
+            .logo-img {
+                height: 3.5rem; /* md:h-14 */
+                width: 3.5rem;  /* md:w-14 */
+            }
+        }
+        .site-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* font-bold */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        @media (min-width: 768px) { /* md: */
+            .site-title {
+                font-size: 1.5rem; /* md:text-2xl */
+            }
+        }
         .hero-bg {
             background: linear-gradient(to right, #1a202c, #2b6cb0); /* Darker blue gradient */
         }
+        .hero-content {
+            padding: 1.5rem; /* p-6 */
+            border-radius: 0.75rem; /* rounded-xl */
+            max-width: 48rem; /* max-w-4xl */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(255, 255, 255, 0.1); /* bg-white bg-opacity-10 */
+            backdrop-filter: blur(4px); /* backdrop-blur-sm */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* border border-white border-opacity-20 */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+        }
+        @media (min-width: 768px) { /* md: */
+            .hero-content {
+                padding: 2rem; /* md:p-8 */
+            }
+        }
+        .hero-title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 800; /* font-extrabold */
+            line-height: 1.25; /* leading-tight */
+            margin-bottom: 1rem; /* mb-4 */
+            color: #ffffff;
+        }
+        @media (min-width: 768px) { /* md: */
+            .hero-title {
+                font-size: 3.75rem; /* md:text-6xl */
+            }
+        }
+        .hero-subtitle {
+            font-size: 1rem; /* text-base */
+            margin-bottom: 2rem; /* mb-8 */
+            color: #ffffff;
+        }
+        @media (min-width: 768px) { /* md: */
+            .hero-subtitle {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+        }
+        .btn-primary {
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #ffffff;
+            font-weight: 700; /* font-bold */
+            padding-top: 0.5rem; /* py-2 */
+            padding-bottom: 0.5rem; /* py-2 */
+            padding-left: 1.5rem; /* px-6 */
+            padding-right: 1.5rem; /* px-6 */
+            border-radius: 9999px; /* rounded-full */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition-property: all;
+            transition-duration: 300ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out */
+            transform: scale(1);
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+            transform: scale(1.05); /* hover:scale-105 */
+        }
+        .btn-primary:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 */
+        }
+        @media (min-width: 768px) { /* md: */
+            .btn-primary {
+                padding-top: 0.75rem; /* md:py-3 */
+                padding-bottom: 0.75rem; /* md:py-3 */
+                padding-left: 2rem; /* md:px-8 */
+                padding-right: 2rem; /* md:px-8 */
+            }
+        }
+
         /* Subtle hover effect for cards */
         .card-hover:hover {
             transform: translateY(-5px);
@@ -98,6 +209,80 @@
             width: 400px;
         }
     </style>
+
+    <!-- Schema.org Structured Data for Local Business and Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Sri Balaji Medicals",
+          "url": "https://yourwebsite.com/sribalajimedical/",
+          "logo": "https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-8981777440",
+            "contactType": "Customer Service"
+          },
+          "sameAs": [
+            "https://www.facebook.com/your-sri-balaji-medicals-page",
+            "https://twitter.com/your-sri-balaji-medicals-handle",
+            "https://www.instagram.com/your-sri-balaji-medicals-profile"
+          ]
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": "Sri Balaji Medicals",
+          "image": "https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw",
+          "url": "https://yourwebsite.com/sribalajimedical/",
+          "telephone": "+91-8981777440",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Near Barrackpore Railway Station, Opposite SBI",
+            "addressLocality": "Barrackpore",
+            "addressRegion": "West Bengal",
+            "postalCode": "700120",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.7661",
+            "longitude": "88.3653"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "22:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Thursday",
+              "closes": "00:00",
+              "opens": "00:00"
+            }
+          ],
+          "servesCuisine": "Medical Supplies, Lab Tests, Doctor Consultations",
+          "hasMap": "https://g.co/kgs/J4dDpYH",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "150"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="text-gray-800">
 
@@ -114,12 +299,12 @@
     </div>
 
     <!-- Header Section -->
-    <header class="bg-white shadow-lg py-4 sticky top-0 z-50">
+    <header class="header-bg py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo -->
+            <!-- Logo and Site Title as a Link -->
             <a href="#" class="flex items-center space-x-2" aria-label="Home - Sri Balaji Medicals">
-                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Logo" class="h-12 w-12 md:h-14 md:w-14 rounded-full object-cover shadow-md border-2 border-blue-200" width="56" height="56">
-                <span class="text-xl md:text-2xl font-bold text-blue-700" data-translate-key="site_title">Sri Balaji Medicals</span>
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medicals Logo" class="logo-img" width="56" height="56">
+                <span class="site-title" data-translate-key="site_title">Sri Balaji Medicals</span>
             </a>
             <!-- Navigation -->
             <nav class="hidden md:block">
@@ -161,10 +346,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg text-white py-24 md:py-40 flex items-center justify-center text-center relative overflow-hidden px-4">
-        <div class="relative z-10 p-6 md:p-8 rounded-xl max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 shadow-xl">
-            <h1 class="text-3xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-translate-key="hero_title">Your Health, Our Priority</h1>
-            <p class="text-base md:text-xl mb-8 animate-fade-in-up" data-translate-key="hero_subtitle">Providing quality medical supplies and services with care and compassion.</p>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 animate-bounce-once focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" data-translate-key="hero_button" aria-label="Get in touch with us">Get in Touch</a>
+        <div class="hero-content relative z-10">
+            <h1 class="hero-title animate-fade-in-down" data-translate-key="hero_title">Your Health, Our Priority</h1>
+            <p class="hero-subtitle animate-fade-in-up" data-translate-key="hero_subtitle">Providing quality medical supplies and services with care and compassion.</p>
+            <a href="#contact" class="btn-primary animate-bounce-once" data-translate-key="hero_button" aria-label="Get in touch with us">Get in Touch</a>
         </div>
     </section>
 
@@ -631,17 +816,16 @@
                 product_other_desc: "আমাদের মূল অফারগুলির বাইরে, আমরা বিভিন্ন অন্যান্য প্রয়োজনীয় স্বাস্থ্যসেবা সামগ্রী এবং পরিষেবা সরবরাহ করি যা বিভিন্ন চাহিদা পূরণ করে। আরও বিস্তারিত জানার জন্য আমাদের দোকানে যান বা আমাদের সাথে যোগাযোগ করুন।",
                 product_other_item1: "প্রাথমিক চিকিৎসার সরঞ্জাম",
                 product_other_item2: "সার্জিক্যাল আইটেম",
-                product_other_item3: "होम डिलीवरी सेवा",
+                product_other_item3: "হোম ডেলিভারি সার্ভিস",
                 doctors_title: "আমাদের ডাক্তারদের সাথে দেখা করুন",
                 doc1_name: "ডাঃ মেজর রবিন দুবে",
                 doc1_specialty: "শিশু বিশেষজ্ঞ",
                 doc1_experience: "শিশুদের যত্নে 10+ বছরের অভিজ্ঞতা, শিশুদের জন্য সহানুভূতিশীল চিকিৎসা প্রদান করেন।",
                 doc1_timings: "বুধবার ও শনিবার, সন্ধ্যা 6:30 থেকে 7:30 পর্যন্ত",
                 doc2_name: "ডাঃ ডিএন চক্রবর্তী",
-                doc2_specialty: "শিশু বিশেষজ্ঞ",
-                doc2_experience: "बाल चिकित्सा देखभाल में 40+ वर्षों का अनुभव, बाल स्वास्थ्य में विशेषज्ञता के लिए प्रसिद्ध।",
+                doc2_specialty: "बाल चिकित्सा देखभाल में 40+ वर्षों का अनुभव, बाल स्वास्थ्य में विशेषज्ञता के लिए प्रसिद्ध।",
                 doc2_timings: "রবিবার ব্যতীত প্রতিদিন, সন্ধ্যা 6:00 থেকে 7:30 পর্যন্ত।",
-                doc3_name: "ডাঃ ইউके ঘোষ",
+                doc3_name: "ডাঃ ইউকে ঘোষ",
                 doc3_specialty: "স্ত্রীরোগ বিশেষজ্ঞ",
                 doc3_experience: "মহিলাদের স্বাস্থ্যে অভিজ্ঞ, ব্যাপক স্ত্রীরোগ সংক্রান্ত যত্ন প্রদান করেন।",
                 doc3_timings: "সোমবার, রাত 8:00 টা।",
@@ -667,7 +851,7 @@
                 doc8_timings: "উপলব্ধতার জন্য যোগাযোগ করুন।",
                 doc_timings_label: "সময়:",
                 doc_appointment_note: "শুধুমাত্র অ্যাপয়েন্টমেন্ট দ্বারা।",
-                doc_book_appointment: "অ্যাপয়েন্টमेंट বুক করুন:",
+                doc_book_appointment: "অ্যাপয়েন্টমেন্ট বুক করুন:",
                 contact_us_link: "যোগাযোগ করুন",
                 contact_title: "যোগাযোগ করুন",
                 contact_details_title: "আমাদের অবস্থান ও যোগাযোগের বিবরণ",
