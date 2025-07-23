@@ -19,17 +19,17 @@
     <link rel="icon" href="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" type="image/png">
 
     <!-- Preload critical resources for faster loading (LCP, render-blocking) -->
+    <!-- Preloading the Tailwind CSS script for faster execution -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <!-- Preloading fonts and icons as styles for early discovery -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
-    <!-- Preload the LCP image if it were a direct image file and not a background -->
-    <!-- <link rel="preload" href="path/to/hero-background-image.jpg" as="image"> -->
 
-    <!-- Tailwind CSS CDN (moved to head for immediate styling, but consider purging for production) -->
+    <!-- Tailwind CSS CDN (placed in head for immediate styling) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Orbitron for headings, Inter for body (with font-display: swap) -->
+    <!-- Google Fonts - Orbitron for headings, Inter for body (with font-display: swap for better FCP) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome for icons (loaded asynchronously to prevent render blocking) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
@@ -164,7 +164,7 @@
     <section id="about" class="py-12 md:py-16 bg-white px-4">
         <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div class="md:w-1/2">
-                <!-- Improved image delivery with srcset and sizes -->
+                <!-- Improved image delivery with srcset and sizes for responsive loading -->
                 <img src="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s1360-w1360-h1020-rw"
                      srcset="https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s480-w480-h360-rw 480w,
                              https://lh3.googleusercontent.com/p/AF1QipNIK0H9zbbImbmC_zT7_c6ZysajuJf9qknsjQBe=s800-w800-h600-rw 800w,
@@ -650,8 +650,8 @@
                 doc6_experience: "ত্বকবিদ্যায় বিশেষজ্ঞ, উন্নত ত্বকের চিকিৎসা প্রদান করেন।",
                 doc6_timings: "বুধবার ও শুক্রবার, রাত 8:00 টা",
                 doc7_name: "ডাঃ এ মুখার্জি",
-                doc7_specialty: "त्वक विशेषज्ञ",
-                doc7_experience: "त्वकविद্যায় विशेषत्व, কার্যকর ত্বকের যত্নের সমাধান প্রদান করেন।",
+                doc7_specialty: "ত্বক বিশেষজ্ঞ",
+                doc7_experience: "ত্বকविद্যায় विशेषत्व, কার্যকর ত্বকের যত্নের समाधान प्रदान করেন।",
                 doc7_timings: "বুধবার, সকাল 11:00 টা",
                 doc8_name: "ডাঃ সোভিক ব্যানার্জি",
                 doc8_specialty: "কার্ডিওলজিস্ট ও ক্রিটিক্যাল কেয়ার",
