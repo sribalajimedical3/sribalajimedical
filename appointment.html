@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book appointments at Sri Balaji Medical with top child specialists, gynecologists, and dermatologists. Fast and easy booking via WhatsApp.">
+    <title>Sri Balaji Medical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #f8fafc; /* Tailwind's slate-50 */
+            overflow: hidden; /* Hide scrollbars during loading */
+        }
+        
+        /* Loading screen styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loading-logo {
+            animation: bouncing-pulse 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
+
+        @keyframes bouncing-pulse {
+            0% {
+                transform: scale(1) translateY(0);
+            }
+            25% {
+                transform: scale(1.1) translateY(-10px);
+            }
+            50% {
+                transform: scale(1) translateY(0);
+            }
+            75% {
+                transform: scale(1.1) translateY(10px);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* Main content styles */
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+    </style>
+    <!-- SEO Structured Data for Medical Clinic -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Sri Balaji Medical",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gouranga Mandir Road",
+        "addressLocality": "Bhadrakali",
+        "addressRegion": "West Bengal",
+        "postalCode": "712232",
+        "addressCountry": "IN"
+      },
+      "telephone": "+918981777440",
+      "url": "https://sribalajimedical.com",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ],
+      "image": "https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw"
+    }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img id="loading-logo" src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" alt="Sri Balaji Medical Logo" class="w-48 h-48 rounded-full">
+        <p class="mt-4 text-xl font-semibold text-gray-700">Loading...</p>
+    </div>
+
+    <!-- Main Content Container -->
+    <div id="main-content">
+        <!-- Reminder Banner -->
+        <div class="bg-yellow-400 text-gray-800 text-center py-2 px-4 shadow-md font-semibold">
+            <p>💊 Don't forget to bring your prescription when you visit.</p>
+        </div>
+
+        <!-- Header Section -->
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-center">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPHw9-NMkphw_TvPsJzp_VrMgG26vZpv-5wLAwK=s1360-w1360-h1020-rw" 
+                     alt="Sri Balaji Medical Logo" 
+                     class="w-24 h-24 rounded-full mr-0 sm:mr-4 mb-4 sm:mb-0 shadow-lg border-2 border-indigo-500">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-700 text-center">Sri Balaji Medical</h1>
+            </div>
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="container mx-auto px-4 py-8">
+            <p class="text-center text-xl sm:text-2xl text-gray-600 mb-8">Providing compassionate and expert care for our community.</p>
+
+            <!-- Appointment Form Section -->
+            <section id="appointmentFormSection" class="bg-white rounded-xl shadow-lg p-6 mb-8" aria-label="Appointment Booking Form">
+                <h2 class="text-3xl font-bold text-indigo-700 mb-4 text-center">Book an Appointment</h2>
+                <form id="appointmentForm" class="flex flex-col gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div>
+                            <label for="patientName" class="block text-sm font-medium text-gray-700">Patient Name</label>
+                            <input type="text" id="patientName" name="patientName" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="patientPhone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <input type="tel" id="patientPhone" name="patientPhone" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <span id="phoneError" class="text-red-500 text-xs mt-1 hidden">Please enter a valid 10-digit phone number.</span>
+                        </div>
+                        <div>
+                            <label for="appointmentDate" class="block text-sm font-medium text-gray-700">Appointment Date</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        </div>
+                        <div class="lg:col-span-3">
+                            <label for="doctorSelect" class="block text-sm font-medium text-gray-700">Select Doctor</label>
+                            <select id="doctorSelect" name="doctorSelect" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                <option value="">-- Please select a doctor --</option>
+                                <option value="Dr. Major Robin Dubey">Dr. Major Robin Dubey</option>
+                                <option value="Dr. DN Chakraborty">Dr. DN Chakraborty</option>
+                                <option value="Dr. UK Ghosh">Dr. UK Ghosh</option>
+                                <option value="Dr. Rini Mukherji">Dr. Rini Mukherji</option>
+                                <option value="Dr. Sapna Lakhotia">Dr. Sapna Lakhotia</option>
+                                <option value="Dr. TK Chakraborty">Dr. TK Chakraborty</option>
+                                <option value="Dr. A Mukherjee">Dr. A Mukherjee</option>
+                                <option value="Dr. Sovik Bannerjee">Dr. Sovik Bannerjee</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <button type="submit" id="confirmAppointmentBtn" class="bg-indigo-500 text-white font-bold py-3 px-6 rounded-full hover:bg-indigo-600 transition-colors">Confirm Appointment</button>
+                    </div>
+                </form>
+                <!-- A simple confirmation message box to appear on form submission -->
+                <div id="confirmationMessage" class="mt-4 p-4 text-center rounded-lg bg-green-100 text-green-700 hidden">
+                    <p class="font-bold">Thank you!</p>
+                    <p>We are redirecting you to WhatsApp to finalize your booking.</p>
+                </div>
+            </section>
+
+            <!-- Doctor Details Display Section -->
+            <section id="doctor-details-section" class="bg-white rounded-xl shadow-lg p-6 mb-8 hidden">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-4 text-center">Doctor Details</h3>
+                <div id="doctor-details-content">
+                    <!-- Doctor details will be dynamically injected here -->
+                </div>
+            </section>
+
+            <!-- Hidden Doctor Data -->
+            <div id="doctor-data" class="hidden">
+                <script type="application/json">
+                    {
+                        "Dr. Major Robin Dubey": {
+                            "specialty": "Child Specialist",
+                            "experience": "10+ years of experience in pediatric care, providing compassionate treatment for children.",
+                            "timings": "Wednesday and Saturday, 6:30 PM to 7:30 PM. By appointment only."
+                        },
+                        "Dr. DN Chakraborty": {
+                            "specialty": "Child Specialist",
+                            "experience": "40+ years of experience in pediatric care, renowned for expertise in child health.",
+                            "timings": "Daily except Sunday, 6:00 PM to 7:30 PM."
+                        },
+                        "Dr. UK Ghosh": {
+                            "specialty": "Gynecologist",
+                            "experience": "Experienced in women's health, providing comprehensive gynecological care.",
+                            "timings": "Monday, 8:00 PM."
+                        },
+                        "Dr. Rini Mukherji": {
+                            "specialty": "Gynecologist",
+                            "experience": "Skilled in women's health, offering personalized gynecological services.",
+                            "timings": "Monday, 8:00 PM."
+                        },
+                        "Dr. Sapna Lakhotia": {
+                            "specialty": "Gynecologist",
+                            "experience": "Dedicated to women's health, providing expert gynecological care.",
+                            "timings": "Monday and Wednesday, 10:00 AM"
+                        },
+                        "Dr. TK Chakraborty": {
+                            "specialty": "Skin Specialist",
+                            "experience": "Expert in dermatology, offering advanced skin treatments.",
+                            "timings": "Wednesday and Friday, 8:00 PM"
+                        },
+                        "Dr. A Mukherjee": {
+                            "specialty": "Skin Specialist",
+                            "experience": "Specialized in dermatology, providing effective skin care solutions.",
+                            "timings": "Wednesday, 11:00 AM"
+                        },
+                        "Dr. Sovik Bannerjee": {
+                            "specialty": "Cardiologist & Critical Care",
+                            "experience": "Expert in cardiology and critical care, ensuring heart health.",
+                            "timings": "Contact for availability."
+                        }
+                    }
+                </script>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+            <p class="text-sm">&copy; 2023 Sri Balaji Medical. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script defer>
+        const doctorSelect = document.getElementById('doctorSelect');
+        const doctorDetailsSection = document.getElementById('doctor-details-section');
+        const doctorDetailsContent = document.getElementById('doctor-details-content');
+        const appointmentForm = document.getElementById('appointmentForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const phoneError = document.getElementById('phoneError');
+
+        const patientNameInput = document.getElementById('patientName');
+        const patientPhoneInput = document.getElementById('patientPhone');
+        const appointmentDateInput = document.getElementById('appointmentDate');
+        
+        const adminPhoneNumber = '918981777440'; 
+
+        const doctorDataElement = document.getElementById('doctor-data');
+        const doctors = JSON.parse(doctorDataElement.querySelector('script').textContent);
+
+        // Hide loading screen after all assets are loaded
+        window.onload = function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                mainContent.style.opacity = '1';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }, 500); // 0.5s transition
+        };
+
+        // Show doctor details when a doctor is selected
+        doctorSelect.addEventListener('change', (event) => {
+            const selectedDoctor = event.target.value;
+            if (selectedDoctor) {
+                const doctor = doctors[selectedDoctor];
+                const detailsHtml = `
+                    <h3 class="text-2xl font-bold text-gray-900">${selectedDoctor}</h3>
+                    <p class="text-indigo-600 font-semibold text-lg">${doctor.specialty}</p>
+                    <p class="text-gray-600 mt-2">${doctor.experience}</p>
+                    <div class="mt-4">
+                        <p class="text-sm text-gray-500"><strong>Timings:</strong> ${doctor.timings}</p>
+                    </div>
+                `;
+                doctorDetailsContent.innerHTML = detailsHtml;
+                doctorDetailsSection.classList.remove('hidden');
+            } else {
+                doctorDetailsSection.classList.add('hidden');
+            }
+        });
+
+        // Handle form submission
+        appointmentForm.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+            const patientName = patientNameInput.value.trim();
+            const patientPhone = patientPhoneInput.value.trim();
+            const appointmentDate = appointmentDateInput.value;
+            const selectedDoctor = doctorSelect.value;
+            
+            // Basic phone number validation for 10 digits
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(patientPhone)) {
+                phoneError.classList.remove('hidden');
+                return;
+            } else {
+                phoneError.classList.add('hidden');
+            }
+
+            if (!patientName || !appointmentDate || !selectedDoctor) {
+                return;
+            }
+
+            // Show confirmation message
+            confirmationMessage.classList.remove('hidden');
+
+            // Construct the pre-filled WhatsApp message
+            const message = `Hello, I would like to book an appointment.\n\n` +
+                            `Patient Name: ${patientName}\n` +
+                            `Patient Phone: ${patientPhone}\n` +
+                            `Appointment Date: ${appointmentDate}\n` +
+                            `Doctor: ${selectedDoctor}`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappLink = `https://wa.me/${adminPhoneNumber}?text=${encodedMessage}`;
+            
+            // Wait a moment before redirecting to allow user to see the message
+            setTimeout(() => {
+                window.open(whatsappLink, '_blank');
+            }, 1500); // 1.5 second delay
+        });
+    </script>
+</body>
+</html>
