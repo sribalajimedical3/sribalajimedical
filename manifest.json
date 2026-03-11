@@ -1,0 +1,23 @@
+{
+  "name": "Sri Balaji Medical",
+  "short_name": "BalajiMed",
+  "start_url": "/sribalajimedical/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Sri Balaji Medical Store",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHxlajAvNM8MmmdwzpZM53t70xjDHrWAQDlYYsuz7L31hy7H8qF1K4OTJotnhtrvdWv-iK_0p7rGElala17RaZpDjQ_FPdHXDQd0qWu0d72Of1mjrVZth0etzV6ypoLNsvooZiGKYgvY0=s1360-w1360-h1020-rw",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHxlajAvNM8MmmdwzpZM53t70xjDHrWAQDlYYsuz7L31hy7H8qF1K4OTJotnhtrvdWv-iK_0p7rGElala17RaZpDjQ_FPdHXDQd0qWu0d72Of1mjrVZth0etzV6ypoLNsvooZiGKYgvY0=s1360-w1360-h1020-rw",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
