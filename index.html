@@ -484,5 +484,16 @@
         updateStoreStatus();
         setInterval(updateStoreStatus, 60000);
     </script>
+    <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sribalajimedical/service-worker.js")
+    .then(function(registration) {
+      console.log("Service Worker registered successfully:", registration);
+    })
+    .catch(function(error) {
+      console.log("Service Worker registration failed:", error);
+    });
+}
+</script>
 </body>
 </html>
