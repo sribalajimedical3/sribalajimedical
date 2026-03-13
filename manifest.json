@@ -1,7 +1,7 @@
 {
   "id": "com.sribalajimedical.app",
   "name": "Sri Balaji Medical",
-  "short_name": "Balaji Med",
+  "short_name": "Sri Balaji Med",
   "description": "Sri Balaji Medical brings premium healthcare to your fingertips. Book specialist appointments, check live 24/7 pharmacy status, and access elite medical care instantly from Titagarh's most trusted clinic.",
   "start_url": "/sribalajimedical/index.html?utm_source=pwa_app_store",
   "scope": "/sribalajimedical/",
