@@ -1,35 +1,36 @@
 {
-  "id": "/sribalajimedical/?source=pwa",
-  "name": "Sri Balaji Medical App",
+  "id": "com.sribalajimedical.app",
+  "name": "Sri Balaji Medical",
   "short_name": "Balaji Med",
-  "description": "Premium Healthcare & Pharmacy in Titagarh. Book appointments and access elite medical care quickly.",
-  "start_url": "/sribalajimedical/index.html?utm_source=pwa_homescreen",
+  "description": "Sri Balaji Medical brings premium healthcare to your fingertips. Book specialist appointments, check live 24/7 pharmacy status, and access elite medical care instantly from Titagarh's most trusted clinic.",
+  "start_url": "/sribalajimedical/index.html?utm_source=pwa_app_store",
   "scope": "/sribalajimedical/",
   "display": "standalone",
   "display_override": [
     "window-controls-overlay",
     "standalone",
-    "minimal-ui",
-    "browser"
+    "minimal-ui"
   ],
   "background_color": "#f8fafc",
   "theme_color": "#1e3a8a",
-  "orientation": "portrait-primary",
+  "orientation": "portrait",
   "dir": "ltr",
   "lang": "en-IN",
   "categories": [
     "medical",
     "health",
     "lifestyle",
-    "business"
+    "productivity"
   ],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "prefer_related_applications": false,
+  "related_applications": [],
   "handle_links": "preferred",
   "launch_handler": {
-    "client_mode": "navigate-existing"
+    "client_mode": ["focus-existing", "navigate-existing", "auto"]
   },
   "edge_side_panel": {
-    "preferred_width": 400
+    "preferred_width": 420
   },
   "share_target": {
     "action": "/sribalajimedical/index.html",
@@ -40,6 +41,17 @@
       "url": "shared_url"
     }
   },
+  "file_handlers": [
+    {
+      "action": "/sribalajimedical/index.html",
+      "accept": {
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/png": [".png"],
+        "application/pdf": [".pdf"]
+      },
+      "name": "Medical Reports & Prescriptions"
+    }
+  ],
   "protocol_handlers": [
     {
       "protocol": "web+appointment",
@@ -71,15 +83,15 @@
       "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
       "sizes": "1360x1020",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "Sri Balaji Medical Desktop App"
+      "form_factor": "narrow",
+      "label": "Book Appointments and Access Elite Care"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
-      "sizes": "1360x1020",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Sri Balaji Medical Mobile App"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepQ6K5gswxSE2M4N-MKFsXdlfpnd-VNvKb6qstfTnFuww_PJTHnd65t0qNbP3gLY8FdY3aVrOx7XmM9PFjcN3jTt1hj8gaadfep68UYKezORtlvjTcQUvH_pRFsfr9PPKvmjgNdwk-OPb8V=w130-h87-n-k-no",
+      "sizes": "130x87",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Visit the Official Sri Balaji Medical Clinic in Titagarh"
     }
   ],
   "shortcuts": [
@@ -121,6 +133,16 @@
           "type": "image/png"
         }
       ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Live Clinic Status",
+      "description": "Check if Sri Balaji Medical is currently open.",
+      "tag": "clinic-status",
+      "ms_ac_template": "/sribalajimedical/widget-template.json",
+      "data": "/sribalajimedical/widget-data.json",
+      "type": "application/json"
     }
   ]
 }
