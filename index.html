@@ -89,6 +89,15 @@
             -webkit-text-fill-color: transparent;
             background-image: linear-gradient(to right, #1e3a8a, #4338ca);
         }
+
+        /* Floating Button Bounce */
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-slate-50 font-sans text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900 overflow-x-hidden">
@@ -113,7 +122,7 @@
                 <a href="#specialists" class="text-gray-600 hover:text-blue-700 font-semibold transition-colors">Specialists</a>
                 <a href="#location" class="text-gray-600 hover:text-blue-700 font-semibold transition-colors">Location</a>
                 
-                <!-- FEATURE 1: Header Install App Button (Supports PC & Mobile) -->
+                <!-- FEATURE 1: Header Install App Button (Desktop primarily) -->
                 <button id="installAppBtn" style="display: none;" class="items-center gap-2 bg-slate-100 text-blue-700 px-5 py-2.5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-sm border border-slate-200 transform hover:scale-105" aria-label="Install App">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
@@ -301,6 +310,17 @@
     </footer>
 
     <!-- ========================================== -->
+    <!-- FEATURE: Floating Persistent Install Button -->
+    <!-- ========================================== -->
+    <button id="floatingInstallBtn" style="display: none;" class="fixed bottom-6 right-6 z-[90] bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-5 py-3.5 rounded-full font-bold shadow-[0_10px_25px_rgba(37,99,235,0.4)] hover:shadow-[0_15px_35px_rgba(37,99,235,0.6)] hover:scale-105 transition-all border border-white/20 items-center gap-2 group animate-bounce-slow" aria-label="Install App">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+        </svg>
+        <span class="hidden sm:inline">Install App</span>
+    </button>
+
+    <!-- ========================================== -->
     <!-- FEATURE 2: Exact Match "Install App" Popup -->
     <!-- ========================================== -->
     <div id="installPopup" class="hidden fixed inset-0 z-[100] bg-slate-900/60 items-center justify-center p-4 backdrop-blur-sm">
@@ -395,7 +415,7 @@
         setInterval(updateLiveStatus, 60000);
 
         // ==========================================
-        // FEATURE: PWA INSTALLATION LOGIC (5-10 Sec Popup)
+        // FEATURE: PWA INSTALLATION LOGIC 
         // ==========================================
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
@@ -407,6 +427,7 @@
 
         let deferredPrompt;
         const installAppBtn = document.getElementById('installAppBtn');
+        const floatingInstallBtn = document.getElementById('floatingInstallBtn'); // New Floating Button
         const installPopup = document.getElementById('installPopup');
         const popupContent = installPopup.querySelector('.popup-content');
         const popupInstallBtn = document.getElementById('popupInstallBtn');
@@ -417,10 +438,11 @@
             e.preventDefault();
             deferredPrompt = e;
             
-            // Show header button immediately
+            // Show header and floating buttons immediately
             if (installAppBtn) installAppBtn.style.display = 'inline-flex';
+            if (floatingInstallBtn) floatingInstallBtn.style.display = 'flex';
 
-            // Show customized popup after EXACTLY 7 seconds (meets 5-10s criteria)
+            // Show customized popup after EXACTLY 7 seconds
             setTimeout(() => {
                 if (deferredPrompt) {
                     installPopup.classList.remove('hidden');
@@ -436,19 +458,21 @@
 
         const handleInstallClick = async () => {
             if (deferredPrompt) {
+                // Hide custom popup immediately if they click an install button
+                closePopupUI();
+                
                 // Trigger browser native download/install prompt
                 deferredPrompt.prompt();
                 const { outcome } = await deferredPrompt.userChoice;
                 if (outcome === 'accepted') console.log('App Installed successfully.');
                 
-                // Clear the prompt variable, it can only be used once
+                // Clear the prompt variable, it can only be used once per page load
                 deferredPrompt = null;
-                hideInstallUI();
+                hideAllInstallUI();
             }
         };
 
-        const hideInstallUI = () => {
-            if (installAppBtn) installAppBtn.style.display = 'none';
+        const closePopupUI = () => {
             popupContent.classList.remove('scale-100', 'opacity-100');
             popupContent.classList.add('scale-95', 'opacity-0');
             setTimeout(() => {
@@ -457,15 +481,25 @@
             }, 400); // Matches CSS transition duration
         };
 
-        // Event Listeners for Buttons
+        const hideAllInstallUI = () => {
+            // Hide the actual buttons ONLY if the app is installed or native prompt is consumed
+            if (installAppBtn) installAppBtn.style.display = 'none';
+            if (floatingInstallBtn) floatingInstallBtn.style.display = 'none';
+            closePopupUI();
+        };
+
+        // Event Listeners for Install Buttons
         if(installAppBtn) installAppBtn.addEventListener('click', handleInstallClick);
+        if(floatingInstallBtn) floatingInstallBtn.addEventListener('click', handleInstallClick);
         if(popupInstallBtn) popupInstallBtn.addEventListener('click', handleInstallClick);
-        if(popupDismissBtn) popupDismissBtn.addEventListener('click', hideInstallUI);
+        
+        // "Maybe Later" strictly closes the popup, but leaves the floating & header buttons active
+        if(popupDismissBtn) popupDismissBtn.addEventListener('click', closePopupUI);
 
         // Hide UI natively if user installs app via browser menu
         window.addEventListener('appinstalled', () => {
             deferredPrompt = null;
-            hideInstallUI();
+            hideAllInstallUI();
         });
     </script>
 </body>
