@@ -1,28 +1,81 @@
 {
+  "id": "/sribalajimedical/?source=pwa",
   "name": "Sri Balaji Medical App",
   "short_name": "Balaji Med",
   "description": "Premium Healthcare & Pharmacy in Titagarh. Book appointments and access elite medical care quickly.",
-  "start_url": "/sribalajimedical/index.html",
+  "start_url": "/sribalajimedical/index.html?utm_source=pwa_homescreen",
   "scope": "/sribalajimedical/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "minimal-ui"],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui",
+    "browser"
+  ],
   "background_color": "#f8fafc",
   "theme_color": "#1e3a8a",
   "orientation": "portrait-primary",
+  "dir": "ltr",
   "lang": "en-IN",
-  "categories": ["medical", "health", "lifestyle"],
+  "categories": [
+    "medical",
+    "health",
+    "lifestyle",
+    "business"
+  ],
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "share_target": {
+    "action": "/sribalajimedical/index.html",
+    "method": "GET",
+    "params": {
+      "title": "shared_title",
+      "text": "shared_text",
+      "url": "shared_url"
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+appointment",
+      "url": "/sribalajimedical/appointment.html?ref=%s"
+    }
+  ],
   "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
+      "sizes": "72x72 96x96 128x128 144x144 152x152 192x192 384x384 512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     },
     {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
+      "sizes": "1360x1020",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Sri Balaji Medical Desktop App"
+    },
+    {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
+      "sizes": "1360x1020",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Sri Balaji Medical Mobile App"
     }
   ],
   "shortcuts": [
