@@ -1,23 +1,43 @@
 {
-  "name": "Sri Balaji Medical",
-  "short_name": "SriBalajiMed",
-  "start_url": "/sribalajimedical/",
+  "name": "Sri Balaji Medical App",
+  "short_name": "Balaji Med",
+  "description": "Premium Healthcare & Pharmacy in Titagarh. Book appointments and access elite medical care quickly.",
+  "start_url": "/sribalajimedical/index.html",
+  "scope": "/sribalajimedical/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "description": "Sri Balaji Medical Store",
+  "display_override": ["window-controls-overlay", "minimal-ui"],
+  "background_color": "#f8fafc",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "categories": ["medical", "health", "lifestyle"],
   "icons": [
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHxlajAvNM8MmmdwzpZM53t70xjDHrWAQDlYYsuz7L31hy7H8qF1K4OTJotnhtrvdWv-iK_0p7rGElala17RaZpDjQ_FPdHXDQd0qWu0d72Of1mjrVZth0etzV6ypoLNsvooZiGKYgvY0=s1360-w1360-h1020-rw",
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqHxlajAvNM8MmmdwzpZM53t70xjDHrWAQDlYYsuz7L31hy7H8qF1K4OTJotnhtrvdWv-iK_0p7rGElala17RaZpDjQ_FPdHXDQd0qWu0d72Of1mjrVZth0etzV6ypoLNsvooZiGKYgvY0=s1360-w1360-h1020-rw",
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book Now",
+      "description": "Schedule a doctor consultation instantly",
+      "url": "/sribalajimedical/appointment.html",
+      "icons": [
+        {
+          "src": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwepUP2FX3SGHTVVi9zaGwqcQFwCyNT5DYEFHwu1BfcMrfGAd_6RCgVs6chi1FpCNnPgkDAr57IT-poVLGH3Qwo8GDiV97PRyiy2d3w3Y1soJ4U39Efp1qu00YF0EriKYEvUUiaWobzhNNMQ=s1360-w1360-h1020-rw",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
