@@ -115,12 +115,13 @@
                     <span class="font-bold text-xl sm:text-2xl text-brand-950 tracking-tight hidden sm:block group-hover:text-accent-600 transition-colors duration-500">Sri Balaji Medical</span>
                 </a>
 
-                <div class="hidden lg:flex space-x-2 items-center">
-                    <a href="index.html" class="px-5 py-2 text-brand-950 font-bold text-[0.95rem] tracking-wide relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-accent-500 after:bottom-0 after:left-0">Home</a>
-                    <a href="about.html" class="px-5 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">About Us</a>
-                    <a href="doctor.html" class="px-5 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Doctors</a>
-                    <div class="pl-6 ml-4 border-l border-brand-200">
-                        <a href="contact.html" class="bg-brand-950 hover:bg-accent-500 text-white hover:text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block">Contact Us</a>
+                <div class="hidden lg:flex space-x-3 items-center">
+                    <a href="index.html" class="px-4 py-2 text-brand-950 font-bold text-[0.95rem] tracking-wide relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-accent-500 after:bottom-0 after:left-0">Home</a>
+                    <a href="about.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">About Us</a>
+                    <a href="doctor.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Doctors</a>
+                    <a href="medicine.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Need Medicine?</a>
+                    <div class="pl-6 ml-2 border-l border-brand-200 flex gap-3">
+                        <a href="appointment.html" class="bg-accent-500 hover:bg-brand-950 text-white px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block">Book Appointment</a>
                     </div>
                 </div>
 
@@ -138,14 +139,23 @@
     <!-- Native App-Like Side Drawer -->
     <div id="drawer-overlay" class="fixed inset-0 bg-brand-950/60 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-500 hardware-accel"></div>
     <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] flex flex-col hardware-accel">
-        <div class="px-6 pt-28 pb-8 space-y-4 flex-grow overflow-y-auto">
-            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-6 px-2">Navigation</h4>
+        <div class="flex justify-between items-center px-6 pt-8 pb-4 border-b border-brand-50">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Navigation</h4>
+            <button id="close-drawer-btn" class="p-2 text-brand-900 bg-brand-50 rounded-full hover:bg-brand-100 transition-colors" aria-label="Close Menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="px-6 pt-6 pb-8 space-y-3 flex-grow overflow-y-auto">
             <a href="index.html" class="block px-4 py-3 text-accent-600 font-bold text-lg relative before:absolute before:left-0 before:top-1/3 before:h-1/3 before:w-1.5 before:bg-accent-500 before:rounded-r-full">Home</a>
             <a href="about.html" class="block px-4 py-3 text-brand-800 font-medium hover:text-accent-600 transition-colors text-lg">About Us</a>
             <a href="doctor.html" class="block px-4 py-3 text-brand-800 font-medium hover:text-accent-600 transition-colors text-lg">Doctors</a>
+            <a href="medicine.html" class="block px-4 py-3 text-brand-800 font-medium hover:text-accent-600 transition-colors text-lg">Need Medicine?</a>
         </div>
-        <div class="p-6 border-t border-brand-50 bg-brand-50/50">
-            <a href="contact.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-brand-950 hover:bg-accent-500 rounded-xl transition-all duration-500 shadow-md transform">
+        <div class="p-6 border-t border-brand-50 bg-brand-50/50 flex flex-col gap-3">
+            <a href="appointment.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-500 shadow-md transform hover:-translate-y-0.5">
+                Book Appointment
+            </a>
+            <a href="contact.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-brand-950 hover:bg-brand-800 rounded-xl transition-all duration-500 shadow-md transform hover:-translate-y-0.5">
                 Contact Pharmacy
             </a>
         </div>
@@ -170,11 +180,11 @@
                             More than a pharmacy. We provide 100% genuine medicines, elite specialist consultations, and an uncompromised commitment to your health.
                         </p>
                         <div class="reveal-up delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="doctor.html" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500 shadow-glow hover:shadow-luxury-hover">
-                                Consult a Doctor
+                            <a href="appointment.html" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500 shadow-glow hover:shadow-luxury-hover">
+                                Book Appointment
                             </a>
-                            <a href="contact.html" class="px-8 py-4 bg-transparent border border-brand-400 hover:border-accent-400 text-white hover:text-accent-300 font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500">
-                                Contact Pharmacy
+                            <a href="medicine.html" class="px-8 py-4 bg-transparent border border-brand-400 hover:border-accent-400 text-white hover:text-accent-300 font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500">
+                                Need Medicine?
                             </a>
                         </div>
                     </div>
@@ -205,8 +215,8 @@
                         </div>
                         <h3 class="text-2xl font-bold text-brand-950 mb-4 group-hover:text-accent-600 transition-colors">Premium Pharmacy</h3>
                         <p class="text-brand-600 mb-8 font-light leading-relaxed">Access a wide range of authentic prescription medications and essential healthcare products, sourced exclusively from verified distributors.</p>
-                        <a href="about.html" class="text-brand-900 font-bold hover:text-accent-600 inline-flex items-center gap-2 uppercase tracking-wider text-xs transition-colors">
-                            Learn More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="medicine.html" class="text-brand-900 font-bold hover:text-accent-600 inline-flex items-center gap-2 uppercase tracking-wider text-xs transition-colors">
+                            Need Medicine? <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>
 
@@ -216,8 +226,8 @@
                         </div>
                         <h3 class="text-2xl font-bold text-brand-950 mb-4 group-hover:text-accent-600 transition-colors">Expert Doctors</h3>
                         <p class="text-brand-600 mb-8 font-light leading-relaxed">Consult directly with our distinguished panel of medical specialists for accurate diagnoses, treatments, and personalized care plans.</p>
-                        <a href="doctor.html" class="text-brand-900 font-bold hover:text-accent-600 inline-flex items-center gap-2 uppercase tracking-wider text-xs transition-colors">
-                            View Specialists <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <a href="appointment.html" class="text-brand-900 font-bold hover:text-accent-600 inline-flex items-center gap-2 uppercase tracking-wider text-xs transition-colors">
+                            Book Appointment <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </a>
                     </div>
 
@@ -277,6 +287,7 @@
             const btn = document.getElementById('mobile-menu-btn');
             const drawer = document.getElementById('mobile-drawer');
             const overlay = document.getElementById('drawer-overlay');
+            const closeBtn = document.getElementById('close-drawer-btn');
             const icon = document.getElementById('menu-icon');
             let isMenuOpen = false;
 
@@ -299,6 +310,7 @@
 
             btn.addEventListener('click', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
 
             const nav = document.getElementById('navbar');
             const scrollProgress = document.getElementById('scroll-progress');
@@ -318,11 +330,11 @@
             }, { passive: true });
 
             const observerOptions = { root: null, rootMargin: '0px 0px -30px 0px', threshold: 0.1 };
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
+                        obs.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
