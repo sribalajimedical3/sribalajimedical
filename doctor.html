@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    
+    <!-- Advanced SEO Meta Tags -->
+    <title>Our Distinguished Specialists - Sri Balaji Medical | Premium Healthcare</title>
+    <meta name="description" content="Consult with the highly distinguished specialists at Sri Balaji Medical. Concierge-level healthcare and expert medical professionals.">
+    <meta name="keywords" content="doctors, medical specialists, premium healthcare, pediatrician, gynecologist, skin specialist, Sri Balaji Medical, book appointment">
+    
+    <!-- Performance Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin>
+    
+    <!-- Premium Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration for Premium Blue/Green Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { // Premium Royal Blue
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+                            500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a', 950: '#172554',
+                        },
+                        accent: { // Premium Emerald Green
+                            50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399',
+                            500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 8s ease-in-out 4s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translate3d(0, 0, 0)' },
+                            '50%': { transform: 'translate3d(0, -12px, 0)' },
+                        }
+                    },
+                    boxShadow: {
+                        'luxury-soft': '0 20px 40px -15px rgba(30, 58, 138, 0.08)',
+                        'luxury-hover': '0 30px 60px -15px rgba(30, 58, 138, 0.12), 0 0 0 1px rgba(16, 185, 129, 0.3)',
+                        'glow': '0 0 30px rgba(16, 185, 129, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-luxury-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+        }
+        
+        .hardware-accel {
+            transform: translateZ(0);
+            will-change: transform, opacity, box-shadow;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.97) translate3d(0, 20px, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s ease;
+        }
+        .reveal-up.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        
+        .delay-100 { transition-delay: 150ms; }
+        .delay-200 { transition-delay: 300ms; }
+
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-luxury-pattern font-sans text-brand-900 antialiased flex flex-col min-h-screen selection:bg-accent-500 selection:text-white">
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-900 via-accent-500 to-brand-900 z-[100] w-0 transition-all duration-300 ease-out shadow-glow"></div>
+
+    <nav class="fixed w-full z-50 transition-all duration-700 backdrop-blur-2xl bg-white/80 border-b border-brand-100/50 hardware-accel" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4 group outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded-lg p-1 -ml-1">
+                    <div class="relative w-12 h-12 rounded-full overflow-hidden border-[1px] border-brand-200 shadow-sm group-hover:border-accent-500 group-hover:shadow-glow transition-all duration-500">
+                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                             src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
+                             alt="Sri Balaji Medical Logo"
+                             onerror="this.src='https://placehold.co/100x100?text=SBM'">
+                    </div>
+                    <span class="font-bold text-xl sm:text-2xl text-brand-950 tracking-tight hidden sm:block group-hover:text-accent-600 transition-colors duration-500">Sri Balaji Medical</span>
+                </a>
+
+                <div class="hidden lg:flex space-x-2 items-center">
+                    <a href="index.html" class="px-5 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Home</a>
+                    <a href="about.html" class="px-5 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">About Us</a>
+                    <a href="doctor.html" class="px-5 py-2 text-brand-950 font-bold text-[0.95rem] tracking-wide relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-accent-500 after:bottom-0 after:left-0">Doctors</a>
+                    <div class="pl-6 ml-4 border-l border-brand-200">
+                        <a href="contact.html" class="bg-brand-950 hover:bg-accent-500 text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-3 rounded-full bg-white/50 backdrop-blur border border-brand-100 transition-all" aria-label="Toggle menu" aria-expanded="false">
+                        <svg class="h-6 w-6 transition-transform duration-500" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Native App-Like Side Drawer -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-brand-950/60 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-500 hardware-accel"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] flex flex-col hardware-accel">
+        <div class="px-6 pt-28 pb-8 space-y-4 flex-grow overflow-y-auto">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-widest mb-6 px-2">Navigation</h4>
+            <a href="index.html" class="block px-4 py-3 text-brand-800 font-medium hover:text-accent-600 transition-colors text-lg">Home</a>
+            <a href="about.html" class="block px-4 py-3 text-brand-800 font-medium hover:text-accent-600 transition-colors text-lg">About Us</a>
+            <a href="doctor.html" class="block px-4 py-3 text-accent-600 font-bold text-lg relative before:absolute before:left-0 before:top-1/3 before:h-1/3 before:w-1.5 before:bg-accent-500 before:rounded-r-full">Doctors</a>
+        </div>
+        <div class="p-6 border-t border-brand-50 bg-brand-50/50">
+            <a href="contact.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-brand-950 hover:bg-accent-500 hover:text-white rounded-xl transition-all duration-500 shadow-md transform">
+                Contact Pharmacy
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        
+        <!-- Luxury Hero Header -->
+        <header class="relative bg-brand-950 py-24 sm:py-32 lg:py-40 overflow-hidden hardware-accel">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12)_0%,transparent_50%)] pointer-events-none"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="reveal-up inline-block py-1.5 px-4 text-accent-400 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-8 border border-accent-500/30 rounded-full bg-brand-900/50">Exceptional Care</span>
+                <h1 class="reveal-up delay-100 text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight mb-8 hardware-accel leading-tight">
+                    Our Distinguished <br class="hidden sm:block" /> <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-300 to-accent-500">Specialists</span>
+                </h1>
+                <p class="reveal-up delay-200 text-base sm:text-lg lg:text-xl text-brand-200 mx-auto font-light hardware-accel leading-relaxed max-w-2xl">
+                    Experience concierge-level healthcare. Consult with our highly qualified experts for accurate diagnoses and personalized medical attention.
+                </p>
+            </div>
+        </header>
+
+        <!-- Doctors Luxury Grid Section -->
+        <section class="py-20 md:py-32 relative hardware-accel bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    
+                    <!-- Doctor 1: Dr. D.N. Chakraborty -->
+                    <div class="reveal-scale group bg-white rounded-2xl border-[0.5px] border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hardware-accel transform hover:-translate-y-3 flex flex-col overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-50/0 to-brand-50/0 group-hover:to-brand-50/50 transition-colors duration-700 pointer-events-none z-0"></div>
+
+                        <div class="p-8 lg:p-10 pb-6 relative z-10">
+                            <div class="w-20 h-20 bg-brand-950 text-accent-400 rounded-full flex items-center justify-center shadow-md mb-8 transform group-hover:scale-105 group-hover:shadow-glow transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] border border-brand-800">
+                                <span class="text-2xl font-light tracking-widest">DC</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-brand-950 mb-3 leading-tight tracking-tight">Dr. D.N. Chakraborty</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="inline-flex items-center text-brand-500 text-sm font-semibold tracking-wide uppercase">Chief Specialist</span>
+                                <span class="text-brand-300 mx-1">•</span>
+                                <span class="inline-flex items-center text-accent-600 text-sm font-semibold tracking-wide uppercase">40+ Yrs Exp.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 lg:p-10 pt-6 flex-grow flex flex-col justify-between relative z-10 border-t border-brand-50">
+                            <div class="space-y-5 mb-10">
+                                <h4 class="text-[0.65rem] font-bold text-accent-600 uppercase tracking-[0.2em] mb-4">Consultation Hours</h4>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Mon, Wed & Fri</p>
+                                        <p class="text-sm text-brand-500 mt-0.5">From 6:00 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-brand-300 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Tue, Thu & Sat</p>
+                                        <p class="text-sm text-brand-500 mt-0.5">Contact for timing details</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="w-full text-center bg-transparent border border-brand-200 group-hover:border-accent-500 group-hover:bg-accent-500 text-brand-900 group-hover:text-white font-bold text-xs uppercase tracking-[0.15em] py-4 rounded-xl transition-all duration-500">Book an Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2: Major Robin Dubey -->
+                    <div class="reveal-scale delay-100 group bg-white rounded-2xl border-[0.5px] border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hardware-accel transform hover:-translate-y-3 flex flex-col overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-50/0 to-brand-50/0 group-hover:to-brand-50/50 transition-colors duration-700 pointer-events-none z-0"></div>
+
+                        <div class="p-8 lg:p-10 pb-6 relative z-10">
+                            <div class="w-20 h-20 bg-brand-950 text-accent-400 rounded-full flex items-center justify-center shadow-md mb-8 transform group-hover:scale-105 group-hover:shadow-glow transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] border border-brand-800">
+                                <span class="text-2xl font-light tracking-widest">RD</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-brand-950 mb-3 leading-tight tracking-tight">Major Dr. Robin Dubey</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="inline-flex items-center text-brand-500 text-sm font-semibold tracking-wide uppercase">Child Specialist</span>
+                                <span class="text-brand-300 mx-1">•</span>
+                                <span class="inline-flex items-center text-accent-600 text-sm font-semibold tracking-wide uppercase">Hospital Doctor</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 lg:p-10 pt-6 flex-grow flex flex-col justify-between relative z-10 border-t border-brand-50">
+                            <div class="space-y-5 mb-10">
+                                <h4 class="text-[0.65rem] font-bold text-accent-600 uppercase tracking-[0.2em] mb-4">Consultation Hours</h4>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Saturdays</p>
+                                        <p class="text-sm text-brand-500 mt-0.5 leading-relaxed">Contact for exact time and more information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="w-full text-center bg-transparent border border-brand-200 group-hover:border-accent-500 group-hover:bg-accent-500 text-brand-900 group-hover:text-white font-bold text-xs uppercase tracking-[0.15em] py-4 rounded-xl transition-all duration-500">Book an Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3: Dr. U.K. Ghosh -->
+                    <div class="reveal-scale delay-200 group bg-white rounded-2xl border-[0.5px] border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hardware-accel transform hover:-translate-y-3 flex flex-col overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-50/0 to-brand-50/0 group-hover:to-brand-50/50 transition-colors duration-700 pointer-events-none z-0"></div>
+
+                        <div class="p-8 lg:p-10 pb-6 relative z-10">
+                            <div class="w-20 h-20 bg-brand-950 text-accent-400 rounded-full flex items-center justify-center shadow-md mb-8 transform group-hover:scale-105 group-hover:shadow-glow transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] border border-brand-800">
+                                <span class="text-2xl font-light tracking-widest">UG</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-brand-950 mb-3 leading-tight tracking-tight">Dr. U.K. Ghosh</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="inline-flex items-center text-brand-500 text-sm font-semibold tracking-wide uppercase">Gynecologist</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 lg:p-10 pt-6 flex-grow flex flex-col justify-between relative z-10 border-t border-brand-50">
+                            <div class="space-y-5 mb-10">
+                                <h4 class="text-[0.65rem] font-bold text-accent-600 uppercase tracking-[0.2em] mb-4">Consultation Hours</h4>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Mondays</p>
+                                        <p class="text-sm text-brand-500 mt-0.5 leading-relaxed">From 8:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="w-full text-center bg-transparent border border-brand-200 group-hover:border-accent-500 group-hover:bg-accent-500 text-brand-900 group-hover:text-white font-bold text-xs uppercase tracking-[0.15em] py-4 rounded-xl transition-all duration-500">Book an Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4: Dr. Rini Mukherjee -->
+                    <div class="reveal-scale group bg-white rounded-2xl border-[0.5px] border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hardware-accel transform hover:-translate-y-3 flex flex-col overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-50/0 to-brand-50/0 group-hover:to-brand-50/50 transition-colors duration-700 pointer-events-none z-0"></div>
+
+                        <div class="p-8 lg:p-10 pb-6 relative z-10">
+                            <div class="w-20 h-20 bg-brand-950 text-accent-400 rounded-full flex items-center justify-center shadow-md mb-8 transform group-hover:scale-105 group-hover:shadow-glow transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] border border-brand-800">
+                                <span class="text-2xl font-light tracking-widest">RM</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-brand-950 mb-3 leading-tight tracking-tight">Dr. Rini Mukherjee</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="inline-flex items-center text-brand-500 text-sm font-semibold tracking-wide uppercase">Gynecologist</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 lg:p-10 pt-6 flex-grow flex flex-col justify-between relative z-10 border-t border-brand-50">
+                            <div class="space-y-5 mb-10">
+                                <h4 class="text-[0.65rem] font-bold text-accent-600 uppercase tracking-[0.2em] mb-4">Consultation Hours</h4>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Mondays</p>
+                                        <p class="text-sm text-brand-500 mt-0.5 leading-relaxed">From 8:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="w-full text-center bg-transparent border border-brand-200 group-hover:border-accent-500 group-hover:bg-accent-500 text-brand-900 group-hover:text-white font-bold text-xs uppercase tracking-[0.15em] py-4 rounded-xl transition-all duration-500">Book an Appointment</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5: Dr. A. Mukherjee -->
+                    <div class="reveal-scale delay-100 group bg-white rounded-2xl border-[0.5px] border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hardware-accel transform hover:-translate-y-3 flex flex-col overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-brand-50/0 to-brand-50/0 group-hover:to-brand-50/50 transition-colors duration-700 pointer-events-none z-0"></div>
+
+                        <div class="p-8 lg:p-10 pb-6 relative z-10">
+                            <div class="w-20 h-20 bg-brand-950 text-accent-400 rounded-full flex items-center justify-center shadow-md mb-8 transform group-hover:scale-105 group-hover:shadow-glow transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] border border-brand-800">
+                                <span class="text-2xl font-light tracking-widest">AM</span>
+                            </div>
+                            
+                            <h3 class="text-2xl font-bold text-brand-950 mb-3 leading-tight tracking-tight">Dr. A. Mukherjee</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="inline-flex items-center text-brand-500 text-sm font-semibold tracking-wide uppercase">Skin Specialist</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-8 lg:p-10 pt-6 flex-grow flex flex-col justify-between relative z-10 border-t border-brand-50">
+                            <div class="space-y-5 mb-10">
+                                <h4 class="text-[0.65rem] font-bold text-accent-600 uppercase tracking-[0.2em] mb-4">Consultation Hours</h4>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500 mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <p class="text-sm font-medium text-brand-900">Thursdays</p>
+                                        <p class="text-sm text-brand-500 mt-0.5 leading-relaxed">Contact for timing and more information.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="w-full text-center bg-transparent border border-brand-200 group-hover:border-accent-500 group-hover:bg-accent-500 text-brand-900 group-hover:text-white font-bold text-xs uppercase tracking-[0.15em] py-4 rounded-xl transition-all duration-500">Book an Appointment</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-brand-950 text-center relative hardware-accel overflow-hidden border-t border-brand-900">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(16,185,129,0.1)_0%,transparent_60%)] pointer-events-none"></div>
+            
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 reveal-up">
+                <h3 class="text-3xl sm:text-4xl font-light text-white mb-6 tracking-tight">Require schedule confirmation?</h3>
+                <p class="text-brand-300 text-lg mb-10 font-light leading-relaxed">Doctor schedules are subject to change. Please contact our reception desk to confirm exact availability and secure your appointment slot.</p>
+                <a href="contact.html" class="inline-flex items-center justify-center px-10 py-4 bg-accent-500 hover:bg-white text-white hover:text-brand-950 font-bold text-xs uppercase tracking-[0.2em] rounded-full transition-all duration-500 shadow-glow hover:shadow-luxury-hover active:scale-95 group">
+                    Contact Reception
+                    <svg class="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-brand-300 py-16 md:py-20 border-t border-white/5 mt-auto hardware-accel relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                
+                <div class="sm:col-span-2 lg:col-span-5 flex flex-col items-center sm:items-start gap-6 text-center sm:text-left">
+                    <div class="flex items-center gap-4">
+                        <img class="h-12 w-12 object-cover rounded-full bg-white p-0.5" 
+                             src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
+                             alt="Sri Balaji Medical Logo"
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <span class="font-bold text-2xl text-white tracking-tight">Sri Balaji Medical</span>
+                    </div>
+                    <p class="text-brand-400 text-sm md:text-base font-light max-w-sm leading-relaxed">Delivering uncompromised, authentic healthcare solutions and premier consultations to our distinguished community.</p>
+                </div>
+                
+                <div class="lg:col-span-3 flex flex-col space-y-4 text-center sm:text-left">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Quick Links</h4>
+                    <a href="index.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">Home</a>
+                    <a href="about.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">About Us</a>
+                    <a href="doctor.html" class="text-accent-500 font-medium text-sm transition-colors inline-block">Doctors & Clinic</a>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col space-y-4 text-center sm:text-left">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Connect</h4>
+                    <p class="text-brand-400 text-sm font-light mb-2">Secure your consultation or inquire about our services today.</p>
+                    <a href="contact.html" class="border border-brand-800 hover:border-accent-500 text-white hover:text-accent-400 transition-all rounded-xl py-3 px-6 inline-flex items-center justify-center sm:justify-start gap-3 font-medium text-sm group active:scale-95">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-brand-800/50 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs tracking-wider uppercase font-medium text-brand-500 text-center sm:text-left">
+                <p>&copy; <span id="year"></span> Sri Balaji Medical. All rights reserved.</p>
+                <p>Excellence in Healthcare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- High-Performance Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const btn = document.getElementById('mobile-menu-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const icon = document.getElementById('menu-icon');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) {
+                    overlay.classList.remove('hidden');
+                    setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+                    drawer.classList.remove('translate-x-full');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>';
+                    btn.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden'; 
+                } else {
+                    drawer.classList.add('translate-x-full');
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => overlay.classList.add('hidden'), 500);
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>';
+                    btn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = ''; 
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+
+            const nav = document.getElementById('navbar');
+            const scrollProgress = document.getElementById('scroll-progress');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('shadow-luxury-soft', 'bg-white/90');
+                    nav.classList.remove('bg-white/70');
+                } else {
+                    nav.classList.remove('shadow-luxury-soft', 'bg-white/90');
+                    nav.classList.add('bg-white/70');
+                }
+                
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                if(scrollProgress) scrollProgress.style.width = scrolled + "%";
+            }, { passive: true });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -30px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up, .reveal-scale').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
