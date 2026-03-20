@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    
+    <!-- Advanced SEO Meta Tags -->
+    <title>Book an Appointment - Sri Balaji Medical | Premium Healthcare</title>
+    <meta name="description" content="Book an appointment with our distinguished medical specialists at Sri Balaji Medical. Schedule your consultation for personalized healthcare.">
+    <meta name="keywords" content="book appointment, doctor consultation, medical specialists, premium healthcare, Sri Balaji Medical, health clinic">
+    <meta property="og:title" content="Book an Appointment - Sri Balaji Medical">
+    <meta property="og:description" content="Schedule a consultation with our expert doctors quickly and easily via WhatsApp.">
+    <meta property="og:type" content="website">
+
+    <!-- Performance Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin>
+    
+    <!-- Premium Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Configuration for Premium Blue/Green Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { // Premium Royal Blue
+                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+                            500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a', 950: '#172554',
+                        },
+                        accent: { // Premium Emerald Green
+                            50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399',
+                            500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'float-delayed': 'float 8s ease-in-out 4s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translate3d(0, 0, 0)' },
+                            '50%': { transform: 'translate3d(0, -12px, 0)' },
+                        }
+                    },
+                    boxShadow: {
+                        'luxury-soft': '0 20px 40px -15px rgba(30, 58, 138, 0.08)',
+                        'luxury-hover': '0 30px 60px -15px rgba(30, 58, 138, 0.12), 0 0 0 1px rgba(16, 185, 129, 0.3)',
+                        'glow': '0 0 30px rgba(16, 185, 129, 0.2)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-luxury-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+        }
+        
+        .hardware-accel {
+            transform: translateZ(0);
+            will-change: transform, opacity, box-shadow;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translate3d(0, 40px, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translate3d(-40px, 0, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translate3d(40px, 0, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.97) translate3d(0, 20px, 0);
+            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s ease;
+        }
+        .reveal-up.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+        
+        .delay-100 { transition-delay: 150ms; }
+        .delay-200 { transition-delay: 300ms; }
+
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; -webkit-tap-highlight-color: transparent; }
+    </style>
+</head>
+<body class="bg-luxury-pattern font-sans text-brand-900 antialiased flex flex-col min-h-screen selection:bg-accent-500 selection:text-white">
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-900 via-accent-500 to-brand-900 z-[100] w-0 transition-all duration-300 ease-out shadow-glow"></div>
+
+    <nav class="fixed w-full z-50 transition-all duration-700 backdrop-blur-2xl bg-white/80 border-b border-brand-100/50 hardware-accel" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 sm:h-24 items-center">
+                
+                <a href="../../index.html" class="flex-shrink-0 flex items-center gap-3 sm:gap-4 group outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded-lg p-1 -ml-1 sm:-ml-2">
+                    <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-[1px] border-brand-200 shadow-sm group-hover:border-accent-500 group-hover:shadow-glow transition-all duration-500">
+                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                             src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
+                             alt="Sri Balaji Medical Logo"
+                             onerror="this.src='https://placehold.co/100x100?text=SBM'">
+                    </div>
+                    <span class="font-bold text-[1.1rem] sm:text-xl lg:text-2xl text-brand-950 tracking-tight group-hover:text-accent-600 transition-colors duration-500">Sri Balaji Medical</span>
+                </a>
+
+                <div class="hidden lg:flex space-x-3 items-center">
+                    <a href="../../index.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Home</a>
+                    <a href="about.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">About Us</a>
+                    <a href="doctor.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Doctors</a>
+                    <a href="medicine.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Need Medicine?</a>
+                    <div class="pl-6 ml-2 border-l border-brand-200 flex gap-3">
+                        <a href="appointment.html" class="bg-brand-950 text-white px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block cursor-default relative overflow-hidden">
+                            <span class="relative z-10">Book Appointment</span>
+                            <div class="absolute inset-0 bg-accent-500/20"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2.5 sm:p-3 rounded-xl bg-brand-50/80 backdrop-blur border border-brand-200 shadow-sm hover:bg-brand-100 active:scale-95 transition-all" aria-label="Toggle menu" aria-expanded="false">
+                        <svg class="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-500" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Native App-Like Side Drawer -->
+    <div id="drawer-overlay" class="fixed inset-0 bg-brand-950/60 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-500 hardware-accel"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] flex flex-col hardware-accel">
+        <div class="flex justify-between items-center px-6 pt-8 pb-5 border-b border-brand-50">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Navigation</h4>
+            <button id="close-drawer-btn" class="p-2.5 text-brand-900 bg-brand-50 rounded-full hover:bg-brand-100 active:scale-95 transition-colors" aria-label="Close Menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="px-6 pt-6 pb-8 space-y-2 flex-grow overflow-y-auto">
+            <a href="../../index.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">Home</a>
+            <a href="about.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">About Us</a>
+            <a href="doctor.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">Doctors</a>
+            <a href="medicine.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">Need Medicine?</a>
+        </div>
+        <div class="p-6 border-t border-brand-50 bg-brand-50/50 flex flex-col gap-3">
+            <a href="appointment.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-500 shadow-luxury-soft transform hover:-translate-y-0.5">
+                Book Appointment
+            </a>
+            <a href="contact.html" class="flex items-center justify-center w-full px-4 py-4 text-brand-950 font-bold text-xs uppercase tracking-widest bg-transparent border border-brand-200 hover:border-brand-950 hover:bg-brand-950 hover:text-white rounded-xl transition-all duration-500 shadow-sm transform hover:-translate-y-0.5">
+                Contact Pharmacy
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-24">
+        
+        <!-- Luxury Hero Header -->
+        <header class="relative bg-brand-950 py-24 sm:py-32 lg:py-40 overflow-hidden hardware-accel">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12)_0%,transparent_50%)] pointer-events-none"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <span class="reveal-up inline-block py-1.5 px-4 text-accent-400 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-8 border border-accent-500/30 rounded-full bg-brand-900/50">Expert Care Awaits</span>
+                <h1 class="reveal-up delay-100 text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight mb-8 hardware-accel leading-tight">
+                    Schedule Your <br class="hidden sm:block" /> <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-300 to-accent-500">Consultation</span>
+                </h1>
+                <p class="reveal-up delay-200 text-base sm:text-lg lg:text-xl text-brand-200 mx-auto font-light hardware-accel leading-relaxed max-w-2xl">
+                    Book an appointment with our distinguished medical specialists. Fill out the details below to secure your visit instantly.
+                </p>
+            </div>
+        </header>
+
+        <!-- Appointment Form Section -->
+        <section class="py-20 md:py-32 relative hardware-accel bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+                    
+                    <!-- Form Area -->
+                    <div class="lg:col-span-7 reveal-left hardware-accel">
+                        <div class="bg-white rounded-3xl border border-brand-100 shadow-luxury-soft p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+                            <!-- Subtle Background Accent -->
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-50 rounded-bl-full -z-10 opacity-50"></div>
+
+                            <h3 class="text-2xl sm:text-3xl font-bold text-brand-950 mb-2">Appointment Details</h3>
+                            <p class="text-brand-600 font-light mb-8 sm:mb-10 text-sm sm:text-base">Provide your details to schedule a visit with our specialists.</p>
+
+                            <form id="appointmentForm" class="space-y-5 sm:space-y-6">
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                                    <!-- Name -->
+                                    <div class="space-y-2">
+                                        <label class="text-[0.65rem] sm:text-xs font-bold text-brand-900 uppercase tracking-wider pl-1">Full Name</label>
+                                        <input type="text" id="patientName" required class="w-full bg-brand-50/50 border border-brand-200 text-brand-900 text-sm rounded-xl focus:ring-accent-500 focus:border-accent-500 block p-3.5 sm:p-4 transition-colors" placeholder="John Doe">
+                                    </div>
+                                    
+                                    <!-- Phone -->
+                                    <div class="space-y-2">
+                                        <label class="text-[0.65rem] sm:text-xs font-bold text-brand-900 uppercase tracking-wider pl-1">Phone Number</label>
+                                        <input type="tel" id="patientPhone" required class="w-full bg-brand-50/50 border border-brand-200 text-brand-900 text-sm rounded-xl focus:ring-accent-500 focus:border-accent-500 block p-3.5 sm:p-4 transition-colors" placeholder="98765 43210">
+                                    </div>
+                                </div>
+
+                                <!-- Doctor Selection -->
+                                <div class="space-y-2">
+                                    <label class="text-[0.65rem] sm:text-xs font-bold text-brand-900 uppercase tracking-wider pl-1">Select Doctor</label>
+                                    <select id="doctorSelect" required class="w-full bg-brand-50/50 border border-brand-200 text-brand-900 text-sm rounded-xl focus:ring-accent-500 focus:border-accent-500 block p-3.5 sm:p-4 transition-colors appearance-none cursor-pointer">
+                                        <option value="" disabled selected>Choose a Specialist</option>
+                                        <option value="Dr. D.N. Chakraborty (Chief Specialist)">Dr. D.N. Chakraborty (Chief Specialist)</option>
+                                        <option value="Major Dr. Robin Dubey (Child Specialist)">Major Dr. Robin Dubey (Child Specialist)</option>
+                                        <option value="Dr. U.K. Ghosh (Gynecologist)">Dr. U.K. Ghosh (Gynecologist)</option>
+                                        <option value="Dr. Rini Mukherjee (Gynecologist)">Dr. Rini Mukherjee (Gynecologist)</option>
+                                        <option value="Dr. A. Mukherjee (Skin Specialist)">Dr. A. Mukherjee (Skin Specialist)</option>
+                                    </select>
+
+                                    <!-- Dynamic Doctor Info Card -->
+                                    <div id="doctorInfoCard" class="hidden mt-3 p-4 bg-gradient-to-br from-brand-50 to-white rounded-xl border border-brand-200 shadow-sm transition-all duration-500">
+                                        <div class="flex items-center gap-3.5 mb-3">
+                                            <div id="docInitials" class="w-10 h-10 rounded-full bg-brand-950 text-accent-400 flex items-center justify-center font-bold text-sm shadow-inner"></div>
+                                            <div>
+                                                <h5 id="docName" class="text-sm sm:text-base font-bold text-brand-950 leading-tight"></h5>
+                                                <p id="docSpecialty" class="text-xs text-brand-600 font-medium"></p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-3 border-t border-brand-100 flex items-start gap-2.5">
+                                            <svg class="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <p class="text-xs sm:text-sm text-brand-800 leading-relaxed"><span class="font-bold text-brand-950">Timings:</span> <span id="docAvailability"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Date Selection -->
+                                <div class="space-y-2">
+                                    <label class="text-[0.65rem] sm:text-xs font-bold text-brand-900 uppercase tracking-wider pl-1">Preferred Date</label>
+                                    <input type="date" id="appointmentDate" required class="w-full bg-brand-50/50 border border-brand-200 text-brand-900 text-sm rounded-xl focus:ring-accent-500 focus:border-accent-500 block p-3.5 sm:p-4 transition-colors cursor-pointer">
+                                </div>
+
+                                <!-- Notice -->
+                                <div class="w-full bg-brand-50/30 border border-brand-200 rounded-xl p-4 flex items-start gap-4">
+                                    <div class="bg-accent-100 text-accent-600 p-2 rounded-lg flex-shrink-0 mt-0.5">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-brand-700 font-medium leading-relaxed">
+                                        Please note that doctor availability varies by day. Our reception will confirm your exact appointment timing via WhatsApp.
+                                    </p>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="w-full text-center bg-accent-500 hover:bg-brand-950 text-white font-bold text-xs sm:text-sm uppercase tracking-[0.15em] py-4 sm:py-5 rounded-xl transition-all duration-500 shadow-luxury-soft hover:shadow-luxury-hover transform hover:-translate-y-1 mt-6 flex items-center justify-center gap-3">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                    Book via WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Information Side Panel -->
+                    <div class="lg:col-span-5 reveal-right delay-200 hardware-accel">
+                        <div class="space-y-8 lg:sticky lg:top-32">
+                            
+                            <div>
+                                <h4 class="text-xl sm:text-2xl font-bold text-brand-950 mb-6">Patient Support</h4>
+                                
+                                <ul class="space-y-5 sm:space-y-6">
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-50 text-accent-600 flex items-center justify-center flex-shrink-0 border border-accent-100">
+                                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-brand-900 text-base sm:text-lg">Instant Confirmation</p>
+                                            <p class="text-brand-600 text-xs sm:text-sm font-light mt-1">Our staff will confirm your appointment details immediately via WhatsApp.</p>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="flex items-start gap-4">
+                                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center flex-shrink-0 border border-brand-100">
+                                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-brand-900 text-base sm:text-lg">Minimal Waiting</p>
+                                            <p class="text-brand-600 text-xs sm:text-sm font-light mt-1">We value your time. Booking in advance ensures you skip the queue.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-brand-300 py-16 md:py-20 border-t border-white/5 mt-auto hardware-accel relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+                
+                <div class="sm:col-span-2 lg:col-span-5 flex flex-col items-center sm:items-start gap-6 text-center sm:text-left">
+                    <div class="flex items-center gap-4">
+                        <img class="h-12 w-12 object-cover rounded-full bg-white p-0.5" 
+                             src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
+                             alt="Sri Balaji Medical Logo"
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <span class="font-bold text-2xl text-white tracking-tight">Sri Balaji Medical</span>
+                    </div>
+                    <p class="text-brand-400 text-sm md:text-base font-light max-w-sm leading-relaxed">Delivering uncompromised, authentic healthcare solutions and premier consultations to our distinguished community.</p>
+                </div>
+                
+                <div class="lg:col-span-3 flex flex-col space-y-4 text-center sm:text-left">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Quick Links</h4>
+                    <a href="../../index.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">Home</a>
+                    <a href="about.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">About Us</a>
+                    <a href="doctor.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">Doctors & Clinic</a>
+                    <a href="medicine.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors inline-block">Need Medicine?</a>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col space-y-4 text-center sm:text-left">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Connect</h4>
+                    <p class="text-brand-400 text-sm font-light mb-2">Secure your consultation or inquire about our services today.</p>
+                    <a href="contact.html" class="border border-brand-800 hover:border-accent-500 text-white hover:text-accent-400 transition-all rounded-xl py-3 px-6 inline-flex items-center justify-center sm:justify-start gap-3 font-medium text-sm group active:scale-95">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 pt-8 border-t border-brand-800/50 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs tracking-wider uppercase font-medium text-brand-500 text-center sm:text-left">
+                <p>&copy; <span id="year"></span> Sri Balaji Medical. All rights reserved.</p>
+                <p>Excellence in Healthcare.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- High-Performance Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Set minimum date to today for the date picker
+            const dateInput = document.getElementById('appointmentDate');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+
+            const btn = document.getElementById('mobile-menu-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const overlay = document.getElementById('drawer-overlay');
+            const closeBtn = document.getElementById('close-drawer-btn');
+            const icon = document.getElementById('menu-icon');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if(isMenuOpen) {
+                    overlay.classList.remove('hidden');
+                    setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+                    drawer.classList.remove('translate-x-full');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>';
+                    btn.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden'; 
+                } else {
+                    drawer.classList.add('translate-x-full');
+                    overlay.classList.add('opacity-0');
+                    setTimeout(() => overlay.classList.add('hidden'), 500);
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>';
+                    btn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = ''; 
+                }
+            }
+
+            btn.addEventListener('click', toggleMenu);
+            overlay.addEventListener('click', toggleMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+
+            const nav = document.getElementById('navbar');
+            const scrollProgress = document.getElementById('scroll-progress');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('shadow-luxury-soft', 'bg-white/90');
+                    nav.classList.remove('bg-white/80');
+                } else {
+                    nav.classList.remove('shadow-luxury-soft', 'bg-white/90');
+                    nav.classList.add('bg-white/80');
+                }
+                
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                if(scrollProgress) scrollProgress.style.width = scrolled + "%";
+            }, { passive: true });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -30px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Dynamic Doctor Info Display Logic
+            const doctorData = {
+                "Dr. D.N. Chakraborty (Chief Specialist)": { initials: "DC", name: "Dr. D.N. Chakraborty", spec: "Chief Specialist • 40+ Yrs Exp.", avail: "Mon, Wed & Fri (From 6:00 PM)" },
+                "Major Dr. Robin Dubey (Child Specialist)": { initials: "RD", name: "Major Dr. Robin Dubey", spec: "Child Specialist • Hospital Doctor", avail: "Saturdays (Contact for exact time)" },
+                "Dr. U.K. Ghosh (Gynecologist)": { initials: "UG", name: "Dr. U.K. Ghosh", spec: "Gynecologist", avail: "Mondays (From 8:00 PM)" },
+                "Dr. Rini Mukherjee (Gynecologist)": { initials: "RM", name: "Dr. Rini Mukherjee", spec: "Gynecologist", avail: "Mondays (From 8:00 PM)" },
+                "Dr. A. Mukherjee (Skin Specialist)": { initials: "AM", name: "Dr. A. Mukherjee", spec: "Skin Specialist", avail: "Thursdays (Contact for timing info)" }
+            };
+
+            const docSelect = document.getElementById('doctorSelect');
+            const docInfoCard = document.getElementById('doctorInfoCard');
+            
+            if (docSelect && docInfoCard) {
+                docSelect.addEventListener('change', (e) => {
+                    const selected = e.target.value;
+                    if (doctorData[selected]) {
+                        document.getElementById('docInitials').textContent = doctorData[selected].initials;
+                        document.getElementById('docName').textContent = doctorData[selected].name;
+                        document.getElementById('docSpecialty').textContent = doctorData[selected].spec;
+                        document.getElementById('docAvailability').textContent = doctorData[selected].avail;
+                        
+                        docInfoCard.classList.remove('hidden');
+                        docInfoCard.classList.add('opacity-0', 'translate-y-2');
+                        
+                        // Small timeout to allow the browser to process removing 'hidden' before transitioning opacity
+                        setTimeout(() => {
+                            docInfoCard.classList.remove('opacity-0', 'translate-y-2');
+                            docInfoCard.classList.add('opacity-100', 'translate-y-0');
+                        }, 20);
+                    } else {
+                        docInfoCard.classList.add('hidden');
+                        docInfoCard.classList.remove('opacity-100', 'translate-y-0');
+                    }
+                });
+            }
+
+            // WhatsApp Appointment Form Submission Logic
+            const appointmentForm = document.getElementById('appointmentForm');
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('patientName').value;
+                    const phone = document.getElementById('patientPhone').value;
+                    const doctor = document.getElementById('doctorSelect').value;
+                    
+                    // Format the date nicely
+                    const rawDate = document.getElementById('appointmentDate').value;
+                    const dateObj = new Date(rawDate);
+                    const formattedDate = dateObj.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+                    
+                    const textMessage = `*New Appointment Request*\n\n*Patient Name:* ${name}\n*Phone:* ${phone}\n*Doctor:* ${doctor}\n*Preferred Date:* ${formattedDate}\n\n_(Please verify availability and confirm exact timing)_`;
+                    
+                    // Direct to specified WhatsApp Number
+                    const whatsappNumber = "918981777440";
+                    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(textMessage)}`;
+                    
+                    window.open(whatsappURL, '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
