@@ -101,13 +101,13 @@
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-900 via-accent-500 to-brand-900 z-[100] w-0 transition-all duration-300 ease-out shadow-glow"></div>
 
     <!-- Premium Navigation Bar -->
-    <nav class="fixed w-full z-50 transition-all duration-700 backdrop-blur-2xl bg-white/80 border-b border-brand-100/50 hardware-accel" id="navbar">
+    <nav class="fixed w-full z-50 transition-all duration-700 backdrop-blur-lg bg-white/80 border-b border-brand-100/50 hardware-accel" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 sm:h-24 items-center">
                 
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-3 sm:gap-4 group outline-none focus-visible:ring-2 focus-visible:ring-accent-500 rounded-lg p-1 -ml-1 sm:-ml-2">
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-[1px] border-brand-200 shadow-sm group-hover:border-accent-500 group-hover:shadow-glow transition-all duration-500">
-                        <img class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out" 
+                        <img class="w-full h-full object-cover transform-gpu group-hover:scale-110 transition-transform duration-700 ease-in-out" 
                              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
                              alt="Sri Balaji Medical Logo"
                              onerror="this.src='https://placehold.co/100x100?text=SBM'">
@@ -117,18 +117,18 @@
 
                 <div class="hidden lg:flex space-x-3 items-center">
                     <a href="index.html" class="px-4 py-2 text-brand-950 font-bold text-[0.95rem] tracking-wide relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-accent-500 after:bottom-0 after:left-0">Home</a>
-                    <a href="frontend/pages/about.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">About Us</a>
-                    <a href="frontend/pages/doctor.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Doctors</a>
-                    <a href="frontend/pages/medicine.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-all duration-300">Need Medicine?</a>
+                    <a href="frontend/pages/about.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">About Us</a>
+                    <a href="frontend/pages/doctor.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">Doctors</a>
+                    <a href="frontend/pages/medicine.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">Need Medicine?</a>
                     <div class="pl-6 ml-2 border-l border-brand-200 flex gap-3">
-                        <a href="frontend/pages/appointment.html" class="bg-accent-500 hover:bg-brand-950 text-white px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block cursor-pointer relative overflow-hidden">
+                        <a href="frontend/pages/appointment.html" class="bg-accent-500 hover:bg-brand-950 text-white px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block cursor-pointer relative overflow-hidden transform-gpu hover:-translate-y-0.5">
                             Book Appointment
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2.5 sm:p-3 rounded-xl bg-brand-50/80 backdrop-blur border border-brand-200 shadow-sm hover:bg-brand-100 active:scale-95 transition-all" aria-label="Toggle menu" aria-expanded="false">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2.5 sm:p-3 rounded-xl bg-brand-50/80 backdrop-blur-sm border border-brand-200 shadow-sm hover:bg-brand-100 active:scale-95 transition-all transform-gpu" aria-label="Toggle menu" aria-expanded="false">
                         <svg class="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-500" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -139,8 +139,8 @@
     </nav>
 
     <!-- Native App-Like Side Drawer -->
-    <div id="drawer-overlay" class="fixed inset-0 bg-brand-950/60 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-500 hardware-accel"></div>
-    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] flex flex-col hardware-accel">
+    <div id="drawer-overlay" class="fixed inset-0 bg-brand-950/60 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-500 hardware-accel"></div>
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-[85vw] max-w-sm bg-white shadow-2xl z-50 transform-gpu translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] flex flex-col hardware-accel">
         <div class="flex justify-between items-center px-6 pt-8 pb-5 border-b border-brand-50">
             <h4 class="text-xs font-bold text-brand-400 uppercase tracking-widest">Navigation</h4>
             <button id="close-drawer-btn" class="p-2.5 text-brand-900 bg-brand-50 rounded-full hover:bg-brand-100 active:scale-95 transition-colors" aria-label="Close Menu">
@@ -148,16 +148,16 @@
             </button>
         </div>
         <div class="px-6 pt-6 pb-8 space-y-2 flex-grow overflow-y-auto">
-            <a href="index.html" class="flex items-center px-4 py-3.5 text-accent-600 font-bold bg-accent-50 rounded-xl transition-all text-lg relative before:absolute before:left-0 before:top-1/4 before:h-1/2 before:w-1.5 before:bg-accent-500 before:rounded-r-full">Home</a>
-            <a href="frontend/pages/about.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">About Us</a>
-            <a href="frontend/pages/doctor.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">Doctors</a>
-            <a href="frontend/pages/medicine.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-all text-lg">Need Medicine?</a>
+            <a href="index.html" class="flex items-center px-4 py-3.5 text-accent-600 font-bold bg-accent-50 rounded-xl transition-colors text-lg relative before:absolute before:left-0 before:top-1/4 before:h-1/2 before:w-1.5 before:bg-accent-500 before:rounded-r-full">Home</a>
+            <a href="frontend/pages/about.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">About Us</a>
+            <a href="frontend/pages/doctor.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">Doctors</a>
+            <a href="frontend/pages/medicine.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">Need Medicine?</a>
         </div>
         <div class="p-6 border-t border-brand-50 bg-brand-50/50 flex flex-col gap-3">
-            <a href="frontend/pages/appointment.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-500 shadow-md transform hover:-translate-y-0.5">
+            <a href="frontend/pages/appointment.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-300 shadow-md transform-gpu hover:-translate-y-0.5">
                 Book Appointment
             </a>
-            <a href="frontend/pages/contact.html" class="flex items-center justify-center w-full px-4 py-4 text-brand-950 font-bold text-xs uppercase tracking-widest bg-transparent border border-brand-200 hover:border-brand-950 hover:bg-brand-950 hover:text-white rounded-xl transition-all duration-500 shadow-sm transform hover:-translate-y-0.5">
+            <a href="frontend/pages/contact.html" class="flex items-center justify-center w-full px-4 py-4 text-brand-950 font-bold text-xs uppercase tracking-widest bg-transparent border border-brand-200 hover:border-brand-950 hover:bg-brand-950 hover:text-white rounded-xl transition-all duration-300 shadow-sm transform-gpu hover:-translate-y-0.5">
                 Contact Pharmacy
             </a>
         </div>
@@ -169,12 +169,13 @@
         <!-- Luxury Hero Header -->
         <header class="relative bg-brand-950 py-24 sm:py-32 lg:py-40 overflow-hidden hardware-accel">
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.12)_0%,transparent_60%)] pointer-events-none"></div>
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%2310b981\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center text-center lg:text-left">
                     <div>
-                        <span class="reveal-up inline-block py-1.5 px-4 text-accent-400 text-xs sm:text-sm font-bold tracking-[0.2em] uppercase mb-8 border border-accent-500/30 rounded-full bg-accent-900/20 backdrop-blur-md">Trusted Healthcare</span>
+                        <!-- Live Shop Status Badge -->
+                        <div class="shop-status-badge mb-6 reveal-up"></div>
+
                         <h1 class="reveal-up delay-100 text-4xl sm:text-5xl lg:text-7xl font-light text-white tracking-tight mb-8 hardware-accel leading-tight">
                             Premium Care <br /> <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent-300 to-accent-500">For Your Family</span>
                         </h1>
@@ -182,18 +183,18 @@
                             More than a pharmacy. We provide 100% genuine medicines, elite specialist consultations, and an uncompromised commitment to your health.
                         </p>
                         <div class="reveal-up delay-300 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="frontend/pages/appointment.html" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500 shadow-glow hover:shadow-luxury-hover">
+                            <a href="frontend/pages/appointment.html" class="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-300 shadow-glow transform-gpu hover:-translate-y-1 hover:shadow-luxury-hover">
                                 Book Appointment
                             </a>
-                            <a href="frontend/pages/medicine.html" class="px-8 py-4 bg-transparent border border-brand-400 hover:border-accent-400 text-white hover:text-accent-300 font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-all duration-500">
+                            <a href="frontend/pages/medicine.html" class="px-8 py-4 bg-transparent border border-brand-400 hover:border-accent-400 text-white hover:text-accent-300 font-bold text-sm uppercase tracking-[0.15em] rounded-full transition-colors duration-300">
                                 Need Medicine?
                             </a>
                         </div>
                     </div>
                     
                     <div class="hidden lg:flex justify-center relative reveal-scale delay-200">
-                        <div class="absolute inset-0 bg-accent-500/20 blur-3xl rounded-full scale-110"></div>
-                        <img class="relative z-10 w-96 h-96 object-cover rounded-full border-[8px] border-brand-900/50 shadow-luxury-hover" 
+                        <div class="absolute inset-0 bg-accent-500/20 blur-2xl rounded-full scale-110 pointer-events-none"></div>
+                        <img class="relative z-10 w-96 h-96 object-cover rounded-full border-[8px] border-brand-900/50 shadow-luxury-hover transform-gpu hover:scale-105 transition-transform duration-700" 
                              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
                              alt="Sri Balaji Medical Storefront">
                     </div>
@@ -211,8 +212,8 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                     
-                    <div class="reveal-scale group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 hardware-accel transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-all duration-500">
+                    <div class="reveal-scale group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-500 hardware-accel transform-gpu hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-colors duration-300">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-950 mb-4 group-hover:text-accent-600 transition-colors">Premium Pharmacy</h3>
@@ -222,8 +223,8 @@
                         </a>
                     </div>
 
-                    <div class="reveal-scale delay-100 group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 hardware-accel transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-all duration-500">
+                    <div class="reveal-scale delay-100 group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-500 hardware-accel transform-gpu hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-colors duration-300">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-950 mb-4 group-hover:text-accent-600 transition-colors">Expert Doctors</h3>
@@ -233,8 +234,8 @@
                         </a>
                     </div>
 
-                    <div class="reveal-scale delay-200 group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-700 hardware-accel transform hover:-translate-y-2">
-                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-all duration-500">
+                    <div class="reveal-scale delay-200 group bg-white p-10 rounded-3xl border border-brand-100 shadow-luxury-soft hover:shadow-luxury-hover transition-all duration-500 hardware-accel transform-gpu hover:-translate-y-2">
+                        <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-accent-500 group-hover:text-white transition-colors duration-300">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         </div>
                         <h3 class="text-2xl font-bold text-brand-950 mb-4 group-hover:text-accent-600 transition-colors">Concierge Support</h3>
@@ -270,7 +271,7 @@
                 <div class="md:col-span-4 flex flex-col space-y-4 text-center md:text-left">
                     <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Connect</h4>
                     <p class="text-brand-400 text-sm font-light mb-2">Secure your consultation or inquire about our services today.</p>
-                    <a href="frontend/pages/contact.html" class="border border-brand-800 hover:border-accent-500 text-white hover:text-accent-400 transition-all rounded-xl py-3 px-6 inline-flex items-center justify-center md:justify-start gap-3 font-medium text-sm group">
+                    <a href="frontend/pages/contact.html" class="border border-brand-800 hover:border-accent-500 text-white hover:text-accent-400 transition-all rounded-xl py-3 px-6 inline-flex items-center justify-center md:justify-start gap-3 font-medium text-sm group active:scale-95 transform-gpu">
                         Get in Touch
                     </a>
                 </div>
@@ -287,6 +288,48 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('year').textContent = new Date().getFullYear();
 
+            // Global Shop Timing Logic
+            function updateShopStatus() {
+                const statusElements = document.querySelectorAll('.shop-status-badge');
+                if (!statusElements.length) return;
+
+                const now = new Date();
+                const day = now.getDay(); // 0 is Sunday, 4 is Thursday
+                const hour = now.getHours();
+                const minutes = now.getMinutes();
+                const timeInMinutes = hour * 60 + minutes;
+                const openTime = 8 * 60; // 8:00 AM
+                const closeTime = 22 * 60 + 30; // 10:30 PM
+
+                let isOpen = false;
+                let statusText = "Closed Now";
+                let statusClass = "bg-red-500/20 text-red-100 border-red-500/30";
+                let dotClass = "bg-red-500";
+
+                if (day !== 4 && timeInMinutes >= openTime && timeInMinutes < closeTime) {
+                    isOpen = true;
+                    statusText = "Open Today until 10:30 PM";
+                    statusClass = "bg-accent-500/20 text-accent-100 border-accent-500/30";
+                    dotClass = "bg-accent-400";
+                } else if (day === 4) {
+                    statusText = "Closed Today (Thursday)";
+                }
+
+                const html = `
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full ${statusClass} text-xs sm:text-sm font-bold border backdrop-blur-md shadow-sm transition-colors duration-300">
+                        <span class="relative flex h-2.5 w-2.5">
+                          ${isOpen ? `<span class="animate-ping absolute inline-flex h-full w-full rounded-full ${dotClass} opacity-75"></span>` : ''}
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 ${dotClass}"></span>
+                        </span>
+                        ${statusText}
+                    </div>
+                `;
+                statusElements.forEach(el => el.innerHTML = html);
+            }
+            updateShopStatus();
+            setInterval(updateShopStatus, 60000); // Refresh every minute
+
+            // Mobile Menu Logic
             const btn = document.getElementById('mobile-menu-btn');
             const drawer = document.getElementById('mobile-drawer');
             const overlay = document.getElementById('drawer-overlay');
@@ -315,6 +358,7 @@
             overlay.addEventListener('click', toggleMenu);
             if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
 
+            // Navbar scroll effect
             const nav = document.getElementById('navbar');
             const scrollProgress = document.getElementById('scroll-progress');
             
@@ -332,6 +376,7 @@
                 if(scrollProgress) scrollProgress.style.width = scrolled + "%";
             }, { passive: true });
 
+            // Zero-Lag Intersection Observer
             const observerOptions = { root: null, rootMargin: '0px 0px -30px 0px', threshold: 0.1 };
             const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
