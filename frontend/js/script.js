@@ -235,7 +235,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function(e
     };
 
     // Send to backend
-    fetch("http://localhost:5000/api/form", {
+    fetch("https://sribalaji-backend.onrender.com/api/form", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
