@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/api/form', (req, res) => {
+    res.send("API is working ✅");
+});
+
 app.post('/api/form', (req, res) => {
     console.log("Data received:", req.body);
     res.json({ success: true });
