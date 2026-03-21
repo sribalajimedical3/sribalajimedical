@@ -219,3 +219,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("patientName").value;
+    const phone = document.getElementById("patientPhone").value;
+    const doctor = document.getElementById("doctorSelect").value;
+    const date = document.getElementById("appointmentDate").value;
+
+    const data = {
+        name,
+        phone,
+        doctor,
+        date
+    };
+
+    // Send to backend
+    fetch("http://localhost:5000/api/form", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        console.log("Saved:", res);
+
+        // WhatsApp message
+        const message = `Name: ${name}%0APhone: ${phone}%0ADoctor: ${doctor}%0ADate: ${date}`;
+
+        window.location.href = `https://wa.me/918981777440?text=${message}`;
+    })
+    .catch(err => console.error(err));
+});
