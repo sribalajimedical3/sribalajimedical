@@ -1,0 +1,277 @@
+/* ==========================================================================
+   1. FONTS & COLORS (CSS Variables)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Fonts */
+    --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    
+    /* Premium Royal Blue Palette */
+    --brand-50: #eff6ff;
+    --brand-100: #dbeafe;
+    --brand-200: #bfdbfe;
+    --brand-300: #93c5fd;
+    --brand-400: #60a5fa;
+    --brand-500: #3b82f6;
+    --brand-600: #2563eb;
+    --brand-700: #1d4ed8;
+    --brand-800: #1e40af;
+    --brand-900: #1e3a8a;
+    --brand-950: #172554;
+
+    /* Premium Emerald Green Palette */
+    --accent-50: #ecfdf5;
+    --accent-100: #d1fae5;
+    --accent-200: #a7f3d0;
+    --accent-300: #6ee7b7;
+    --accent-400: #34d399;
+    --accent-500: #10b981;
+    --accent-600: #059669;
+    --accent-700: #047857;
+    --accent-800: #065f46;
+    --accent-900: #064e3b;
+    --accent-950: #022c22;
+
+    /* Luxury Shadows */
+    --shadow-soft: 0 20px 40px -15px rgba(30, 58, 138, 0.08);
+    --shadow-hover: 0 30px 60px -15px rgba(30, 58, 138, 0.12), 0 0 0 1px rgba(16, 185, 129, 0.3);
+    --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+/* Global Reset & Base Styling */
+body {
+    font-family: var(--font-primary);
+    color: var(--brand-900);
+    background-color: #ffffff;
+    /* Subtle luxury noise pattern */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    transition: all 0.7s ease;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(219, 234, 254, 0.5); /* brand-100 with opacity */
+}
+
+/* Add this class via JS when scrolling down */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-soft);
+    border-bottom-color: rgba(191, 219, 254, 0.5); /* brand-200 with opacity */
+}
+
+.navbar-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.nav-link {
+    color: var(--brand-600);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-600);
+}
+
+/* ==========================================================================
+   3. HERO SECTION (Homepage Top)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    background-color: var(--brand-950);
+    padding: 8rem 1.5rem 6rem;
+    overflow: hidden;
+    text-align: center;
+    /* Soft top-right green glow */
+    background-image: radial-gradient(circle at top right, rgba(16, 185, 129, 0.12) 0%, transparent 50%);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 300; /* Light weight for luxury feel */
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title .highlight {
+    font-weight: 700;
+    /* Emerald gradient text */
+    background: linear-gradient(to right, var(--accent-300), var(--accent-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--brand-200);
+    font-weight: 300;
+    max-width: 42rem;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. BUTTONS
+   ========================================================================== */
+/* Primary Action Button */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-500);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 1rem 2rem;
+    border-radius: 9999px; /* Pill shape */
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-soft);
+    will-change: transform, box-shadow;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-600);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Secondary / Dark Outline Button */
+.btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--brand-950);
+    border: 1px solid var(--brand-200);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--brand-950);
+    color: #ffffff;
+    border-color: var(--brand-950);
+    transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--brand-950);
+    color: var(--brand-300);
+    padding: 4rem 1.5rem;
+    border-top: 1px solid var(--brand-800);
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 5fr 3fr 4fr;
+        gap: 2rem;
+    }
+}
+
+.footer-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-heading {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: var(--brand-400);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--accent-400);
+}
+
+.footer-bottom {
+    max-width: 80rem;
+    margin: 4rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(30, 64, 175, 0.5); /* brand-800/50 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--brand-500);
+}
+
+@media (min-width: 640px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
