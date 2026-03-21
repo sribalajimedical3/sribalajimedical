@@ -4,18 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     
-    <!-- Advanced SEO Meta Tags -->
+    <!-- Advanced SEO & Open Graph Meta Tags -->
     <title>Sri Balaji Medical - Premium Pharmacy & Expert Clinic</title>
     <meta name="description" content="Sri Balaji Medical is your trusted destination for 100% authentic medicines and expert doctor consultations. Experience premium healthcare.">
     <meta name="keywords" content="pharmacy, medical clinic, doctor consultation, buy medicines, healthcare, Sri Balaji Medical, local pharmacy, health support">
+    <link rel="canonical" href="https://www.sribalajimedical.com/" />
     
-    <!-- Performance Preconnects -->
+    <meta property="og:title" content="Sri Balaji Medical - Premium Pharmacy & Clinic">
+    <meta property="og:description" content="Trusted neighborhood destination for 100% authentic medicines and expert doctor consultations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sribalajimedical.com/">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw">
+    
+    <!-- JSON-LD Structured Data for Local Business SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Sri Balaji Medical",
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw",
+      "@id": "https://www.sribalajimedical.com/",
+      "url": "https://www.sribalajimedical.com/",
+      "telephone": "+918981777440",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Your neighborhood medical store",
+        "addressLocality": "Barrackpore",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "22:30"
+      }
+    }
+    </script>
+    
+    <!-- Performance Preconnects & Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin>
-    
-    <!-- Premium Google Fonts: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,14 +61,8 @@
                         sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
                     },
                     colors: {
-                        brand: { // Premium Royal Blue
-                            50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
-                            500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a', 950: '#172554',
-                        },
-                        accent: { // Premium Emerald Green
-                            50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399',
-                            500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22',
-                        }
+                        brand: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a', 950: '#172554' },
+                        accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22' }
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
@@ -72,20 +98,9 @@
             backface-visibility: hidden;
         }
 
-        .reveal-up {
-            opacity: 0;
-            transform: translate3d(0, 40px, 0);
-            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-        }
-        .reveal-scale {
-            opacity: 0;
-            transform: scale(0.97) translate3d(0, 20px, 0);
-            transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s ease;
-        }
-        .reveal-up.active, .reveal-scale.active {
-            opacity: 1;
-            transform: translate3d(0, 0, 0) scale(1);
-        }
+        .reveal-up { opacity: 0; transform: translate3d(0, 40px, 0); transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1); }
+        .reveal-scale { opacity: 0; transform: scale(0.97) translate3d(0, 20px, 0); transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.8s ease; }
+        .reveal-up.active, .reveal-scale.active { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
         
         .delay-100 { transition-delay: 150ms; }
         .delay-200 { transition-delay: 300ms; }
@@ -109,8 +124,7 @@
                     <div class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-[1px] border-brand-200 shadow-sm group-hover:border-accent-500 group-hover:shadow-glow transition-all duration-500">
                         <img class="w-full h-full object-cover transform-gpu group-hover:scale-110 transition-transform duration-700 ease-in-out" 
                              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
-                             alt="Sri Balaji Medical Logo"
-                             onerror="this.src='https://placehold.co/100x100?text=SBM'">
+                             alt="Sri Balaji Medical Logo" fetchpriority="high">
                     </div>
                     <span class="font-bold text-[1.1rem] sm:text-xl lg:text-2xl text-brand-950 tracking-tight group-hover:text-accent-600 transition-colors duration-500">Sri Balaji Medical</span>
                 </a>
@@ -120,6 +134,7 @@
                     <a href="frontend/pages/about.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">About Us</a>
                     <a href="frontend/pages/doctor.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">Doctors</a>
                     <a href="frontend/pages/medicine.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">Need Medicine?</a>
+                    <a href="frontend/pages/contact.html" class="px-4 py-2 text-brand-600 hover:text-accent-600 font-medium text-[0.95rem] tracking-wide rounded-lg transition-colors duration-300">Contact</a>
                     <div class="pl-6 ml-2 border-l border-brand-200 flex gap-3">
                         <a href="frontend/pages/appointment.html" class="bg-accent-500 hover:bg-brand-950 text-white px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-[0.15em] transition-all duration-500 shadow-luxury-soft inline-block cursor-pointer relative overflow-hidden transform-gpu hover:-translate-y-0.5">
                             Book Appointment
@@ -128,7 +143,7 @@
                 </div>
 
                 <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none p-2.5 sm:p-3 rounded-xl bg-brand-50/80 backdrop-blur-sm border border-brand-200 shadow-sm hover:bg-brand-100 active:scale-95 transition-all transform-gpu" aria-label="Toggle menu" aria-expanded="false">
+                    <button id="mobile-menu-btn" class="text-brand-900 focus:outline-none w-12 h-12 flex items-center justify-center rounded-xl bg-brand-50/80 backdrop-blur-sm border border-brand-200 shadow-sm hover:bg-brand-100 active:scale-95 transition-all transform-gpu" aria-label="Toggle menu">
                         <svg class="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-500" id="menu-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -152,13 +167,11 @@
             <a href="frontend/pages/about.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">About Us</a>
             <a href="frontend/pages/doctor.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">Doctors</a>
             <a href="frontend/pages/medicine.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">Need Medicine?</a>
+            <a href="frontend/pages/contact.html" class="flex items-center px-4 py-3.5 text-brand-800 font-medium hover:text-accent-600 hover:bg-brand-50 rounded-xl transition-colors text-lg">Contact Us</a>
         </div>
         <div class="p-6 border-t border-brand-50 bg-brand-50/50 flex flex-col gap-3">
             <a href="frontend/pages/appointment.html" class="flex items-center justify-center w-full px-4 py-4 text-white font-bold text-xs uppercase tracking-widest bg-accent-500 hover:bg-accent-600 rounded-xl transition-all duration-300 shadow-md transform-gpu hover:-translate-y-0.5">
                 Book Appointment
-            </a>
-            <a href="frontend/pages/contact.html" class="flex items-center justify-center w-full px-4 py-4 text-brand-950 font-bold text-xs uppercase tracking-widest bg-transparent border border-brand-200 hover:border-brand-950 hover:bg-brand-950 hover:text-white rounded-xl transition-all duration-300 shadow-sm transform-gpu hover:-translate-y-0.5">
-                Contact Pharmacy
             </a>
         </div>
     </div>
@@ -196,7 +209,7 @@
                         <div class="absolute inset-0 bg-accent-500/20 blur-2xl rounded-full scale-110 pointer-events-none"></div>
                         <img class="relative z-10 w-96 h-96 object-cover rounded-full border-[8px] border-brand-900/50 shadow-luxury-hover transform-gpu hover:scale-105 transition-transform duration-700" 
                              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep15UjFjDqNDqbi6IHt0dDdKAFWSCKVnMRZU8-mrCqDmiQmVepjTAVUuvJuqsMY-KKaMoxZoakfXoxdKD2SSCBzpHXTYTMGIXNP8HCOqaP2v0LQUoqMiejA7V-gASwUOt75xwF0zJulURU=s1360-w1360-h1020-rw" 
-                             alt="Sri Balaji Medical Storefront">
+                             alt="Sri Balaji Medical Storefront" fetchpriority="high">
                     </div>
                 </div>
             </div>
@@ -250,8 +263,8 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-brand-950 text-brand-300 py-16 border-t border-brand-800 mt-auto hardware-accel">
+    <!-- Footer optimized with content-visibility for performance -->
+    <footer class="bg-brand-950 text-brand-300 py-16 border-t border-brand-800 mt-auto hardware-accel" style="content-visibility: auto;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 items-start">
                 <div class="md:col-span-5 flex flex-col items-center md:items-start gap-6 text-center md:text-left">
@@ -267,6 +280,7 @@
                     <a href="frontend/pages/about.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors">About Us</a>
                     <a href="frontend/pages/doctor.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors">Doctors & Clinic</a>
                     <a href="frontend/pages/medicine.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors">Need Medicine?</a>
+                    <a href="frontend/pages/contact.html" class="text-brand-400 hover:text-accent-400 font-medium text-sm transition-colors">Contact</a>
                 </div>
                 <div class="md:col-span-4 flex flex-col space-y-4 text-center md:text-left">
                     <h4 class="text-white font-bold text-xs uppercase tracking-[0.2em] mb-2">Connect</h4>
@@ -294,7 +308,7 @@
                 if (!statusElements.length) return;
 
                 const now = new Date();
-                const day = now.getDay(); // 0 is Sunday, 4 is Thursday
+                const day = now.getDay(); 
                 const hour = now.getHours();
                 const minutes = now.getMinutes();
                 const timeInMinutes = hour * 60 + minutes;
@@ -327,67 +341,60 @@
                 statusElements.forEach(el => el.innerHTML = html);
             }
             updateShopStatus();
-            setInterval(updateShopStatus, 60000); // Refresh every minute
+            setInterval(updateShopStatus, 60000);
 
-            // Mobile Menu Logic
             const btn = document.getElementById('mobile-menu-btn');
             const drawer = document.getElementById('mobile-drawer');
             const overlay = document.getElementById('drawer-overlay');
             const closeBtn = document.getElementById('close-drawer-btn');
-            const icon = document.getElementById('menu-icon');
-            let isMenuOpen = false;
-
+            
             function toggleMenu() {
-                isMenuOpen = !isMenuOpen;
-                if(isMenuOpen) {
+                const isHidden = overlay.classList.contains('hidden');
+                if(isHidden) {
                     overlay.classList.remove('hidden');
                     setTimeout(() => overlay.classList.remove('opacity-0'), 10);
                     drawer.classList.remove('translate-x-full');
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
                     document.body.style.overflow = 'hidden'; 
                 } else {
                     drawer.classList.add('translate-x-full');
                     overlay.classList.add('opacity-0');
                     setTimeout(() => overlay.classList.add('hidden'), 500);
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
                     document.body.style.overflow = ''; 
                 }
             }
-
             btn.addEventListener('click', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
             if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
 
-            // Navbar scroll effect
-            const nav = document.getElementById('navbar');
-            const scrollProgress = document.getElementById('scroll-progress');
-            
+            const nav = document.getElementById('navbar'), scrollProgress = document.getElementById('scroll-progress');
+            let ticking = false;
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    nav.classList.add('shadow-luxury-soft', 'bg-white/95');
-                    nav.classList.remove('bg-white/80');
-                } else {
-                    nav.classList.remove('shadow-luxury-soft', 'bg-white/95');
-                    nav.classList.add('bg-white/80');
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        if (window.scrollY > 20) { nav.classList.add('shadow-luxury-soft', 'bg-white/95'); nav.classList.remove('bg-white/80'); } 
+                        else { nav.classList.remove('shadow-luxury-soft', 'bg-white/95'); nav.classList.add('bg-white/80'); }
+                        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                        if(scrollProgress) scrollProgress.style.width = ((winScroll / height) * 100) + "%";
+                        ticking = false;
+                    });
+                    ticking = true;
                 }
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                if(scrollProgress) scrollProgress.style.width = scrolled + "%";
             }, { passive: true });
 
-            // Zero-Lag Intersection Observer
             const observerOptions = { root: null, rootMargin: '0px 0px -30px 0px', threshold: 0.1 };
-            const observer = new IntersectionObserver((entries, obs) => {
+            const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        obs.unobserve(entry.target);
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.reveal-up, .reveal-scale').forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal-up, .reveal-scale').forEach((element) => {
+                observer.observe(element);
+            });
         });
     </script>
 </body>
